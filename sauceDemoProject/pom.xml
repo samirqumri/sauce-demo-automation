@@ -29,16 +29,41 @@
   </dependencyManagement>
 
   <dependencies>
+    <!-- Source: https://mvnrepository.com -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>6.3.4</version>
+        <scope>compile</scope>
     </dependency>
-    <!-- Optionally: parameterized tests support -->
+
+    <!-- Source: https://mvnrepository.com -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <scope>test</scope>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.20.0</version>
+        <scope>compile</scope>
+    </dependency>
+    
+    <!-- Source: https://mvnrepository.com -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.11.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Dependencies to fix the Excel errors -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>5.2.5</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.5</version>
     </dependency>
   </dependencies>
 
