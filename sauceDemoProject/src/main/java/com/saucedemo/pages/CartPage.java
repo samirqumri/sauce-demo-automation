@@ -7,7 +7,7 @@ public class CartPage {
 	private WebDriver driver;
 
 	// Blank placeholder blueprint hooks for the team
-	private By badgeCount = By.id("id");
+	private By badgeCount = By.id("");
 	private By checkoutButton = By.name("");
 	private By emptyMessage = By.className("");
 	private By removeLink = By.linkText("Remove");
