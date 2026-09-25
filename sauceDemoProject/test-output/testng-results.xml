@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-26T00:54:14 EEST" name="Default suite" finished-at="2026-09-26T00:54:22 EEST" duration-ms="8359">
+    <groups>
+    </groups>
+    <test started-at="2026-09-26T00:54:14 EEST" name="Default test" finished-at="2026-09-26T00:54:22 EEST" duration-ms="8359">
+      <class name="com.saucedemo.tests.ProductTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.ProductTests@22ff4249]" started-at="2026-09-26T00:54:14 EEST" name="setUp" finished-at="2026-09-26T00:54:19 EEST" duration-ms="4834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_CHK_01_ProductPageShowsNamePriceAndAddToCart()[pri:0, instance:com.saucedemo.tests.ProductTests@22ff4249]" started-at="2026-09-26T00:54:19 EEST" name="TC_CHK_01_ProductPageShowsNamePriceAndAddToCart" finished-at="2026-09-26T00:54:22 EEST" duration-ms="2912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CHK_01_ProductPageShowsNamePriceAndAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.ProductTests@22ff4249]" started-at="2026-09-26T00:54:22 EEST" name="tearDown" finished-at="2026-09-26T00:54:22 EEST" duration-ms="533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.ProductTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
