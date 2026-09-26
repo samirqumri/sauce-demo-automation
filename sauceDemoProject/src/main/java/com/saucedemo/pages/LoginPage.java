@@ -7,12 +7,12 @@ public class LoginPage {
 	private WebDriver driver;
 
 	// Blank placeholder blueprint hooks for the team
-	private By emailField = By.id("");
-	private By passwordField = By.id("");
-	private By submitButton = By.cssSelector("");
-	private By errorAlert = By.className("");
-	private By recoverLink = By.xpath("");
-	private By recoverForm = By.id("");
+	private By emailField = By.id("customer_email");
+	private By passwordField = By.id("customer_password");
+	private By submitButton = By.cssSelector("input[value*='Sign']");
+	private By errorAlert = By.cssSelector("div.errors");
+	private By recoverLink = By.xpath("//a[text()='Forgot your password?']");
+	private By recoverForm = By.id("recover-email");
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;

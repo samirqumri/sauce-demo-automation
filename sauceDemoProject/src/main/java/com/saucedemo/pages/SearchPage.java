@@ -7,19 +7,17 @@ import org.openqa.selenium.WebDriver;
 public class SearchPage {
 	private WebDriver driver;
 
-	// Blank placeholder blueprint hooks for the team
-	private By openSearchButton = By.xpath("");
-	private By searchBox = By.name("");
+	// Contains 2 methods in 1
+	// 1. Open search field
+	// 2. Type Search Query
+	private By searchBox = By.id("search-field");
 
 	public SearchPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public void openSearchField() {
-		driver.findElement(openSearchButton).click();
-	}
-
-	public void typeSearchQuery(String itemKeyword) {
+	public void searchFor(String itemKeyword) {
+		driver.findElement(searchBox).click();
 		driver.findElement(searchBox).sendKeys(itemKeyword + Keys.ENTER);
 	}
 }
