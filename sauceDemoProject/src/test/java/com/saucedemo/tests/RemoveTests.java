@@ -10,7 +10,7 @@ import com.saucedemo.pages.ProductPage;
 public class RemoveTests extends BaseTest {
 
 	@Test(priority = 1)
-	public void TC_CHK_07_emptyCartHasNoCheckout() throws InterruptedException {
+	public void emptyCartHasNoCheckout() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
 		Thread.sleep(1000);
