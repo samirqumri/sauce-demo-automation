@@ -4,6 +4,7 @@
     <test name="Automated UI Functional Tests">
         <classes>
             <class name="com.saucedemo.tests.SearchTests"/>
+           
             <class name="com.saucedemo.tests.RemoveTests"/>
         </classes>
     </test>
