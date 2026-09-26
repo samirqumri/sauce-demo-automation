@@ -13,6 +13,7 @@ public class CheckoutPage {
 	private By continueButton = By.cssSelector("button[type='submit']");
 	private By errorMessages = By.cssSelector(".field__message--error, .notice--error");
 	private By orderSummaryItems = By.cssSelector(".order-summary__item, .product");
+	private By removeOrder = By.xpath("//a[text()='x']");
 
 	public CheckoutPage(WebDriver driver) {
 		this.driver = driver;
@@ -38,5 +39,9 @@ public class CheckoutPage {
 
 	public int getOrderItemsCount() {
 		return driver.findElements(orderSummaryItems).size();
+	}
+
+	public void ToRemoveOrder() {
+		driver.findElement(removeOrder).click();
 	}
 }

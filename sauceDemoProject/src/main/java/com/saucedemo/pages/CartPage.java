@@ -6,13 +6,12 @@ import org.openqa.selenium.WebDriver;
 public class CartPage {
 	private WebDriver driver;
 
-	// Blank placeholder blueprint hooks for the team
-	private By badgeCount = By.id("id");
-	private By checkoutButton = By.name("");
-	private By emptyMessage = By.className("");
+	private By badgeCount = By.cssSelector("a[href='/cart']");
+	private By checkoutButton = By.name("checkout");
+	private By emptyMessage = By.cssSelector(".rte p, div.errors, #main p");
 	private By removeLink = By.linkText("Remove");
-	private By quantityInput = By.xpath("");
-	private By updateButton = By.name("");
+	private By quantityInput = By.cssSelector("input.cart__qty-input, input[name='updates[]']");
+	private By updateButton = By.cssSelector("button.cart__update, input[name='update']");
 
 	public CartPage(WebDriver driver) {
 		this.driver = driver;

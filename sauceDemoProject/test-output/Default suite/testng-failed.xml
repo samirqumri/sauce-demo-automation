@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.saucedemo.tests.ProductTests">
+      <class name="com.saucedemo.tests.RemoveTests">
         <methods>
-          <include name="TC_CHK_01_ProductPageShowsNamePriceAndAddToCart"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="removeOnlyItem"/>
         </methods>
-      </class> <!-- com.saucedemo.tests.ProductTests -->
+      </class> <!-- com.saucedemo.tests.RemoveTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
