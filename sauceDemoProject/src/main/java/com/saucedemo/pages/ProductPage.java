@@ -1,7 +1,10 @@
 package com.saucedemo.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ProductPage {
 	private WebDriver driver;
@@ -9,7 +12,8 @@ public class ProductPage {
 	private By titleText = By.xpath("(//h1)[last()]");
 	private By priceText = By.cssSelector("[class*='price']");
 	private By addToCartButton = By.xpath(
-		    "//*[self::button or self::input][contains(text(),'Add to Cart') or contains(@value,'Add to Cart')]");
+			"//*[self::button or self::input][contains(text(),'Add to Cart') or contains(@value,'Add to Cart')]");
+	private By addToCartButtonById = By.id("add");
 	private By gridItems = By.cssSelector(".grid__item, .product-card");
 	private By pageBody = By.tagName("body");
 
@@ -18,8 +22,17 @@ public class ProductPage {
 	}
 
 	public void clickProductLink(String productName) {
-	    driver.findElement(By.partialLinkText(productName)).click();
+		String productSlug = productName.toLowerCase().replace(" ", "-");
+		List<WebElement> matches = driver.findElements(By.cssSelector("a[href*='" + productSlug + "']"));
+
+		for (WebElement el : matches) {
+			if (el.isDisplayed()) {
+				el.click();
+				return;
+			}
+		}
 	}
+
 	public boolean areProductElementsVisible() {
 		return driver.findElement(titleText).isDisplayed() && driver.findElement(priceText).isDisplayed()
 				&& driver.findElement(addToCartButton).isDisplayed();
@@ -39,6 +52,10 @@ public class ProductPage {
 
 	public void clickAddToCart() {
 		driver.findElement(addToCartButton).click();
+	}
+
+	public boolean isProductSoldOut() {
+		return !driver.findElement(addToCartButtonById).isEnabled();
 	}
 
 	public int getSearchResultsCount() {
