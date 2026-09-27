@@ -8,7 +8,8 @@ public class HomePage {
 
 	private By storeName = By.cssSelector(".header__logo, .site-header__logo");
 	private By tagline = By.cssSelector(".hero__subheading, .tagline");
-	private By featuredProducts = By.cssSelector(".featured-products .grid__item, .product-card");
+	
+	private By pageBody = By.tagName("body");
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -22,11 +23,17 @@ public class HomePage {
 		return driver.findElement(tagline).getText();
 	}
 
-	public int getFeaturedProductsCount() {
-		return driver.findElements(featuredProducts).size();
-	}
 
 	public void clickMenuLink(String linkText) {
 		driver.findElement(By.linkText(linkText)).click();
+	}
+
+	public String getPageText() {
+		return driver.findElement(pageBody).getText();
+	}
+
+	public void clickFeaturedProduct(String productName) {
+		String productSlug = productName.toLowerCase().replace(" ", "-");
+		driver.findElement(By.cssSelector("a[href*='" + productSlug + "']")).click();
 	}
 }

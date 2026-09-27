@@ -17,6 +17,8 @@ public class CartPage {
 	private By quantityInput = By.cssSelector("input[name='updates[]']");
 	private By updateButton = By.id("update");
 	private By pageBody = By.tagName("body");
+	private By miniCartToggle = By.cssSelector("a.toggle-drawer.cart.desktop");
+	private By miniCartEmptyMessage = By.cssSelector("#drawer p.empty");
 
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
@@ -98,5 +100,13 @@ public class CartPage {
 
 	public String getPageText() {
 		return driver.findElement(pageBody).getText();
+	}
+	
+	public void clickMiniCartToggle() {
+		driver.findElement(miniCartToggle).click();
+	}
+
+	public String getMiniCartEmptyMessage() {
+		return driver.findElement(miniCartEmptyMessage).getText();
 	}
 }
