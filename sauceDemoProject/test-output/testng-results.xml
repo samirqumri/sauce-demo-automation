@@ -1,36 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+=======
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-09-27T14:20:37 IDT" name="Sauce Demo Shopify Regression Suite" finished-at="2026-09-27T14:23:20 IDT" duration-ms="163176">
+=======
+  <suite started-at="2026-09-27T11:43:56 EEST" name="Default suite" finished-at="2026-09-27T11:44:13 EEST" duration-ms="17384">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-09-27T14:20:37 IDT" name="Automated UI Functional Tests" finished-at="2026-09-27T14:23:20 IDT" duration-ms="163176">
       <class name="com.saucedemo.tests.SearchTests">
         <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:37 IDT" name="setUp" finished-at="2026-09-27T14:20:42 IDT" duration-ms="4903" status="PASS">
+=======
+    <test started-at="2026-09-27T11:43:56 EEST" name="Default test" finished-at="2026-09-27T11:44:13 EEST" duration-ms="17384">
+      <class name="com.saucedemo.tests.ProductTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.ProductTests@2d1ef81a]" started-at="2026-09-27T11:43:56 EEST" name="setUp" finished-at="2026-09-27T11:43:59 EEST" duration-ms="3430" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
         <test-method signature="invalidSortValue()[pri:1, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:42 IDT" name="invalidSortValue" finished-at="2026-09-27T14:20:50 IDT" duration-ms="7899" status="PASS">
+=======
+        <test-method signature="TC_CHK_01_ProductPageShowsNamePriceAndAddToCart()[pri:0, instance:com.saucedemo.tests.ProductTests@2d1ef81a]" started-at="2026-09-27T11:43:59 EEST" name="TC_CHK_01_ProductPageShowsNamePriceAndAddToCart" finished-at="2026-09-27T11:44:03 EEST" duration-ms="3784" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- invalidSortValue -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:50 IDT" name="tearDown" finished-at="2026-09-27T14:20:50 IDT" duration-ms="141" status="PASS">
+=======
+        </test-method> <!-- TC_CHK_01_ProductPageShowsNamePriceAndAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.ProductTests@2d1ef81a]" started-at="2026-09-27T11:44:03 EEST" name="tearDown" finished-at="2026-09-27T11:44:03 EEST" duration-ms="171" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:50 IDT" name="setUp" finished-at="2026-09-27T14:20:51 IDT" duration-ms="1400" status="PASS">
+=======
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.ProductTests@2d1ef81a]" started-at="2026-09-27T11:44:03 EEST" name="setUp" finished-at="2026-09-27T11:44:06 EEST" duration-ms="2937" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
         <test-method signature="searchWithNoMatch()[pri:2, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:51 IDT" name="searchWithNoMatch" finished-at="2026-09-27T14:21:01 IDT" duration-ms="10027" status="PASS">
+=======
+        <test-method signature="TC_CHK_02_AddToCartIncreasesCartCountByOne()[pri:0, instance:com.saucedemo.tests.ProductTests@2d1ef81a]" started-at="2026-09-27T11:44:06 EEST" name="TC_CHK_02_AddToCartIncreasesCartCountByOne" finished-at="2026-09-27T11:44:13 EEST" duration-ms="6856" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- searchWithNoMatch -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:01 IDT" name="tearDown" finished-at="2026-09-27T14:21:01 IDT" duration-ms="115" status="PASS">
+=======
+        </test-method> <!-- TC_CHK_02_AddToCartIncreasesCartCountByOne -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.ProductTests@2d1ef81a]" started-at="2026-09-27T11:44:13 EEST" name="tearDown" finished-at="2026-09-27T11:44:13 EEST" duration-ms="161" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:01 IDT" name="setUp" finished-at="2026-09-27T14:21:03 IDT" duration-ms="1457" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -144,4 +181,9 @@
       </class> <!-- com.saucedemo.tests.RemoveTests -->
     </test> <!-- Automated UI Functional Tests -->
   </suite> <!-- Sauce Demo Shopify Regression Suite -->
+=======
+      </class> <!-- com.saucedemo.tests.ProductTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 </testng-results>

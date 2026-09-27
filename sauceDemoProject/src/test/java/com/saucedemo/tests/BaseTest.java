@@ -15,13 +15,24 @@ public class BaseTest {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
 		driver.get("https://sauce-demo.myshopify.com");
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
 	}
 
 	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
+		}
+	}
+
+	protected void pause(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
 		}
 	}
 }
