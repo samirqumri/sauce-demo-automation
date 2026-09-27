@@ -9,15 +9,12 @@ public class HomePage {
 	private By storeName = By.cssSelector(".header__logo, .site-header__logo");
 	private By tagline = By.cssSelector(".hero__subheading, .tagline");
 
-
 	private By pageBody = By.tagName("body");
-
 
 	private By facebooklink = By.cssSelector("a[href*='facebook']");
 	private By twitterlink = By.cssSelector("a[href*='twitter']");
 	private By instalink = By.cssSelector("a[href*='instagram']");
 	private By pinterestlink = By.cssSelector("a[href*='pinterest']");
-
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -35,7 +32,6 @@ public class HomePage {
 		driver.findElement(By.linkText(linkText)).click();
 	}
 
-
 	public String getPageText() {
 		return driver.findElement(pageBody).getText();
 	}
@@ -44,10 +40,7 @@ public class HomePage {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
 
 		driver.findElement(By.cssSelector("a[href*='" + productSlug + "']")).click();
-
-		driver.findElement(By.cssSelector("a[href*='" + productSlug + "']")).click();
 	}
-
 
 	public void clickFacebookLink() {
 		driver.findElement(facebooklink).click();

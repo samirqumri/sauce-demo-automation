@@ -68,7 +68,7 @@ public class LoginTests extends BaseTest {
 		loginPage.login("ibrahim.newuser01@gmail.com", "QaTeam2026");
 		Thread.sleep(3000);
 
-		driver.get("https://sauce-demo.myshopify.com/account/logout"); // Log Out (a pop-up can't block this)
+		driver.get("https://sauce-demo.myshopify.com/account/logout");
 		Thread.sleep(2000);
 
 		driver.get("https://sauce-demo.myshopify.com/account");
@@ -181,7 +181,7 @@ public class LoginTests extends BaseTest {
 		loginPage.login("ibrahim.newuser01@gmail.com", "QaTeam2026");
 		Thread.sleep(3000);
 
-		driver.get("https://sauce-demo.myshopify.com/account/logout"); // Log Out (a pop-up can't block this)
+		driver.get("https://sauce-demo.myshopify.com/account/logout");
 		Thread.sleep(2000);
 
 		driver.navigate().back();
