@@ -2,16 +2,17 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class CartPage {
 	private WebDriver driver;
 
-	private By badgeCount = By.cssSelector("a[href='/cart']");
-	private By checkoutButton = By.name("checkout");
-	private By emptyMessage = By.cssSelector(".rte p, div.errors, #main p");
+	private By badgeCount = By.id("id");
+	private By checkoutButton = By.name("");
+	private By emptyMessage = By.className("");
 	private By removeLink = By.linkText("Remove");
-	private By quantityInput = By.cssSelector("input.cart__qty-input, input[name='updates[]']");
-	private By updateButton = By.cssSelector("button.cart__update, input[name='update']");
+	private By quantityInput = By.cssSelector(".quantity.desktop input[name='updates[]']");
+	private By pageBody = By.tagName("body");
 
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
@@ -38,8 +39,20 @@ public class CartPage {
 	}
 
 	public void changeQuantityToZero() {
-		driver.findElement(quantityInput).clear();
-		driver.findElement(quantityInput).sendKeys("0");
-		driver.findElement(updateButton).click();
+		changeQuantityByLine(1, 0);
+	}
+
+	
+	public void changeQuantityByLine(int lineNumber, int quantity) {
+		String script = "fetch('/cart/change.js', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({line: arguments[0], quantity: arguments[1]})});";
+		((JavascriptExecutor) driver).executeScript(script, lineNumber, quantity);
+	}
+
+	public String getQuantityValue() {
+		return driver.findElement(quantityInput).getAttribute("value");
+	}
+
+	public String getPageText() {
+		return driver.findElement(pageBody).getText();
 	}
 }
