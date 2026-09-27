@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
-=======
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+<testng-results ignored="0" total="55" passed="55" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[pass]]>
@@ -20,137 +16,938 @@
     <line>
       <![CDATA[pass]]>
     </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2026-09-27T20:23:03 EEST" name="Default suite" finished-at="2026-09-27T20:23:38 EEST" duration-ms="35142">
-=======
-  <suite started-at="2026-09-27T19:35:00 IDT" name="Default suite" finished-at="2026-09-27T19:35:54 IDT" duration-ms="54160">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+  <suite started-at="2026-09-27T22:56:25 IDT" name="Sauce Demo Shopify Regression Suite" finished-at="2026-09-27T23:07:06 IDT" duration-ms="641126">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test started-at="2026-09-27T20:23:03 EEST" name="Default test" finished-at="2026-09-27T20:23:38 EEST" duration-ms="35142">
+    <test started-at="2026-09-27T22:56:25 IDT" name="Automated UI Functional Tests" finished-at="2026-09-27T23:07:06 IDT" duration-ms="641126">
+      <class name="com.saucedemo.tests.SearchTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:02:45 IDT" name="setUp" finished-at="2026-09-27T23:02:47 IDT" duration-ms="1984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidSortValue()[pri:1, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:02:47 IDT" name="invalidSortValue" finished-at="2026-09-27T23:02:52 IDT" duration-ms="5051" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- invalidSortValue -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:02:52 IDT" name="tearDown" finished-at="2026-09-27T23:02:52 IDT" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:02:52 IDT" name="setUp" finished-at="2026-09-27T23:02:54 IDT" duration-ms="1842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithNoMatch()[pri:2, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:02:54 IDT" name="searchWithNoMatch" finished-at="2026-09-27T23:03:03 IDT" duration-ms="9644" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchWithNoMatch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:03 IDT" name="tearDown" finished-at="2026-09-27T23:03:04 IDT" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:04 IDT" name="setUp" finished-at="2026-09-27T23:03:05 IDT" duration-ms="1876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptySearch()[pri:3, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:05 IDT" name="emptySearch" finished-at="2026-09-27T23:03:11 IDT" duration-ms="5374" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptySearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:11 IDT" name="tearDown" finished-at="2026-09-27T23:03:11 IDT" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:11 IDT" name="setUp" finished-at="2026-09-27T23:03:13 IDT" duration-ms="2072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchIgnoresCase()[pri:4, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:13 IDT" name="searchIgnoresCase" finished-at="2026-09-27T23:03:18 IDT" duration-ms="4547" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchIgnoresCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:18 IDT" name="tearDown" finished-at="2026-09-27T23:03:18 IDT" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:18 IDT" name="setUp" finished-at="2026-09-27T23:03:20 IDT" duration-ms="1866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchFullProductName()[pri:5, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:20 IDT" name="searchFullProductName" finished-at="2026-09-27T23:03:24 IDT" duration-ms="4570" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchFullProductName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:24 IDT" name="tearDown" finished-at="2026-09-27T23:03:24 IDT" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:24 IDT" name="setUp" finished-at="2026-09-27T23:03:26 IDT" duration-ms="2134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithScriptText()[pri:6, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:26 IDT" name="searchWithScriptText" finished-at="2026-09-27T23:03:36 IDT" duration-ms="9974" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchWithScriptText -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@609cd4d8]" started-at="2026-09-27T23:03:36 IDT" name="tearDown" finished-at="2026-09-27T23:03:36 IDT" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.SearchTests -->
+      <class name="com.saucedemo.tests.CartTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:25 IDT" name="setUp" finished-at="2026-09-27T22:56:29 IDT" duration-ms="3912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="cartShowsProductAndTotal()[pri:1, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:29 IDT" name="cartShowsProductAndTotal" finished-at="2026-09-27T22:56:36 IDT" duration-ms="7051" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cartShowsProductAndTotal -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:36 IDT" name="tearDown" finished-at="2026-09-27T22:56:36 IDT" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:36 IDT" name="setUp" finished-at="2026-09-27T22:56:38 IDT" duration-ms="1797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="updatingQuantityRecalculatesTotal()[pri:2, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:38 IDT" name="updatingQuantityRecalculatesTotal" finished-at="2026-09-27T22:56:48 IDT" duration-ms="10135" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- updatingQuantityRecalculatesTotal -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:48 IDT" name="tearDown" finished-at="2026-09-27T22:56:48 IDT" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:48 IDT" name="setUp" finished-at="2026-09-27T22:56:51 IDT" duration-ms="2494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="cartTotalSumsMultipleProducts()[pri:3, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:56:51 IDT" name="cartTotalSumsMultipleProducts" finished-at="2026-09-27T22:57:13 IDT" duration-ms="22351" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cartTotalSumsMultipleProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:13 IDT" name="tearDown" finished-at="2026-09-27T22:57:13 IDT" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:13 IDT" name="setUp" finished-at="2026-09-27T22:57:16 IDT" duration-ms="3388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyCartShowsMessage()[pri:4, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:16 IDT" name="emptyCartShowsMessage" finished-at="2026-09-27T22:57:23 IDT" duration-ms="6972" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyCartShowsMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:23 IDT" name="tearDown" finished-at="2026-09-27T22:57:24 IDT" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:24 IDT" name="setUp" finished-at="2026-09-27T22:57:26 IDT" duration-ms="2246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkoutOpensWithCartProducts()[pri:5, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:26 IDT" name="checkoutOpensWithCartProducts" finished-at="2026-09-27T22:57:38 IDT" duration-ms="11901" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- checkoutOpensWithCartProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:38 IDT" name="tearDown" finished-at="2026-09-27T22:57:38 IDT" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:38 IDT" name="setUp" finished-at="2026-09-27T22:57:40 IDT" duration-ms="1860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="negativeQuantityIsIgnored()[pri:6, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:40 IDT" name="negativeQuantityIsIgnored" finished-at="2026-09-27T22:57:50 IDT" duration-ms="10346" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- negativeQuantityIsIgnored -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:50 IDT" name="tearDown" finished-at="2026-09-27T22:57:50 IDT" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:50 IDT" name="setUp" finished-at="2026-09-27T22:57:52 IDT" duration-ms="1894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="veryLargeQuantityShowsCartError()[pri:7, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:57:52 IDT" name="veryLargeQuantityShowsCartError" finished-at="2026-09-27T22:58:02 IDT" duration-ms="9627" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- veryLargeQuantityShowsCartError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:58:02 IDT" name="tearDown" finished-at="2026-09-27T22:58:02 IDT" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:58:02 IDT" name="setUp" finished-at="2026-09-27T22:58:04 IDT" duration-ms="1947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="miniCartShowsEmptyMessage()[pri:8, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:58:04 IDT" name="miniCartShowsEmptyMessage" finished-at="2026-09-27T22:58:05 IDT" duration-ms="1063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- miniCartShowsEmptyMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@4b2bac3f]" started-at="2026-09-27T22:58:05 IDT" name="tearDown" finished-at="2026-09-27T22:58:05 IDT" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.CartTests -->
+      <class name="com.saucedemo.tests.RemoveTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:00:49 IDT" name="setUp" finished-at="2026-09-27T23:00:51 IDT" duration-ms="1932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyCartHasNoCheckout()[pri:1, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:00:51 IDT" name="emptyCartHasNoCheckout" finished-at="2026-09-27T23:00:55 IDT" duration-ms="3922" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyCartHasNoCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:00:55 IDT" name="tearDown" finished-at="2026-09-27T23:00:55 IDT" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:00:55 IDT" name="setUp" finished-at="2026-09-27T23:00:57 IDT" duration-ms="1881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeOnlyItem()[pri:2, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:00:57 IDT" name="removeOnlyItem" finished-at="2026-09-27T23:01:14 IDT" duration-ms="17731" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- removeOnlyItem -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:01:14 IDT" name="tearDown" finished-at="2026-09-27T23:01:14 IDT" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:01:14 IDT" name="setUp" finished-at="2026-09-27T23:01:16 IDT" duration-ms="1859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeAllProductsOneByOne()[pri:3, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:01:16 IDT" name="removeAllProductsOneByOne" finished-at="2026-09-27T23:01:51 IDT" duration-ms="34316" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- removeAllProductsOneByOne -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:01:51 IDT" name="tearDown" finished-at="2026-09-27T23:01:51 IDT" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:01:51 IDT" name="setUp" finished-at="2026-09-27T23:01:54 IDT" duration-ms="3193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeWithQuantityThree()[pri:4, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:01:54 IDT" name="removeWithQuantityThree" finished-at="2026-09-27T23:02:14 IDT" duration-ms="19913" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- removeWithQuantityThree -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:02:14 IDT" name="tearDown" finished-at="2026-09-27T23:02:14 IDT" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:02:14 IDT" name="setUp" finished-at="2026-09-27T23:02:18 IDT" duration-ms="3465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removedProductCanBeAddedAgain()[pri:5, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:02:18 IDT" name="removedProductCanBeAddedAgain" finished-at="2026-09-27T23:02:44 IDT" duration-ms="26977" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- removedProductCanBeAddedAgain -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@bccb269]" started-at="2026-09-27T23:02:44 IDT" name="tearDown" finished-at="2026-09-27T23:02:45 IDT" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.RemoveTests -->
+      <class name="com.saucedemo.tests.LoginTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:46 IDT" name="setUp" finished-at="2026-09-27T22:58:48 IDT" duration-ms="1843" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validLogin()[pri:1, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:48 IDT" name="validLogin" description="TC_LOG_01 Login with correct email and password" finished-at="2026-09-27T22:58:53 IDT" duration-ms="5298" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:53 IDT" name="tearDown" finished-at="2026-09-27T22:58:54 IDT" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:54 IDT" name="setUp" finished-at="2026-09-27T22:58:55 IDT" duration-ms="1912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginLinkOpensLoginPage()[pri:2, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:55 IDT" name="loginLinkOpensLoginPage" description="TC_LOG_13 &#039;Log In&#039; link in the menu opens the login page" finished-at="2026-09-27T22:58:58 IDT" duration-ms="2131" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginLinkOpensLoginPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:58 IDT" name="tearDown" finished-at="2026-09-27T22:58:58 IDT" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:58 IDT" name="setUp" finished-at="2026-09-27T22:58:59 IDT" duration-ms="1770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="passwordIsHidden()[pri:3, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:58:59 IDT" name="passwordIsHidden" description="TC_LOG_08 Password is hidden (dots)" finished-at="2026-09-27T22:59:02 IDT" duration-ms="2216" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- passwordIsHidden -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:02 IDT" name="tearDown" finished-at="2026-09-27T22:59:02 IDT" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:02 IDT" name="setUp" finished-at="2026-09-27T22:59:04 IDT" duration-ms="1811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="forgotPassword()[pri:4, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:04 IDT" name="forgotPassword" description="TC_LOG_11 &#039;Forgot your password?&#039; opens the reset form" finished-at="2026-09-27T22:59:07 IDT" duration-ms="3684" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- forgotPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:07 IDT" name="tearDown" finished-at="2026-09-27T22:59:07 IDT" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:07 IDT" name="setUp" finished-at="2026-09-27T22:59:10 IDT" duration-ms="2212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logout()[pri:5, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:10 IDT" name="logout" description="TC_LOG_09 Log Out works" finished-at="2026-09-27T22:59:21 IDT" duration-ms="11224" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:21 IDT" name="tearDown" finished-at="2026-09-27T22:59:21 IDT" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:21 IDT" name="setUp" finished-at="2026-09-27T22:59:23 IDT" duration-ms="2187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="wrongPassword()[pri:6, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:23 IDT" name="wrongPassword" description="TC_LOG_02 Correct email + wrong password" finished-at="2026-09-27T22:59:29 IDT" duration-ms="5364" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- wrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:29 IDT" name="tearDown" finished-at="2026-09-27T22:59:29 IDT" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:29 IDT" name="setUp" finished-at="2026-09-27T22:59:31 IDT" duration-ms="1947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bothEmpty()[pri:7, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:31 IDT" name="bothEmpty" description="TC_LOG_04 Email and password both empty" finished-at="2026-09-27T22:59:35 IDT" duration-ms="4458" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bothEmpty -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:35 IDT" name="tearDown" finished-at="2026-09-27T22:59:36 IDT" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:36 IDT" name="setUp" finished-at="2026-09-27T22:59:37 IDT" duration-ms="1821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyPassword()[pri:8, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:37 IDT" name="emptyPassword" description="TC_LOG_05 Correct email + empty password" finished-at="2026-09-27T22:59:43 IDT" duration-ms="5408" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:43 IDT" name="tearDown" finished-at="2026-09-27T22:59:43 IDT" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:43 IDT" name="setUp" finished-at="2026-09-27T22:59:45 IDT" duration-ms="1918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emailWithoutAt()[pri:9, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:45 IDT" name="emailWithoutAt" description="TC_LOG_06 Email without @" finished-at="2026-09-27T22:59:50 IDT" duration-ms="5333" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emailWithoutAt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:50 IDT" name="tearDown" finished-at="2026-09-27T22:59:50 IDT" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:50 IDT" name="setUp" finished-at="2026-09-27T22:59:52 IDT" duration-ms="1799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="accountNeedsLogin()[pri:10, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:52 IDT" name="accountNeedsLogin" description="TC_LOG_10 My Account cannot be opened without login" finished-at="2026-09-27T22:59:55 IDT" duration-ms="3029" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- accountNeedsLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:55 IDT" name="tearDown" finished-at="2026-09-27T22:59:55 IDT" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:55 IDT" name="setUp" finished-at="2026-09-27T22:59:59 IDT" duration-ms="3252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emailInCapitals()[pri:11, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T22:59:59 IDT" name="emailInCapitals" description="TC_LOG_14 Email in CAPITAL letters still logs in" finished-at="2026-09-27T23:00:07 IDT" duration-ms="8424" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emailInCapitals -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:07 IDT" name="tearDown" finished-at="2026-09-27T23:00:07 IDT" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:07 IDT" name="setUp" finished-at="2026-09-27T23:00:09 IDT" duration-ms="1916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="passwordInCapitals()[pri:12, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:09 IDT" name="passwordInCapitals" description="TC_LOG_15 Password in CAPITAL letters must NOT log in" finished-at="2026-09-27T23:00:14 IDT" duration-ms="5248" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- passwordInCapitals -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:14 IDT" name="tearDown" finished-at="2026-09-27T23:00:14 IDT" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:14 IDT" name="setUp" finished-at="2026-09-27T23:00:16 IDT" duration-ms="1868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="backButtonAfterLogout()[pri:13, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:16 IDT" name="backButtonAfterLogout" description="TC_LOG_19 After Log Out, the Back button does not log you in again" finished-at="2026-09-27T23:00:29 IDT" duration-ms="12327" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backButtonAfterLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@6913c1fb]" started-at="2026-09-27T23:00:29 IDT" name="tearDown" finished-at="2026-09-27T23:00:29 IDT" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.LoginTests -->
       <class name="com.saucedemo.tests.HomeTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:03 EEST" name="setUp" finished-at="2026-09-27T20:23:18 EEST" duration-ms="14425" status="PASS">
-=======
-    <test started-at="2026-09-27T19:35:00 IDT" name="Default test" finished-at="2026-09-27T19:35:54 IDT" duration-ms="54160">
-      <class name="com.saucedemo.tests.LinksTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:00 IDT" name="setUp" finished-at="2026-09-27T19:35:05 IDT" duration-ms="5006" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:06:52 IDT" name="setUp" finished-at="2026-09-27T23:06:56 IDT" duration-ms="3382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-<<<<<<< HEAD
-        <test-method signature="homePageShowsContent()[pri:1, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:18 EEST" name="homePageShowsContent" finished-at="2026-09-27T20:23:19 EEST" duration-ms="1637" status="PASS">
-=======
-        <test-method signature="testAllSocialMediaLinks()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:05 IDT" name="testAllSocialMediaLinks" finished-at="2026-09-27T19:35:20 IDT" duration-ms="14760" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method signature="homePageShowsContent()[pri:1, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:06:56 IDT" name="homePageShowsContent" finished-at="2026-09-27T23:06:57 IDT" duration-ms="1031" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
           </reporter-output>
-<<<<<<< HEAD
         </test-method> <!-- homePageShowsContent -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:20 EEST" name="tearDown" finished-at="2026-09-27T20:23:22 EEST" duration-ms="2901" status="PASS">
-=======
-        </test-method> <!-- testAllSocialMediaLinks -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:20 IDT" name="tearDown" finished-at="2026-09-27T19:35:20 IDT" duration-ms="558" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:06:57 IDT" name="tearDown" finished-at="2026-09-27T23:06:57 IDT" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:22 EEST" name="setUp" finished-at="2026-09-27T20:23:26 EEST" duration-ms="4080" status="PASS">
-=======
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:20 IDT" name="setUp" finished-at="2026-09-27T19:35:24 IDT" duration-ms="3485" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:06:57 IDT" name="setUp" finished-at="2026-09-27T23:06:59 IDT" duration-ms="1869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-<<<<<<< HEAD
-        <test-method signature="productPageShowsImageDescriptionAndRelatedProducts()[pri:2, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:26 EEST" name="productPageShowsImageDescriptionAndRelatedProducts" finished-at="2026-09-27T20:23:29 EEST" duration-ms="2241" status="PASS">
-=======
-        <test-method signature="testFacebookLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:24 IDT" name="testFacebookLink" finished-at="2026-09-27T19:35:28 IDT" duration-ms="4151" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method signature="productPageShowsImageDescriptionAndRelatedProducts()[pri:2, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:06:59 IDT" name="productPageShowsImageDescriptionAndRelatedProducts" finished-at="2026-09-27T23:07:00 IDT" duration-ms="1752" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
           </reporter-output>
-<<<<<<< HEAD
         </test-method> <!-- productPageShowsImageDescriptionAndRelatedProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:29 EEST" name="tearDown" finished-at="2026-09-27T20:23:29 EEST" duration-ms="387" status="PASS">
-=======
-        </test-method> <!-- testFacebookLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:28 IDT" name="tearDown" finished-at="2026-09-27T19:35:28 IDT" duration-ms="283" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:07:00 IDT" name="tearDown" finished-at="2026-09-27T23:07:01 IDT" duration-ms="131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:29 EEST" name="setUp" finished-at="2026-09-27T20:23:34 EEST" duration-ms="4649" status="PASS">
-=======
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:28 IDT" name="setUp" finished-at="2026-09-27T19:35:32 IDT" duration-ms="3615" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:07:01 IDT" name="setUp" finished-at="2026-09-27T23:07:02 IDT" duration-ms="1907" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-<<<<<<< HEAD
-        <test-method signature="relatedProductLinkOpensItsPage()[pri:3, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:34 EEST" name="relatedProductLinkOpensItsPage" finished-at="2026-09-27T20:23:38 EEST" duration-ms="4346" status="PASS">
-=======
-        <test-method signature="testInstagramLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:32 IDT" name="testInstagramLink" finished-at="2026-09-27T19:35:36 IDT" duration-ms="4186" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        <test-method signature="relatedProductLinkOpensItsPage()[pri:3, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:07:02 IDT" name="relatedProductLinkOpensItsPage" finished-at="2026-09-27T23:07:06 IDT" duration-ms="3350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- relatedProductLinkOpensItsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@13b6aecc]" started-at="2026-09-27T23:07:06 IDT" name="tearDown" finished-at="2026-09-27T23:07:06 IDT" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.HomeTests -->
+      <class name="com.saucedemo.tests.SignUpTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:36 IDT" name="setUp" finished-at="2026-09-27T23:03:38 IDT" duration-ms="1833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createAccount()[pri:1, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:38 IDT" name="createAccount" description="TC_SIGN_02 Create an account with a new email" finished-at="2026-09-27T23:03:44 IDT" duration-ms="5640" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- relatedProductLinkOpensItsPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:38 EEST" name="tearDown" finished-at="2026-09-27T20:23:38 EEST" duration-ms="376" status="PASS">
-=======
-        </test-method> <!-- testInstagramLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:36 IDT" name="tearDown" finished-at="2026-09-27T19:35:37 IDT" duration-ms="419" status="PASS">
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+        </test-method> <!-- createAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:44 IDT" name="tearDown" finished-at="2026-09-27T23:03:44 IDT" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-<<<<<<< HEAD
-      </class> <!-- com.saucedemo.tests.HomeTests -->
-=======
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:37 IDT" name="setUp" finished-at="2026-09-27T19:35:41 IDT" duration-ms="4535" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:44 IDT" name="setUp" finished-at="2026-09-27T23:03:46 IDT" duration-ms="1927" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testPinterestLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:41 IDT" name="testPinterestLink" finished-at="2026-09-27T19:35:45 IDT" duration-ms="4267" status="PASS">
+        <test-method signature="emptyEmailAndPassword()[pri:2, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:46 IDT" name="emptyEmailAndPassword" description="TC_SIGN_03 Sign up with empty email and password" finished-at="2026-09-27T23:03:57 IDT" duration-ms="10532" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyEmailAndPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:57 IDT" name="tearDown" finished-at="2026-09-27T23:03:57 IDT" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:57 IDT" name="setUp" finished-at="2026-09-27T23:03:59 IDT" duration-ms="1943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emailWithoutAt()[pri:3, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:03:59 IDT" name="emailWithoutAt" description="TC_SIGN_04 Sign up with an email without @" finished-at="2026-09-27T23:04:09 IDT" duration-ms="10605" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emailWithoutAt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:09 IDT" name="tearDown" finished-at="2026-09-27T23:04:09 IDT" duration-ms="178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:09 IDT" name="setUp" finished-at="2026-09-27T23:04:11 IDT" duration-ms="1862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="existingEmail()[pri:4, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:11 IDT" name="existingEmail" description="TC_SIGN_05 Sign up with an email that already has an account" finished-at="2026-09-27T23:04:22 IDT" duration-ms="10507" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- existingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:22 IDT" name="tearDown" finished-at="2026-09-27T23:04:22 IDT" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:22 IDT" name="setUp" finished-at="2026-09-27T23:04:24 IDT" duration-ms="1879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shortPassword()[pri:5, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:24 IDT" name="shortPassword" description="TC_SIGN_06 Sign up with a short password (4 characters)" finished-at="2026-09-27T23:04:35 IDT" duration-ms="10944" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- shortPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@17f7cd29]" started-at="2026-09-27T23:04:35 IDT" name="tearDown" finished-at="2026-09-27T23:04:35 IDT" duration-ms="183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.SignUpTests -->
+      <class name="com.saucedemo.tests.LinksTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:05 IDT" name="setUp" finished-at="2026-09-27T22:58:07 IDT" duration-ms="1862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllSocialMediaLinks()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:07 IDT" name="testAllSocialMediaLinks" finished-at="2026-09-27T22:58:21 IDT" duration-ms="14392" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testAllSocialMediaLinks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:21 IDT" name="tearDown" finished-at="2026-09-27T22:58:21 IDT" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:21 IDT" name="setUp" finished-at="2026-09-27T22:58:23 IDT" duration-ms="1967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFacebookLink()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:23 IDT" name="testFacebookLink" finished-at="2026-09-27T22:58:28 IDT" duration-ms="4126" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testFacebookLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:28 IDT" name="tearDown" finished-at="2026-09-27T22:58:28 IDT" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:28 IDT" name="setUp" finished-at="2026-09-27T22:58:30 IDT" duration-ms="1834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInstagramLink()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:30 IDT" name="testInstagramLink" finished-at="2026-09-27T22:58:34 IDT" duration-ms="4095" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testInstagramLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:34 IDT" name="tearDown" finished-at="2026-09-27T22:58:34 IDT" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:34 IDT" name="setUp" finished-at="2026-09-27T22:58:36 IDT" duration-ms="1872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPinterestLink()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:36 IDT" name="testPinterestLink" finished-at="2026-09-27T22:58:40 IDT" duration-ms="4114" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- testPinterestLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:45 IDT" name="tearDown" finished-at="2026-09-27T19:35:46 IDT" duration-ms="426" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:40 IDT" name="tearDown" finished-at="2026-09-27T22:58:40 IDT" duration-ms="170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:46 IDT" name="setUp" finished-at="2026-09-27T19:35:50 IDT" duration-ms="3824" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:40 IDT" name="setUp" finished-at="2026-09-27T22:58:42 IDT" duration-ms="1980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTwitterLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:50 IDT" name="testTwitterLink" finished-at="2026-09-27T19:35:54 IDT" duration-ms="4178" status="PASS">
+        <test-method signature="testTwitterLink()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:42 IDT" name="testTwitterLink" finished-at="2026-09-27T22:58:46 IDT" duration-ms="4095" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- testTwitterLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:54 IDT" name="tearDown" finished-at="2026-09-27T19:35:54 IDT" duration-ms="384" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@305b7c14]" started-at="2026-09-27T22:58:46 IDT" name="tearDown" finished-at="2026-09-27T22:58:46 IDT" duration-ms="159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.tests.LinksTests -->
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.saucedemo.tests.CheckoutTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:04:35 IDT" name="setUp" finished-at="2026-09-27T23:04:37 IDT" duration-ms="1857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkoutWithAllFieldsEmptyShowsErrors()[pri:1, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:04:37 IDT" name="checkoutWithAllFieldsEmptyShowsErrors" finished-at="2026-09-27T23:04:50 IDT" duration-ms="13564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutWithAllFieldsEmptyShowsErrors -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:04:50 IDT" name="tearDown" finished-at="2026-09-27T23:04:51 IDT" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:04:51 IDT" name="setUp" finished-at="2026-09-27T23:04:53 IDT" duration-ms="1878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkoutWithInvalidEmailShowsError()[pri:2, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:04:53 IDT" name="checkoutWithInvalidEmailShowsError" finished-at="2026-09-27T23:05:06 IDT" duration-ms="13484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutWithInvalidEmailShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:06 IDT" name="tearDown" finished-at="2026-09-27T23:05:06 IDT" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:06 IDT" name="setUp" finished-at="2026-09-27T23:05:09 IDT" duration-ms="2853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="firstNameEmptyIsAccepted()[pri:3, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:09 IDT" name="firstNameEmptyIsAccepted" finished-at="2026-09-27T23:05:28 IDT" duration-ms="19395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstNameEmptyIsAccepted -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:28 IDT" name="tearDown" finished-at="2026-09-27T23:05:29 IDT" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:29 IDT" name="setUp" finished-at="2026-09-27T23:05:32 IDT" duration-ms="3300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="firstNameWithSymbolsIsAccepted()[pri:4, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:32 IDT" name="firstNameWithSymbolsIsAccepted" finished-at="2026-09-27T23:05:50 IDT" duration-ms="18369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstNameWithSymbolsIsAccepted -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:50 IDT" name="tearDown" finished-at="2026-09-27T23:05:51 IDT" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:51 IDT" name="setUp" finished-at="2026-09-27T23:05:53 IDT" duration-ms="1987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="lastNameEmptyShowsError()[pri:5, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:05:53 IDT" name="lastNameEmptyShowsError" finished-at="2026-09-27T23:06:07 IDT" duration-ms="14754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lastNameEmptyShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:07 IDT" name="tearDown" finished-at="2026-09-27T23:06:07 IDT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:07 IDT" name="setUp" finished-at="2026-09-27T23:06:09 IDT" duration-ms="1825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="lastNameWithSymbolsIsAccepted()[pri:6, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:09 IDT" name="lastNameWithSymbolsIsAccepted" finished-at="2026-09-27T23:06:31 IDT" duration-ms="21209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lastNameWithSymbolsIsAccepted -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:31 IDT" name="tearDown" finished-at="2026-09-27T23:06:31 IDT" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:31 IDT" name="setUp" finished-at="2026-09-27T23:06:33 IDT" duration-ms="1901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkoutHappyPathWithValidTestData()[pri:7, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:33 IDT" name="checkoutHappyPathWithValidTestData" finished-at="2026-09-27T23:06:52 IDT" duration-ms="19360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutHappyPathWithValidTestData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@7d8704ef]" started-at="2026-09-27T23:06:52 IDT" name="tearDown" finished-at="2026-09-27T23:06:52 IDT" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.CheckoutTests -->
+      <class name="com.saucedemo.tests.ProductTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:29 IDT" name="setUp" finished-at="2026-09-27T23:00:31 IDT" duration-ms="1918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="productPageShowsNameAndPrice()[pri:1, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:31 IDT" name="productPageShowsNameAndPrice" finished-at="2026-09-27T23:00:34 IDT" duration-ms="3266" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- productPageShowsNameAndPrice -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:34 IDT" name="tearDown" finished-at="2026-09-27T23:00:34 IDT" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:34 IDT" name="setUp" finished-at="2026-09-27T23:00:36 IDT" duration-ms="1813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addToCartIncreasesCartCount()[pri:2, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:36 IDT" name="addToCartIncreasesCartCount" finished-at="2026-09-27T23:00:43 IDT" duration-ms="7226" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addToCartIncreasesCartCount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:43 IDT" name="tearDown" finished-at="2026-09-27T23:00:43 IDT" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:43 IDT" name="setUp" finished-at="2026-09-27T23:00:45 IDT" duration-ms="1966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="soldOutProductCannotBeAdded()[pri:3, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:45 IDT" name="soldOutProductCannotBeAdded" finished-at="2026-09-27T23:00:49 IDT" duration-ms="3138" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- soldOutProductCannotBeAdded -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.ProductTests@66d18979]" started-at="2026-09-27T23:00:49 IDT" name="tearDown" finished-at="2026-09-27T23:00:49 IDT" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.ProductTests -->
+    </test> <!-- Automated UI Functional Tests -->
+  </suite> <!-- Sauce Demo Shopify Regression Suite -->
 </testng-results>
