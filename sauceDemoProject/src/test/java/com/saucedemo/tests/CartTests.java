@@ -1,68 +1,184 @@
 package com.saucedemo.tests;
 
-import com.saucedemo.pages.CartPage;
-import com.saucedemo.pages.ProductPage;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.saucedemo.pages.CartPage;
+import com.saucedemo.pages.CheckoutPage;
+import com.saucedemo.pages.HomePage;
+import com.saucedemo.pages.ProductPage;
+
 public class CartTests extends BaseTest {
 
-	private void addProductToCart(String productName) {
-		driver.findElement(By.linkText("Catalog")).click();
-		pause(1000);
+	@Test(priority = 1)
+	public void cartShowsProductAndTotal() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
 
 		ProductPage productPage = new ProductPage(driver);
-		productPage.clickProductLink(productName);
-		pause(1000);
-
+		productPage.clickProductLink("Grey jacket");
+		Thread.sleep(1000);
 		productPage.clickAddToCart();
-		pause(2000);
-	}
+		Thread.sleep(2000);
 
-	private CartPage openCartPage() {
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		pause(1500);
-		return new CartPage(driver);
-	}
+		Thread.sleep(1500);
 
-	@Test
-	public void TC_CHK_03_CartShowsProductQuantityAndTotal() {
-		addProductToCart("Grey jacket");
-		CartPage cartPage = openCartPage();
-
+		CartPage cartPage = new CartPage(driver);
 		String cartText = cartPage.getPageText();
-		Assert.assertTrue(cartText.contains("Grey jacket"), "Product name should be listed in the cart");
-		Assert.assertTrue(cartText.contains("55.00"), "Price/total (£55.00) should be listed in the cart");
-		Assert.assertEquals(cartPage.getQuantityValue(), "1", "Quantity field should equal 1");
+
+		Assert.assertTrue(cartText.contains("Grey jacket"));
+		Assert.assertTrue(cartText.contains("55.00"));
+		Assert.assertEquals(cartPage.getQuantityValue(), "1");
 	}
 
-	@Test
-	public void TC_CHK_04_UpdatingQuantityRecalculatesTotal() {
-		addProductToCart("Grey jacket");
-		CartPage cartPage = openCartPage();
+	@Test(priority = 2)
+	public void updatingQuantityRecalculatesTotal() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
 
+		ProductPage productPage = new ProductPage(driver);
+		productPage.clickProductLink("Grey jacket");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		driver.get("https://sauce-demo.myshopify.com/cart");
+		Thread.sleep(1500);
+
+		CartPage cartPage = new CartPage(driver);
 		cartPage.changeQuantityByLine(1, 3);
-		pause(1500);
+		Thread.sleep(1500);
 		driver.navigate().refresh();
-		pause(1000);
+		Thread.sleep(1000);
 
-		Assert.assertEquals(cartPage.getQuantityValue(), "3", "Quantity field should reflect the updated value");
-		Assert.assertTrue(cartPage.getPageText().contains("165.00"),
-				"Line total and grand total should update to £165.00 (55 x 3)");
+		Assert.assertEquals(cartPage.getQuantityValue(), "3");
+		Assert.assertTrue(cartPage.getPageText().contains("165.00"));
 	}
 
-	@Test
-	public void TC_CHK_05_CartTotalSumsAcrossMultipleProducts() {
-		addProductToCart("Grey jacket");
-		addProductToCart("Striped top");
-		addProductToCart("Striped top");
+	@Test(priority = 3)
+	public void cartTotalSumsMultipleProducts() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		ProductPage productPage = new ProductPage(driver);
 
-		CartPage cartPage = openCartPage();
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
+		productPage.clickProductLink("Grey jacket");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
+		productPage.clickProductLink("Striped top");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
+		productPage.clickProductLink("Striped top");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		driver.get("https://sauce-demo.myshopify.com/cart");
+		Thread.sleep(1500);
+
+		CartPage cartPage = new CartPage(driver);
 		String cartText = cartPage.getPageText();
 
-		Assert.assertTrue(cartText.contains("55.00"), "Grey jacket line total (£55.00) should be present");
-		Assert.assertTrue(cartText.contains("100.00"), "Striped top line total (£100.00) should be present");
-		Assert.assertTrue(cartText.contains("155.00"), "Grand total (£155.00) should be present");
+		Assert.assertTrue(cartText.contains("55.00"));
+		Assert.assertTrue(cartText.contains("100.00"));
+		Assert.assertTrue(cartText.contains("155.00"));
+	}
+
+	@Test(priority = 4)
+	public void emptyCartShowsMessage() throws InterruptedException {
+		driver.get("https://sauce-demo.myshopify.com/cart");
+		Thread.sleep(1500);
+
+		CartPage cartPage = new CartPage(driver);
+		String message = cartPage.getEmptyCartMessage();
+
+		Assert.assertTrue(message.contains("It appears that your cart is currently empty"));
+		Assert.assertEquals(cartPage.getCheckoutButtonsCount(), 0);
+	}
+
+	@Test(priority = 5)
+	public void checkoutOpensWithCartProducts() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
+
+		ProductPage productPage = new ProductPage(driver);
+		productPage.clickProductLink("Noir jacket");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		driver.get("https://sauce-demo.myshopify.com/cart");
+		Thread.sleep(1500);
+
+		CartPage cartPage = new CartPage(driver);
+		cartPage.clickCheckout();
+		Thread.sleep(3000);
+
+		CheckoutPage checkoutPage = new CheckoutPage(driver);
+		String summaryText = checkoutPage.getOrderSummaryText();
+
+		Assert.assertTrue(summaryText.contains("Noir jacket"));
+		Assert.assertTrue(summaryText.contains("Total"));
+	}
+
+	@Test(priority = 6)
+	public void negativeQuantityIsIgnored() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
+
+		ProductPage productPage = new ProductPage(driver);
+		productPage.clickProductLink("Grey jacket");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		driver.get("https://sauce-demo.myshopify.com/cart");
+		Thread.sleep(1500);
+
+		CartPage cartPage = new CartPage(driver);
+		String quantityBeforeUpdate = cartPage.getQuantityValue();
+
+		cartPage.setQuantityValue("-1");
+		cartPage.clickUpdateButton();
+		Thread.sleep(2000);
+
+		String quantityAfterUpdate = cartPage.getQuantityValue();
+		Assert.assertEquals(quantityAfterUpdate, quantityBeforeUpdate);
+	}
+
+	@Test(priority = 7)
+	public void veryLargeQuantityShowsCartError() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage.clickMenuLink("Catalog");
+		Thread.sleep(1000);
+
+		ProductPage productPage = new ProductPage(driver);
+		productPage.clickProductLink("Grey jacket");
+		Thread.sleep(1000);
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
+
+		driver.get("https://sauce-demo.myshopify.com/cart");
+		Thread.sleep(1500);
+
+		CartPage cartPage = new CartPage(driver);
+		cartPage.setQuantityValue("999999999");
+		cartPage.clickUpdateButton();
+		Thread.sleep(2000);
+
+		Assert.assertTrue(cartPage.isCartErrorPageShown());
 	}
 }
