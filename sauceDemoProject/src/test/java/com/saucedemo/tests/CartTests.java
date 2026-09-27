@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.CartPage;
@@ -31,6 +32,7 @@ public class CartTests extends BaseTest {
 		Assert.assertTrue(cartText.contains("Grey jacket"));
 		Assert.assertTrue(cartText.contains("55.00"));
 		Assert.assertEquals(cartPage.getQuantityValue(), "1");
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 2)
@@ -56,6 +58,7 @@ public class CartTests extends BaseTest {
 
 		Assert.assertEquals(cartPage.getQuantityValue(), "3");
 		Assert.assertTrue(cartPage.getPageText().contains("165.00"));
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 3)
@@ -93,6 +96,7 @@ public class CartTests extends BaseTest {
 		Assert.assertTrue(cartText.contains("55.00"));
 		Assert.assertTrue(cartText.contains("100.00"));
 		Assert.assertTrue(cartText.contains("155.00"));
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 4)
@@ -105,6 +109,7 @@ public class CartTests extends BaseTest {
 
 		Assert.assertTrue(message.contains("It appears that your cart is currently empty"));
 		Assert.assertEquals(cartPage.getCheckoutButtonsCount(), 0);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 5)
@@ -131,6 +136,7 @@ public class CartTests extends BaseTest {
 
 		Assert.assertTrue(summaryText.contains("Noir jacket"));
 		Assert.assertTrue(summaryText.contains("Total"));
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 6)
@@ -157,6 +163,7 @@ public class CartTests extends BaseTest {
 
 		String quantityAfterUpdate = cartPage.getQuantityValue();
 		Assert.assertEquals(quantityAfterUpdate, quantityBeforeUpdate);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 7)
@@ -180,5 +187,6 @@ public class CartTests extends BaseTest {
 		Thread.sleep(2000);
 
 		Assert.assertTrue(cartPage.isCartErrorPageShown());
+		Reporter.log("pass",true);
 	}
 }

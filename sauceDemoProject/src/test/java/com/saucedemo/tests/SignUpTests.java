@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.HomePage;
@@ -21,6 +22,7 @@ public class SignUpTests extends BaseTest {
 
      
         Assert.assertTrue(driver.getCurrentUrl().contains("register"), "Account should be created");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 2, description = "TC_SIGN_03 Sign up with empty email and password")
@@ -35,6 +37,7 @@ public class SignUpTests extends BaseTest {
 
         Assert.assertTrue(registerPage.isErrorDisplayed() || driver.getCurrentUrl().contains("register"),
                 "Account must NOT be created (error shown or still on the Sign up page)");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 3, description = "TC_SIGN_04 Sign up with an email without @")
@@ -49,6 +52,7 @@ public class SignUpTests extends BaseTest {
 
         Assert.assertTrue(registerPage.isErrorDisplayed() || driver.getCurrentUrl().contains("register"),
                 "Account must NOT be created (error shown or still on the Sign up page)");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 4, description = "TC_SIGN_05 Sign up with an email that already has an account")
@@ -62,6 +66,7 @@ public class SignUpTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertFalse(registerPage.isErrorDisplayed(), "Error expected: email already taken");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 5, description = "TC_SIGN_06 Sign up with a short password (4 characters)")
@@ -75,5 +80,6 @@ public class SignUpTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertFalse(registerPage.isErrorDisplayed(), "Error expected: password too short");
+        Reporter.log("pass",true);
     }
 }

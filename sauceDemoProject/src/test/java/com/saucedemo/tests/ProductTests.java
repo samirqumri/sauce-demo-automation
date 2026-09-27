@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.CartPage;
@@ -23,6 +24,7 @@ public class ProductTests extends BaseTest {
 		Assert.assertEquals(productPage.getProductName(), "Grey jacket");
 		Assert.assertTrue(productPage.getProductPrice().contains("55.00"));
 		Assert.assertTrue(productPage.isAddToCartEnabled());
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 2)
@@ -43,6 +45,7 @@ public class ProductTests extends BaseTest {
 
 		int countAfter = cartPage.getCartCount();
 		Assert.assertEquals(countAfter, countBefore + 1);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 3)
@@ -62,5 +65,6 @@ public class ProductTests extends BaseTest {
 
 		int countAfter = cartPage.getCartCount();
 		Assert.assertEquals(countAfter, countBefore);
+		Reporter.log("pass",true);
 	}
 }
