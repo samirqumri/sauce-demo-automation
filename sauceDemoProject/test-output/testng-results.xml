@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-27T14:56:02 IDT" name="Sauce Demo Shopify Regression Suite" finished-at="2026-09-27T14:58:48 IDT" duration-ms="166528">
+    <groups>
+    </groups>
+    <test started-at="2026-09-27T14:56:02 IDT" name="Automated UI Functional Tests" finished-at="2026-09-27T14:58:48 IDT" duration-ms="166528">
+      <class name="com.saucedemo.tests.SearchTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:02 IDT" name="setUp" finished-at="2026-09-27T14:56:05 IDT" duration-ms="2912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidSortValue()[pri:1, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:05 IDT" name="invalidSortValue" finished-at="2026-09-27T14:56:12 IDT" duration-ms="7868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidSortValue -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:12 IDT" name="tearDown" finished-at="2026-09-27T14:56:13 IDT" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:13 IDT" name="setUp" finished-at="2026-09-27T14:56:14 IDT" duration-ms="1866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithNoMatch()[pri:2, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:14 IDT" name="searchWithNoMatch" finished-at="2026-09-27T14:56:24 IDT" duration-ms="9580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithNoMatch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:24 IDT" name="tearDown" finished-at="2026-09-27T14:56:24 IDT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:24 IDT" name="setUp" finished-at="2026-09-27T14:56:27 IDT" duration-ms="3063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptySearch()[pri:3, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:27 IDT" name="emptySearch" finished-at="2026-09-27T14:56:32 IDT" duration-ms="4982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptySearch -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:32 IDT" name="tearDown" finished-at="2026-09-27T14:56:32 IDT" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:32 IDT" name="setUp" finished-at="2026-09-27T14:56:34 IDT" duration-ms="1804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchIgnoresCase()[pri:4, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:34 IDT" name="searchIgnoresCase" finished-at="2026-09-27T14:56:39 IDT" duration-ms="4540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchIgnoresCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:39 IDT" name="tearDown" finished-at="2026-09-27T14:56:39 IDT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:39 IDT" name="setUp" finished-at="2026-09-27T14:56:41 IDT" duration-ms="1890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchFullProductName()[pri:5, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:41 IDT" name="searchFullProductName" finished-at="2026-09-27T14:56:45 IDT" duration-ms="4603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchFullProductName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:45 IDT" name="tearDown" finished-at="2026-09-27T14:56:45 IDT" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:45 IDT" name="setUp" finished-at="2026-09-27T14:56:47 IDT" duration-ms="1930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithScriptText()[pri:6, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:47 IDT" name="searchWithScriptText" finished-at="2026-09-27T14:56:57 IDT" duration-ms="9580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithScriptText -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:56:57 IDT" name="tearDown" finished-at="2026-09-27T14:56:57 IDT" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.SearchTests -->
+      <class name="com.saucedemo.tests.RemoveTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:56:57 IDT" name="setUp" finished-at="2026-09-27T14:56:59 IDT" duration-ms="1736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyCartHasNoCheckout()[pri:1, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:56:59 IDT" name="emptyCartHasNoCheckout" finished-at="2026-09-27T14:57:03 IDT" duration-ms="3817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyCartHasNoCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:03 IDT" name="tearDown" finished-at="2026-09-27T14:57:03 IDT" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:03 IDT" name="setUp" finished-at="2026-09-27T14:57:04 IDT" duration-ms="1683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeOnlyItem()[pri:2, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:04 IDT" name="removeOnlyItem" finished-at="2026-09-27T14:57:21 IDT" duration-ms="16574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeOnlyItem -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:21 IDT" name="tearDown" finished-at="2026-09-27T14:57:21 IDT" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:21 IDT" name="setUp" finished-at="2026-09-27T14:57:23 IDT" duration-ms="1762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeAllProductsOneByOne()[pri:3, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:23 IDT" name="removeAllProductsOneByOne" finished-at="2026-09-27T14:57:57 IDT" duration-ms="34053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeAllProductsOneByOne -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:57 IDT" name="tearDown" finished-at="2026-09-27T14:57:57 IDT" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:57:57 IDT" name="setUp" finished-at="2026-09-27T14:58:00 IDT" duration-ms="3229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeWithQuantityThree()[pri:4, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:58:00 IDT" name="removeWithQuantityThree" finished-at="2026-09-27T14:58:20 IDT" duration-ms="19665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeWithQuantityThree -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:58:20 IDT" name="tearDown" finished-at="2026-09-27T14:58:20 IDT" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:58:20 IDT" name="setUp" finished-at="2026-09-27T14:58:22 IDT" duration-ms="1991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removedProductCanBeAddedAgain()[pri:5, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:58:22 IDT" name="removedProductCanBeAddedAgain" finished-at="2026-09-27T14:58:48 IDT" duration-ms="25885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removedProductCanBeAddedAgain -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:58:48 IDT" name="tearDown" finished-at="2026-09-27T14:58:48 IDT" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.RemoveTests -->
+    </test> <!-- Automated UI Functional Tests -->
+  </suite> <!-- Sauce Demo Shopify Regression Suite -->
+</testng-results>
