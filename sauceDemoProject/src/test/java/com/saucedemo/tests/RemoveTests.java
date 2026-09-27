@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.CheckoutPage;
@@ -20,6 +21,7 @@ public class RemoveTests extends BaseTest {
 
 		String currentUrl = driver.getCurrentUrl();
 		Assert.assertFalse(currentUrl.contains("checkouts"));
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 2)
@@ -41,6 +43,7 @@ public class RemoveTests extends BaseTest {
 		checkoutpage.ToRemoveOrder();
 		Thread.sleep(2000);
 		Assert.assertEquals(checkoutpage.getOrderItemsCount(), 0);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 3)
@@ -90,6 +93,7 @@ public class RemoveTests extends BaseTest {
 		Thread.sleep(1000);
 		driver.navigate().refresh();
 		Thread.sleep(2000);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 4)
@@ -116,6 +120,7 @@ public class RemoveTests extends BaseTest {
 		checkoutpage.ToRemoveOrder();
 		Thread.sleep(2000);
 		Assert.assertEquals(checkoutpage.getOrderItemsCount(), 0);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 5)
@@ -146,5 +151,6 @@ public class RemoveTests extends BaseTest {
 		Thread.sleep(2000);
 		homePage.clickMenuLink("Check Out");
 		Thread.sleep(2000);
+		Reporter.log("pass",true);
 	}
 }

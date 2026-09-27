@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.HomePage;
@@ -16,6 +17,7 @@ public class LinksTests extends BaseTest {
 		Thread.sleep(2000);
 
 		Assert.assertTrue(driver.getPageSource().contains("facebook.com"));
+		Reporter.log("pass",true);
 	}
 
 	@Test
@@ -27,6 +29,7 @@ public class LinksTests extends BaseTest {
 		Thread.sleep(2000);
 
 		Assert.assertTrue(driver.getPageSource().contains("twitter.com"));
+		Reporter.log("pass",true);
 	}
 
 	@Test
@@ -38,6 +41,7 @@ public class LinksTests extends BaseTest {
 		Thread.sleep(2000);
 
 		Assert.assertTrue(driver.getPageSource().contains("instagram.com"));
+		Reporter.log("pass",true);
 	}
 
 	@Test
@@ -49,6 +53,7 @@ public class LinksTests extends BaseTest {
 		Thread.sleep(2000);
 
 		Assert.assertTrue(driver.getPageSource().contains("pinterest.com"));
+		Reporter.log("pass",true);
 	}
 
 	@Test
@@ -71,5 +76,6 @@ public class LinksTests extends BaseTest {
 		homePage.clickPinterestLink();
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.getPageSource().contains("pinterest.com"));
+		Reporter.log("pass",true);
 	}
 }

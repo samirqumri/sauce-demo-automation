@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.HomePage;
@@ -24,6 +25,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "My Account page should open");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 2, description = "TC_LOG_13 'Log In' link in the menu opens the login page")
@@ -33,6 +35,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(1500);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Login page should open");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 3, description = "TC_LOG_08 Password is hidden (dots)")
@@ -43,6 +46,7 @@ public class LoginTests extends BaseTest {
 
         LoginPage loginPage = new LoginPage(driver);
         Assert.assertEquals(loginPage.getPasswordInputType(), "password");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 4, description = "TC_LOG_11 'Forgot your password?' opens the reset form")
@@ -56,6 +60,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(1500);
 
         Assert.assertTrue(loginPage.isRecoveryFormVisible(), "Reset Password form should show");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 5, description = "TC_LOG_09 Log Out works")
@@ -74,6 +79,7 @@ public class LoginTests extends BaseTest {
         driver.get("https://sauce-demo.myshopify.com/account");
         Thread.sleep(2000);
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "After Log Out, My Account must ask for login again");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 6, description = "TC_LOG_02 Correct email + wrong password")
@@ -87,6 +93,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
+        Reporter.log("pass",true);
     }
 
  
@@ -104,6 +111,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(2000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 8, description = "TC_LOG_05 Correct email + empty password")
@@ -117,6 +125,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 9, description = "TC_LOG_06 Email without @")
@@ -130,6 +139,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
+        Reporter.log("pass",true);
     }
 
   
@@ -140,6 +150,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(2000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Website should ask for login");
+        Reporter.log("pass",true);
     }
     @Test(priority = 11, description = "TC_LOG_14 Email in CAPITAL letters still logs in")
     public void emailInCapitals() throws InterruptedException {
@@ -152,6 +163,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Email is not case-sensitive - should log in");
+        Reporter.log("pass",true);
     }
 
     @Test(priority = 12, description = "TC_LOG_15 Password in CAPITAL letters must NOT log in")
@@ -165,6 +177,7 @@ public class LoginTests extends BaseTest {
         Thread.sleep(3000);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Password is case-sensitive - must NOT log in");
+        Reporter.log("pass",true);
     }
 
 
@@ -188,5 +201,6 @@ public class LoginTests extends BaseTest {
 
         Assert.assertTrue(driver.getCurrentUrl().contains("login") || !driver.getCurrentUrl().contains("/account"),
                 "Must stay logged out");
+        Reporter.log("pass",true);
     }
 }
