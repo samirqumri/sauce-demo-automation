@@ -12,10 +12,6 @@ public class SearchTests extends BaseTest {
 
 	@Test(priority = 1)
 	public void invalidSortValue() throws InterruptedException {
-
-		driver.get("https://sauce-demo.myshopify.com");
-		Thread.sleep(2500);
-
 		CatalogPage catalogPage = new CatalogPage(driver);
 		Assert.assertTrue(catalogPage.getProductsCount() >= 0);
 	}
