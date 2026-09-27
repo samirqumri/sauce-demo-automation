@@ -3,8 +3,13 @@
 <suite name="Sauce Demo Shopify Regression Suite">
     <test name="Automated UI Functional Tests">
         <classes>
-            <class name="com.saucedemo.tests.SearchTests"/>
+            <class name="com.saucedemo.tests.CartTests"/>
+            <class name="com.saucedemo.tests.LinksTests"/>
+            <class name="com.saucedemo.tests.LoginTests"/>
+            <class name="com.saucedemo.tests.ProductTests"/>
             <class name="com.saucedemo.tests.RemoveTests"/>
+            <class name="com.saucedemo.tests.SearchTests"/>
+            <class name="com.saucedemo.tests.SignUpTests"/>
         </classes>
     </test>
 </suite>

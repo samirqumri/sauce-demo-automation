@@ -10,7 +10,7 @@ public class LoginPage {
 	private By emailField = By.id("customer_email");
 	private By passwordField = By.id("customer_password");
 	private By submitButton = By.cssSelector("input[value*='Sign']");
-	private By errorAlert = By.cssSelector("div.errors");
+	private By errorAlert = By.xpath("//li[text()='Incorrect email or password.']");
 	private By recoverLink = By.xpath("//a[text()='Forgot your password?']");
 	private By recoverForm = By.id("recover-email");
 

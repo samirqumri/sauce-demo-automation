@@ -1,6 +1,7 @@
 package com.saucedemo.tests;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.CatalogPage;
@@ -12,12 +13,9 @@ public class SearchTests extends BaseTest {
 
 	@Test(priority = 1)
 	public void invalidSortValue() throws InterruptedException {
-
-		driver.get("https://sauce-demo.myshopify.com");
-		Thread.sleep(2500);
-
 		CatalogPage catalogPage = new CatalogPage(driver);
 		Assert.assertTrue(catalogPage.getProductsCount() >= 0);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 2)
@@ -32,6 +30,7 @@ public class SearchTests extends BaseTest {
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertEquals(productPage.getSearchResultsCount(), 0);
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 3)
@@ -46,6 +45,7 @@ public class SearchTests extends BaseTest {
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.getBodyTextContext().contains("No search performed"));
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 4)
@@ -60,6 +60,7 @@ public class SearchTests extends BaseTest {
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertNotNull(productPage.getBodyTextContext());
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 5)
@@ -74,6 +75,7 @@ public class SearchTests extends BaseTest {
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.getBodyTextContext().contains("Striped top"));
+		Reporter.log("pass",true);
 	}
 
 	@Test(priority = 6)
@@ -88,5 +90,6 @@ public class SearchTests extends BaseTest {
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.getSearchResultsCount() == 0);
+		Reporter.log("pass",true);
 	}
 }
