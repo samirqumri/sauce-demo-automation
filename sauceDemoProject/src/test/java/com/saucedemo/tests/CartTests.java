@@ -189,4 +189,13 @@ public class CartTests extends BaseTest {
 		Assert.assertTrue(cartPage.isCartErrorPageShown());
 		Reporter.log("pass",true);
 	}
+	@Test(priority = 8)
+	public void miniCartShowsEmptyMessage() throws InterruptedException {
+		CartPage cartPage = new CartPage(driver);
+		cartPage.clickMiniCartToggle();
+		Thread.sleep(1000);
+
+		Assert.assertTrue(cartPage.getMiniCartEmptyMessage().contains("Your cart is empty."));
+	}
+	
 }

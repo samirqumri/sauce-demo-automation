@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+=======
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+  <reporter-output>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+  </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2026-09-27T20:23:03 EEST" name="Default suite" finished-at="2026-09-27T20:23:38 EEST" duration-ms="35142">
+=======
+  <suite started-at="2026-09-27T19:35:00 IDT" name="Default suite" finished-at="2026-09-27T19:35:54 IDT" duration-ms="54160">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+    <groups>
+    </groups>
+<<<<<<< HEAD
+    <test started-at="2026-09-27T20:23:03 EEST" name="Default test" finished-at="2026-09-27T20:23:38 EEST" duration-ms="35142">
+      <class name="com.saucedemo.tests.HomeTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:03 EEST" name="setUp" finished-at="2026-09-27T20:23:18 EEST" duration-ms="14425" status="PASS">
+=======
+    <test started-at="2026-09-27T19:35:00 IDT" name="Default test" finished-at="2026-09-27T19:35:54 IDT" duration-ms="54160">
+      <class name="com.saucedemo.tests.LinksTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:00 IDT" name="setUp" finished-at="2026-09-27T19:35:05 IDT" duration-ms="5006" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+<<<<<<< HEAD
+        <test-method signature="homePageShowsContent()[pri:1, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:18 EEST" name="homePageShowsContent" finished-at="2026-09-27T20:23:19 EEST" duration-ms="1637" status="PASS">
+=======
+        <test-method signature="testAllSocialMediaLinks()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:05 IDT" name="testAllSocialMediaLinks" finished-at="2026-09-27T19:35:20 IDT" duration-ms="14760" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- homePageShowsContent -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:20 EEST" name="tearDown" finished-at="2026-09-27T20:23:22 EEST" duration-ms="2901" status="PASS">
+=======
+        </test-method> <!-- testAllSocialMediaLinks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:20 IDT" name="tearDown" finished-at="2026-09-27T19:35:20 IDT" duration-ms="558" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:22 EEST" name="setUp" finished-at="2026-09-27T20:23:26 EEST" duration-ms="4080" status="PASS">
+=======
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:20 IDT" name="setUp" finished-at="2026-09-27T19:35:24 IDT" duration-ms="3485" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+<<<<<<< HEAD
+        <test-method signature="productPageShowsImageDescriptionAndRelatedProducts()[pri:2, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:26 EEST" name="productPageShowsImageDescriptionAndRelatedProducts" finished-at="2026-09-27T20:23:29 EEST" duration-ms="2241" status="PASS">
+=======
+        <test-method signature="testFacebookLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:24 IDT" name="testFacebookLink" finished-at="2026-09-27T19:35:28 IDT" duration-ms="4151" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- productPageShowsImageDescriptionAndRelatedProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:29 EEST" name="tearDown" finished-at="2026-09-27T20:23:29 EEST" duration-ms="387" status="PASS">
+=======
+        </test-method> <!-- testFacebookLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:28 IDT" name="tearDown" finished-at="2026-09-27T19:35:28 IDT" duration-ms="283" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:29 EEST" name="setUp" finished-at="2026-09-27T20:23:34 EEST" duration-ms="4649" status="PASS">
+=======
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:28 IDT" name="setUp" finished-at="2026-09-27T19:35:32 IDT" duration-ms="3615" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+<<<<<<< HEAD
+        <test-method signature="relatedProductLinkOpensItsPage()[pri:3, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:34 EEST" name="relatedProductLinkOpensItsPage" finished-at="2026-09-27T20:23:38 EEST" duration-ms="4346" status="PASS">
+=======
+        <test-method signature="testInstagramLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:32 IDT" name="testInstagramLink" finished-at="2026-09-27T19:35:36 IDT" duration-ms="4186" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- relatedProductLinkOpensItsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.HomeTests@327514f]" started-at="2026-09-27T20:23:38 EEST" name="tearDown" finished-at="2026-09-27T20:23:38 EEST" duration-ms="376" status="PASS">
+=======
+        </test-method> <!-- testInstagramLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:36 IDT" name="tearDown" finished-at="2026-09-27T19:35:37 IDT" duration-ms="419" status="PASS">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+<<<<<<< HEAD
+      </class> <!-- com.saucedemo.tests.HomeTests -->
+=======
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:37 IDT" name="setUp" finished-at="2026-09-27T19:35:41 IDT" duration-ms="4535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPinterestLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:41 IDT" name="testPinterestLink" finished-at="2026-09-27T19:35:45 IDT" duration-ms="4267" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testPinterestLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:45 IDT" name="tearDown" finished-at="2026-09-27T19:35:46 IDT" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:46 IDT" name="setUp" finished-at="2026-09-27T19:35:50 IDT" duration-ms="3824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTwitterLink()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:50 IDT" name="testTwitterLink" finished-at="2026-09-27T19:35:54 IDT" duration-ms="4178" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testTwitterLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LinksTests@1165b38]" started-at="2026-09-27T19:35:54 IDT" name="tearDown" finished-at="2026-09-27T19:35:54 IDT" duration-ms="384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.LinksTests -->
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -16,6 +16,7 @@ public class ProductPage {
 	private By addToCartButtonById = By.id("add");
 	private By gridItems = By.cssSelector(".grid__item, .product-card");
 	private By pageBody = By.tagName("body");
+	private By relatedProductsSection = By.id("related-products");
 
 	public ProductPage(WebDriver driver) {
 		this.driver = driver;
@@ -68,5 +69,16 @@ public class ProductPage {
 
 	public String getAddToCartButtonText() {
 		return driver.findElement(addToCartButton).getText().toLowerCase();
+	}
+	
+
+	public String getRelatedProductsText() {
+		return driver.findElement(relatedProductsSection).getText();
+	}
+
+	public void clickRelatedProduct(String productName) {
+		String productSlug = productName.toLowerCase().replace(" ", "-");
+		driver.findElement(relatedProductsSection)
+				.findElement(By.cssSelector("a[href*='" + productSlug + "']")).click();
 	}
 }
