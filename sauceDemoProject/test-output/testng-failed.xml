@@ -6,6 +6,7 @@
       <class name="com.saucedemo.tests.RemoveTests">
         <methods>
           <include name="tearDown"/>
+          <include name="removedProductCanBeAddedAgain"/>
           <include name="setUp"/>
           <include name="removeOnlyItem"/>
         </methods>

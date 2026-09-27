@@ -1,107 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-26T15:33:53 IDT" name="Sauce Demo Shopify Regression Suite" finished-at="2026-09-26T15:35:08 IDT" duration-ms="75539">
+  <suite started-at="2026-09-27T14:20:37 IDT" name="Sauce Demo Shopify Regression Suite" finished-at="2026-09-27T14:23:20 IDT" duration-ms="163176">
     <groups>
     </groups>
-    <test started-at="2026-09-26T15:33:53 IDT" name="Automated UI Functional Tests" finished-at="2026-09-26T15:35:08 IDT" duration-ms="75539">
+    <test started-at="2026-09-27T14:20:37 IDT" name="Automated UI Functional Tests" finished-at="2026-09-27T14:23:20 IDT" duration-ms="163176">
       <class name="com.saucedemo.tests.SearchTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:33:53 IDT" name="setUp" finished-at="2026-09-26T15:33:56 IDT" duration-ms="3168" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:37 IDT" name="setUp" finished-at="2026-09-27T14:20:42 IDT" duration-ms="4903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invalidSortValue()[pri:1, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:33:56 IDT" name="invalidSortValue" finished-at="2026-09-26T15:34:04 IDT" duration-ms="7883" status="PASS">
+        <test-method signature="invalidSortValue()[pri:1, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:42 IDT" name="invalidSortValue" finished-at="2026-09-27T14:20:50 IDT" duration-ms="7899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidSortValue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:04 IDT" name="tearDown" finished-at="2026-09-26T15:34:04 IDT" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:50 IDT" name="tearDown" finished-at="2026-09-27T14:20:50 IDT" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:04 IDT" name="setUp" finished-at="2026-09-26T15:34:05 IDT" duration-ms="1430" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:50 IDT" name="setUp" finished-at="2026-09-27T14:20:51 IDT" duration-ms="1400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchWithNoMatch()[pri:2, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:05 IDT" name="searchWithNoMatch" finished-at="2026-09-26T15:34:15 IDT" duration-ms="9658" status="PASS">
+        <test-method signature="searchWithNoMatch()[pri:2, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:20:51 IDT" name="searchWithNoMatch" finished-at="2026-09-27T14:21:01 IDT" duration-ms="10027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchWithNoMatch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:15 IDT" name="tearDown" finished-at="2026-09-26T15:34:15 IDT" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:01 IDT" name="tearDown" finished-at="2026-09-27T14:21:01 IDT" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:15 IDT" name="setUp" finished-at="2026-09-26T15:34:16 IDT" duration-ms="1414" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:01 IDT" name="setUp" finished-at="2026-09-27T14:21:03 IDT" duration-ms="1457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="emptySearch()[pri:3, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:16 IDT" name="emptySearch" finished-at="2026-09-26T15:34:21 IDT" duration-ms="4938" status="PASS">
+        <test-method signature="emptySearch()[pri:3, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:03 IDT" name="emptySearch" finished-at="2026-09-27T14:21:08 IDT" duration-ms="4940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptySearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:21 IDT" name="tearDown" finished-at="2026-09-26T15:34:21 IDT" duration-ms="100" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:08 IDT" name="tearDown" finished-at="2026-09-27T14:21:08 IDT" duration-ms="98" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:21 IDT" name="setUp" finished-at="2026-09-26T15:34:23 IDT" duration-ms="1384" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:08 IDT" name="setUp" finished-at="2026-09-27T14:21:09 IDT" duration-ms="1381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchIgnoresCase()[pri:4, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:23 IDT" name="searchIgnoresCase" finished-at="2026-09-26T15:34:27 IDT" duration-ms="4553" status="PASS">
+        <test-method signature="searchIgnoresCase()[pri:4, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:09 IDT" name="searchIgnoresCase" finished-at="2026-09-27T14:21:14 IDT" duration-ms="4546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchIgnoresCase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:27 IDT" name="tearDown" finished-at="2026-09-26T15:34:28 IDT" duration-ms="97" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:14 IDT" name="tearDown" finished-at="2026-09-27T14:21:14 IDT" duration-ms="105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:28 IDT" name="setUp" finished-at="2026-09-26T15:34:29 IDT" duration-ms="1519" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:14 IDT" name="setUp" finished-at="2026-09-27T14:21:15 IDT" duration-ms="1493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchFullProductName()[pri:5, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:29 IDT" name="searchFullProductName" finished-at="2026-09-26T15:34:34 IDT" duration-ms="4560" status="PASS">
+        <test-method signature="searchFullProductName()[pri:5, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:15 IDT" name="searchFullProductName" finished-at="2026-09-27T14:21:20 IDT" duration-ms="4602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchFullProductName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:34 IDT" name="tearDown" finished-at="2026-09-26T15:34:34 IDT" duration-ms="94" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:20 IDT" name="tearDown" finished-at="2026-09-27T14:21:20 IDT" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:34 IDT" name="setUp" finished-at="2026-09-26T15:34:35 IDT" duration-ms="1439" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:20 IDT" name="setUp" finished-at="2026-09-27T14:21:21 IDT" duration-ms="1434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchWithScriptText()[pri:6, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:35 IDT" name="searchWithScriptText" finished-at="2026-09-26T15:34:45 IDT" duration-ms="9538" status="PASS">
+        <test-method signature="searchWithScriptText()[pri:6, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:21 IDT" name="searchWithScriptText" finished-at="2026-09-27T14:21:32 IDT" duration-ms="10188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchWithScriptText -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@815b41f]" started-at="2026-09-26T15:34:45 IDT" name="tearDown" finished-at="2026-09-26T15:34:45 IDT" duration-ms="103" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@6150c3ec]" started-at="2026-09-27T14:21:32 IDT" name="tearDown" finished-at="2026-09-27T14:21:32 IDT" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.tests.SearchTests -->
       <class name="com.saucedemo.tests.RemoveTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@752325ad]" started-at="2026-09-26T15:34:45 IDT" name="setUp" finished-at="2026-09-26T15:34:46 IDT" duration-ms="1377" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:32 IDT" name="setUp" finished-at="2026-09-27T14:21:33 IDT" duration-ms="1481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_CHK_07_emptyCartHasNoCheckout()[pri:1, instance:com.saucedemo.tests.RemoveTests@752325ad]" started-at="2026-09-26T15:34:46 IDT" name="TC_CHK_07_emptyCartHasNoCheckout" finished-at="2026-09-26T15:34:50 IDT" duration-ms="3860" status="PASS">
+        <test-method signature="emptyCartHasNoCheckout()[pri:1, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:33 IDT" name="emptyCartHasNoCheckout" finished-at="2026-09-27T14:21:37 IDT" duration-ms="3864" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_CHK_07_emptyCartHasNoCheckout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@752325ad]" started-at="2026-09-26T15:34:50 IDT" name="tearDown" finished-at="2026-09-26T15:34:50 IDT" duration-ms="95" status="PASS">
+        </test-method> <!-- emptyCartHasNoCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:37 IDT" name="tearDown" finished-at="2026-09-27T14:21:37 IDT" duration-ms="96" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@752325ad]" started-at="2026-09-26T15:34:50 IDT" name="setUp" finished-at="2026-09-26T15:34:51 IDT" duration-ms="1390" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:37 IDT" name="setUp" finished-at="2026-09-27T14:21:39 IDT" duration-ms="1416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="removeOnlyItem()[pri:2, instance:com.saucedemo.tests.RemoveTests@752325ad]" started-at="2026-09-26T15:34:51 IDT" name="removeOnlyItem" finished-at="2026-09-26T15:35:08 IDT" duration-ms="16519" status="PASS">
+        <test-method signature="removeOnlyItem()[pri:2, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:39 IDT" name="removeOnlyItem" finished-at="2026-09-27T14:21:55 IDT" duration-ms="16437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeOnlyItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@752325ad]" started-at="2026-09-26T15:35:08 IDT" name="tearDown" finished-at="2026-09-26T15:35:08 IDT" duration-ms="138" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:55 IDT" name="tearDown" finished-at="2026-09-27T14:21:55 IDT" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:55 IDT" name="setUp" finished-at="2026-09-27T14:21:57 IDT" duration-ms="1510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeAllProductsOneByOne()[pri:3, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:21:57 IDT" name="removeAllProductsOneByOne" finished-at="2026-09-27T14:22:30 IDT" duration-ms="33124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeAllProductsOneByOne -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:22:30 IDT" name="tearDown" finished-at="2026-09-27T14:22:30 IDT" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:22:30 IDT" name="setUp" finished-at="2026-09-27T14:22:32 IDT" duration-ms="2428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeWithQuantityThree()[pri:4, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:22:32 IDT" name="removeWithQuantityThree" finished-at="2026-09-27T14:22:52 IDT" duration-ms="19726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeWithQuantityThree -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:22:52 IDT" name="tearDown" finished-at="2026-09-27T14:22:52 IDT" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:22:52 IDT" name="setUp" finished-at="2026-09-27T14:22:54 IDT" duration-ms="1571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removedProductCanBeAddedAgain()[pri:5, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:22:54 IDT" name="removedProductCanBeAddedAgain" finished-at="2026-09-27T14:23:20 IDT" duration-ms="25891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removedProductCanBeAddedAgain -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.RemoveTests@45c7e403]" started-at="2026-09-27T14:23:20 IDT" name="tearDown" finished-at="2026-09-27T14:23:20 IDT" duration-ms="152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
