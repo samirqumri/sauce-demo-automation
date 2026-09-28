@@ -2,9 +2,10 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class AccountPage {
-	private WebDriver driver;
+public class AccountPage extends BasePage {
 
 	private By accountDetails = By.cssSelector(".account__details, .customer-details");
 	private By orderHistory = By.cssSelector(".order-history, table.order-list");
@@ -12,22 +13,26 @@ public class AccountPage {
 	private By saveAddressButton = By.cssSelector("button[type='submit']");
 
 	public AccountPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public boolean isAccountDetailsDisplayed() {
-		return driver.findElement(accountDetails).isDisplayed();
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(accountDetails));
+		return element.isDisplayed();
 	}
 
 	public boolean hasOrderHistory() {
-		return driver.findElements(orderHistory).size() > 0;
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(orderHistory));
+		return true;
 	}
 
 	public void clickAddAddress() {
-		driver.findElement(addAddressButton).click();
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(addAddressButton));
+		element.click();
 	}
 
 	public void clickSaveAddress() {
-		driver.findElement(saveAddressButton).click();
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(saveAddressButton));
+		element.click();
 	}
 }

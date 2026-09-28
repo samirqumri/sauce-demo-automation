@@ -7,7 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CartPage {
+public class CartPage extends BasePage {
 	private WebDriver driver;
 
 	private By badgeCount = By.id("cart-target-desktop");
@@ -23,7 +23,7 @@ public class CartPage {
 			"//*[self::button or self::input][contains(text(),'Add to Cart') or contains(@value,'Add to Cart')]");
 
 	public CartPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public String getCartBadgeText() {
