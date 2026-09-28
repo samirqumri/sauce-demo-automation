@@ -1,36 +1,52 @@
 package com.saucedemo.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartPage extends BasePage {
-
-	private static final String CART_URL = "https://sauce-demo.myshopify.com/cart";
 
 	private By badgeCount = By.id("cart-target-desktop");
 	private By checkoutButton = By.id("checkout");
 	private By emptyMessage = By.cssSelector("#cart p");
 	private By removeLink = By.linkText("Remove");
-	private By quantityInput = By.cssSelector("input[name='updates[]']");
+	private By quantityInput = By.xpath("//input[@name='updates[]' and not(ancestor::*[@id='drawer'])]");
 	private By updateButton = By.id("update");
 	private By pageBody = By.tagName("body");
 	private By miniCartToggle = By.cssSelector("a.toggle-drawer.cart.desktop");
 	private By miniCartEmptyMessage = By.cssSelector("#drawer p.empty");
+	private By cartContainer = By.id("cart");
+	private By errorMessage = By.xpath("//*[contains(text(),'Something went wrong')]");
+
+	// من ProductPage
 	private By addToCartButton = By.xpath(
 			"//*[self::button or self::input][contains(text(),'Add to Cart') or contains(@value,'Add to Cart')]");
+
+	// من CheckoutPage
+	private By payNowButton = By.id("checkout-pay-button");
+
+	private String cartUrl = "https://sauce-demo.myshopify.com/cart";
 
 	public CartPage(WebDriver driver) {
 		super(driver);
 	}
 
+<<<<<<< HEAD
 	private WebElement waitForVisible(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+=======
+	public void openCart() {
+		driver.get(cartUrl);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cartContainer));
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	}
 
+<<<<<<< HEAD
 	private WebElement waitForClickable(By locator) {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
@@ -46,38 +62,55 @@ public class CartPage extends BasePage {
 		});
 	}
 
+=======
+	// من HomePage
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	public void clickMenuLink(String linkText) {
-		waitForClickable(By.linkText(linkText)).click();
+		WebElement menuLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText(linkText)));
+		menuLink.click();
 	}
 
+	// من ProductPage
 	public void clickProductLink(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-		WebElement product = waitForFirstDisplayed(By.cssSelector("a[href*='" + productSlug + "']"));
-		wait.until(ExpectedConditions.elementToBeClickable(product)).click();
+		By productLink = By.xpath("//a[contains(@href,'" + productSlug + "') and not(ancestor::*[@id='drawer'])]");
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productLink));
+		List<WebElement> matches = driver.findElements(productLink);
+
+		for (WebElement el : matches) {
+			if (el.isDisplayed()) {
+				el.click();
+				return;
+			}
+		}
 	}
 
+	// من ProductPage
 	public void clickAddToCart() {
+<<<<<<< HEAD
 		waitForClickable(addToCartButton).click();
 	}
 
 	public void addProductToCart(String productName) {
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		int expectedCount = getCartCount() + 1;
-
-		clickMenuLink("Catalog");
-		clickProductLink(productName);
-		clickAddToCart();
-
-		wait.until(ExpectedConditions.textToBePresentInElementLocated(badgeCount, String.valueOf(expectedCount)));
+		WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
+		addButton.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id='cart-target-desktop' and contains(normalize-space(.), '(" + expectedCount + ")')]")));
 	}
 
-	public void openCart() {
-		driver.get(CART_URL);
-		wait.until(ExpectedConditions.urlContains("/cart"));
-		waitForVisible(pageBody);
+	// من CheckoutPage
+	public String getOrderSummaryText() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(payNowButton));
+		return driver.findElement(pageBody).getText();
 	}
 
 	public String getCartBadgeText() {
-		return waitForVisible(badgeCount).getText().trim();
+		WebElement badge = wait.until(ExpectedConditions.visibilityOfElementLocated(badgeCount));
+		return badge.getText().trim();
 	}
 
 	public int getCartCount() {
@@ -97,47 +130,83 @@ public class CartPage extends BasePage {
 	}
 
 	public void clickCheckout() {
-		waitForClickable(checkoutButton).click();
+		WebElement checkout = wait.until(ExpectedConditions.elementToBeClickable(checkoutButton));
+		checkout.click();
 	}
 
+<<<<<<< HEAD
 	public String getCheckoutSummaryText() {
 		wait.until(ExpectedConditions.urlContains("checkout"));
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(pageBody, "Total"));
 		return driver.findElement(pageBody).getText();
+=======
+	public String getEmptyCartMessage() {
+		WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(emptyMessage));
+		return message.getText();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	}
 
 	public int getCheckoutButtonsCount() {
 		return driver.findElements(checkoutButton).size();
 	}
 
+<<<<<<< HEAD
 	public String getEmptyCartMessage() {
 		return waitForVisible(emptyMessage).getText();
 	}
 
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	public void clickRemoveItem() {
+<<<<<<< HEAD
 		waitForClickable(removeLink).click();
 	}
 
 	public void changeQuantity(int quantity) {
 		setQuantityValue(String.valueOf(quantity));
 		clickUpdateButtonAndWaitForReload();
+=======
+		WebElement remove = wait.until(ExpectedConditions.elementToBeClickable(removeLink));
+		remove.click();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	}
 
 	public void changeQuantityToZero() {
-		changeQuantity(0);
+		changeQuantityByLine(1, 0);
+	}
+
+	public void changeQuantityByLine(int lineNumber, int quantity) {
+		String script = "var done = arguments[arguments.length - 1];"
+				+ "fetch('/cart/change.js', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({line: arguments[0], quantity: arguments[1]})})"
+				+ ".then(function(){ done(); }, function(){ done(); });";
+		((JavascriptExecutor) driver).executeAsyncScript(script, lineNumber, quantity);
 	}
 
 	public String getQuantityValue() {
-		return waitForFirstDisplayed(quantityInput).getAttribute("value");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(quantityInput));
+		List<WebElement> matches = driver.findElements(quantityInput);
+		for (WebElement el : matches) {
+			if (el.isDisplayed()) {
+				return el.getAttribute("value");
+			}
+		}
+		return null;
 	}
 
 	public void setQuantityValue(String value) {
-		WebElement el = waitForFirstDisplayed(quantityInput);
-		el.clear();
-		el.sendKeys(value);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(quantityInput));
+		List<WebElement> matches = driver.findElements(quantityInput);
+		for (WebElement el : matches) {
+			if (el.isDisplayed()) {
+				el.clear();
+				el.sendKeys(value);
+				return;
+			}
+		}
 	}
 
 	public void clickUpdateButton() {
+<<<<<<< HEAD
 		waitForClickable(updateButton).click();
 	}
 
@@ -146,25 +215,33 @@ public class CartPage extends BasePage {
 		button.click();
 		wait.until(ExpectedConditions.stalenessOf(button));
 		waitForVisible(pageBody);
+=======
+		WebElement update = wait.until(ExpectedConditions.elementToBeClickable(updateButton));
+		update.click();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	}
 
 	public boolean isCartErrorPageShown() {
 		try {
-			return wait.until(ExpectedConditions.textToBePresentInElementLocated(pageBody, "Something went wrong"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+			return true;
 		} catch (TimeoutException e) {
 			return false;
 		}
 	}
 
 	public String getPageText() {
-		return waitForVisible(pageBody).getText();
+		WebElement body = wait.until(ExpectedConditions.visibilityOfElementLocated(pageBody));
+		return body.getText();
 	}
 
 	public void clickMiniCartToggle() {
-		waitForClickable(miniCartToggle).click();
+		WebElement toggle = wait.until(ExpectedConditions.elementToBeClickable(miniCartToggle));
+		toggle.click();
 	}
 
 	public String getMiniCartEmptyMessage() {
-		return waitForVisible(miniCartEmptyMessage).getText();
+		WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(miniCartEmptyMessage));
+		return message.getText();
 	}
 }

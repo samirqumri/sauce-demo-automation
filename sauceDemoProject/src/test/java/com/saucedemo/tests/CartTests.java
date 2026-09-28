@@ -12,6 +12,7 @@ import com.saucedemo.pages.ProductPage;
 public class CartTests extends BaseTest {
 
 	@Test(priority = 1)
+<<<<<<< HEAD
 
 	public void cartShowsProductAndTotal() throws InterruptedException {
 
@@ -26,9 +27,20 @@ public class CartTests extends BaseTest {
 		productPage.clickAddToCart();
 		Thread.sleep(2000);
 		driver.get("https://sauce-demo.myshopify.com/cart");
-
+=======
+	public void cartShowsProductAndTotal() {
 		CartPage cartPage = new CartPage(driver);
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 
+<<<<<<< HEAD
+		CartPage cartPage = new CartPage(driver);
+=======
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Grey jacket");
+		cartPage.clickAddToCart();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
+
+		cartPage.openCart();
 		String cartText = cartPage.getPageText();
 
 		Assert.assertTrue(cartText.contains("Grey jacket"));
@@ -41,6 +53,7 @@ public class CartTests extends BaseTest {
 
 	}
 
+<<<<<<< HEAD
 	@Test
 	public void updatingQuantityRecalculatesTotal() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
@@ -50,11 +63,28 @@ public class CartTests extends BaseTest {
 		productPage.clickProductLink("Grey jacket");
 		productPage.clickAddToCart();
 		Thread.sleep(2000);
+=======
+	@Test(priority = 2)
+	public void updatingQuantityRecalculatesTotal() {
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		CartPage cartPage = new CartPage(driver);
+<<<<<<< HEAD
+=======
+
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Grey jacket");
+		cartPage.clickAddToCart();
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		cartPage.openCart();
+<<<<<<< HEAD
 
 		// Fixed parameter to match your page method
 		cartPage.changeQuantity(3);
+=======
+		cartPage.changeQuantityByLine(1, 3);
+		driver.navigate().refresh();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 
 		Assert.assertEquals(cartPage.getQuantityValue(), "3");
 		Assert.assertTrue(cartPage.getPageText().contains("165.00"));
@@ -62,6 +92,7 @@ public class CartTests extends BaseTest {
 	}
 
 	@Test(priority = 3)
+<<<<<<< HEAD
 
 	public void cartTotalSumsMultipleProducts() throws InterruptedException {
 
@@ -89,8 +120,27 @@ public class CartTests extends BaseTest {
 		Thread.sleep(2000);
 		driver.get("https://sauce-demo.myshopify.com/cart");
 
+=======
+	public void cartTotalSumsMultipleProducts() {
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		CartPage cartPage = new CartPage(driver);
 
+<<<<<<< HEAD
+=======
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Grey jacket");
+		cartPage.clickAddToCart();
+
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Striped top");
+		cartPage.clickAddToCart();
+
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Striped top");
+		cartPage.clickAddToCart();
+
+		cartPage.openCart();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		String cartText = cartPage.getPageText();
 
 		Assert.assertTrue(cartText.contains("55.00"));
@@ -104,12 +154,20 @@ public class CartTests extends BaseTest {
 	}
 
 	@Test(priority = 4)
+<<<<<<< HEAD
 
 	public void emptyCartShowsMessage() throws InterruptedException {
 
 		driver.get("https://sauce-demo.myshopify.com/cart");
 
+=======
+	public void emptyCartShowsMessage() {
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		CartPage cartPage = new CartPage(driver);
+<<<<<<< HEAD
+=======
+		cartPage.openCart();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 
 		String message = cartPage.getEmptyCartMessage();
 
@@ -122,6 +180,7 @@ public class CartTests extends BaseTest {
 	}
 
 	@Test(priority = 5)
+<<<<<<< HEAD
 
 	public void checkoutOpensWithCartProducts() throws InterruptedException {
 
@@ -137,13 +196,28 @@ public class CartTests extends BaseTest {
 		Thread.sleep(2000);
 		driver.get("https://sauce-demo.myshopify.com/cart");
 
+=======
+	public void checkoutOpensWithCartProducts() {
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		CartPage cartPage = new CartPage(driver);
 
+<<<<<<< HEAD
+=======
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Noir jacket");
+		cartPage.clickAddToCart();
+
+		cartPage.openCart();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		cartPage.clickCheckout();
 
+<<<<<<< HEAD
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
 
 		String summaryText = checkoutPage.getOrderSummaryText();
+=======
+		String summaryText = cartPage.getOrderSummaryText();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 
 		Assert.assertTrue(summaryText.contains("Noir jacket"));
 
@@ -154,6 +228,7 @@ public class CartTests extends BaseTest {
 	}
 
 	@Test(priority = 6)
+<<<<<<< HEAD
 
 	public void negativeQuantityIsIgnored() throws InterruptedException {
 
@@ -168,17 +243,30 @@ public class CartTests extends BaseTest {
 		productPage.clickAddToCart();
 		Thread.sleep(2000);
 		driver.get("https://sauce-demo.myshopify.com/cart");
-
+=======
+	public void negativeQuantityIsIgnored() {
 		CartPage cartPage = new CartPage(driver);
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 
+<<<<<<< HEAD
+		CartPage cartPage = new CartPage(driver);
+=======
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Grey jacket");
+		cartPage.clickAddToCart();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
+
+		cartPage.openCart();
 		String quantityBeforeUpdate = cartPage.getQuantityValue();
 
 		cartPage.setQuantityValue("-1");
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		cartPage.clickUpdateButton();
 
 		String quantityAfterUpdate = cartPage.getQuantityValue();
-
 		Assert.assertEquals(quantityAfterUpdate, quantityBeforeUpdate);
 
 		Reporter.log("pass", true);
@@ -186,6 +274,7 @@ public class CartTests extends BaseTest {
 	}
 
 	@Test(priority = 7)
+<<<<<<< HEAD
 
 	public void veryLargeQuantityShowsCartError() throws InterruptedException {
 
@@ -201,10 +290,24 @@ public class CartTests extends BaseTest {
 		Thread.sleep(2000);
 		driver.get("https://sauce-demo.myshopify.com/cart");
 
+=======
+	public void veryLargeQuantityShowsCartError() {
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		CartPage cartPage = new CartPage(driver);
 
-		cartPage.setQuantityValue("999999999");
+<<<<<<< HEAD
+=======
+		cartPage.clickMenuLink("Catalog");
+		cartPage.clickProductLink("Grey jacket");
+		cartPage.clickAddToCart();
 
+		cartPage.openCart();
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
+		cartPage.setQuantityValue("999999999");
+<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		cartPage.clickUpdateButton();
 
 		Assert.assertTrue(cartPage.isCartErrorPageShown());
@@ -214,15 +317,21 @@ public class CartTests extends BaseTest {
 	}
 
 	@Test(priority = 8)
+<<<<<<< HEAD
 
 	public void miniCartShowsEmptyMessage() throws InterruptedException {
 
+=======
+	public void miniCartShowsEmptyMessage() {
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		CartPage cartPage = new CartPage(driver);
-
 		cartPage.clickMiniCartToggle();
 
 		Assert.assertTrue(cartPage.getMiniCartEmptyMessage().contains("Your cart is empty."));
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 	}
 
 }
