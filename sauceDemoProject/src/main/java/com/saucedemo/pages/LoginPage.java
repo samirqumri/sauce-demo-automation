@@ -3,7 +3,7 @@ package com.saucedemo.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 	private WebDriver driver;
 
 	// Blank placeholder blueprint hooks for the team
@@ -15,7 +15,7 @@ public class LoginPage {
 	private By recoverForm = By.id("recover-email");
 
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public void login(String email, String password) {

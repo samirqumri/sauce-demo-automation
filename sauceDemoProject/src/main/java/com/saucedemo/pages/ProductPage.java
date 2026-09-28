@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ProductPage {
+public class ProductPage extends BasePage {
 	private WebDriver driver;
 
 	private By titleText = By.xpath("(//h1)[last()]");
@@ -19,7 +19,7 @@ public class ProductPage {
 	private By relatedProductsSection = By.id("related-products");
 
 	public ProductPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public void clickProductLink(String productName) {
@@ -70,7 +70,6 @@ public class ProductPage {
 	public String getAddToCartButtonText() {
 		return driver.findElement(addToCartButton).getText().toLowerCase();
 	}
-	
 
 	public String getRelatedProductsText() {
 		return driver.findElement(relatedProductsSection).getText();
@@ -78,7 +77,7 @@ public class ProductPage {
 
 	public void clickRelatedProduct(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-		driver.findElement(relatedProductsSection)
-				.findElement(By.cssSelector("a[href*='" + productSlug + "']")).click();
+		driver.findElement(relatedProductsSection).findElement(By.cssSelector("a[href*='" + productSlug + "']"))
+				.click();
 	}
 }

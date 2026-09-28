@@ -3,7 +3,7 @@ package com.saucedemo.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
+public class HomePage extends BasePage {
 	private WebDriver driver;
 
 	private By storeName = By.cssSelector(".header__logo, .site-header__logo");
@@ -17,7 +17,7 @@ public class HomePage {
 	private By pinterestlink = By.cssSelector("a[href*='pinterest']");
 
 	public HomePage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public boolean isStoreNameDisplayed() {

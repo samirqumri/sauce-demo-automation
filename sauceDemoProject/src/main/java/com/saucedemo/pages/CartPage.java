@@ -7,7 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CartPage {
+public class CartPage extends BasePage {
 	private WebDriver driver;
 
 	private By badgeCount = By.id("cart-target-desktop");
@@ -21,7 +21,7 @@ public class CartPage {
 	private By miniCartEmptyMessage = By.cssSelector("#drawer p.empty");
 
 	public CartPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public String getCartBadgeText() {
@@ -101,7 +101,7 @@ public class CartPage {
 	public String getPageText() {
 		return driver.findElement(pageBody).getText();
 	}
-	
+
 	public void clickMiniCartToggle() {
 		driver.findElement(miniCartToggle).click();
 	}
