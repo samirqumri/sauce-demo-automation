@@ -2,6 +2,7 @@ package com.saucedemo.tests;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.HomePage;
@@ -9,29 +10,53 @@ import com.saucedemo.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
 
-	@Test(priority = 1)
-	public void validLogin() throws InterruptedException {
+	
+
+	@DataProvider(name = "LogeninData") public Object[][] signUpData() { 
+		return new Object[][] {
+			// test name               email                          password
+			{ "validLogin",            "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
+			{ "logout",                "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
+			{ "wrongPassword",         "ibrahim.newuser01@gmail.com", "Wrong123"   },   // correct email + wrong password
+			{ "bothEmpty",             "",                            ""           },   // email and password empty
+			{ "emptyPassword",         "ibrahim.newuser01@gmail.com", ""           },   // correct email + empty password
+			{ "emailWithoutAt",        "ibrahimgmail.com",            "QaTeam2026" },   // email without @
+			{ "emailInCapitals",       "IBRAHIM.NEWUSER01@GMAIL.COM", "QaTeam2026" },   // email in capital letters
+			{ "passwordInCapitals",    "ibrahim.newuser01@gmail.com", "QATEAM2026" },   // password in capital letters
+			{ "backButtonAfterLogout", "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
+		};
+
+	}	
+
+	
+
+	@Test(priority = 1, dataProvider = "loginData")
+	public void validLogin(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahim.newuser01@gmail.com", "QaTeam2026");
+		loginPage.login(email, password);
+	
 
-		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "My Account page should open");
+		Assert.assertFalse(driver.getCurrentUrl().contains("login"), "My Account page should open");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 2)
-	public void loginLinkOpensLoginPage() throws InterruptedException {
+	public void loginLinkOpensLoginPage() {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
+
+	
+		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Login page should open");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 3)
-	public void passwordIsHidden() throws InterruptedException {
+	public void passwordIsHidden() {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
@@ -41,7 +66,7 @@ public class LoginTests extends BaseTest {
 	}
 
 	@Test(priority = 4)
-	public void forgotPassword() throws InterruptedException {
+	public void forgotPassword() {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
@@ -52,112 +77,118 @@ public class LoginTests extends BaseTest {
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 5)
-	public void logout() throws InterruptedException {
+	@Test(priority = 5, dataProvider = "loginData")
+	public void logout(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahim.newuser01@gmail.com", "QaTeam2026");
+		loginPage.login(email, password);
+	
 
-		driver.get("https://sauce-demo.myshopify.com/account/logout");
+		loginPage.logout();
 
-		driver.get("https://sauce-demo.myshopify.com/account");
+		loginPage.openMyAccount();
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"),
 				"After Log Out, My Account must ask for login again");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 6)
-	public void wrongPassword() throws InterruptedException {
+	@Test(priority = 6, dataProvider = "loginData")
+	public void wrongPassword(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahim.newuser01@gmail.com", "Wrong123");
+		loginPage.login(email, password);
+		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 7)
-	public void bothEmpty() throws InterruptedException {
+	@Test(priority = 7, dataProvider = "loginData")
+	public void bothEmpty(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.clickSubmitOnly();
+		loginPage.login(email, password);
+		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 8)
-	public void emptyPassword() throws InterruptedException {
+	@Test(priority = 8, dataProvider = "loginData")
+	public void emptyPassword(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahim.newuser01@gmail.com", "");
-
+		loginPage.login(email, password);
+		
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 9)
-	public void emailWithoutAt() throws InterruptedException {
+	@Test(priority = 9, dataProvider = "loginData")
+	public void emailWithoutAt(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahimgmail.com", "QaTeam2026");
+		loginPage.login(email, password);
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 10)
-	public void accountNeedsLogin() throws InterruptedException {
-		driver.get("https://sauce-demo.myshopify.com/account");
-		Thread.sleep(2000);
+	public void accountNeedsLogin() {
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.openMyAccount();
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Website should ask for login");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 11)
-	public void emailInCapitals() throws InterruptedException {
+	@Test(priority = 11, dataProvider = "loginData")
+	public void emailInCapitals(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("IBRAHIM.NEWUSER01@GMAIL.COM", "QaTeam2026");
+		loginPage.login(email, password);
+		
 
-		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Email is not case-sensitive - should log in");
+		Assert.assertFalse(driver.getCurrentUrl().contains("login"), "Email is not case-sensitive - should log in");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 12)
-	public void passwordInCapitals() throws InterruptedException {
+	@Test(priority = 12, dataProvider = "loginData")
+	public void passwordInCapitals(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahim.newuser01@gmail.com", "QATEAM2026");
+		loginPage.login(email, password);
+		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Password is case-sensitive - must NOT log in");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 13)
-	public void backButtonAfterLogout() throws InterruptedException {
+	@Test(priority = 13, dataProvider = "loginData")
+	public void backButtonAfterLogout(String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login("ibrahim.newuser01@gmail.com", "QaTeam2026");
+		loginPage.login(email, password);
+		
 
-		driver.get("https://sauce-demo.myshopify.com/account/logout");
+		loginPage.logout();
 
 		driver.navigate().back();
 		driver.navigate().refresh();
