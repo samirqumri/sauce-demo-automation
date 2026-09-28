@@ -2,6 +2,7 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class BlogPage extends BasePage {
 
@@ -13,14 +14,15 @@ public class BlogPage extends BasePage {
 	}
 
 	public int getPostsCount() {
-		return driver.findElements(postTitles).size();
+		return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(postTitles)).size();
 	}
 
 	public void openPost(String title) {
-		driver.findElement(By.linkText(title)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText(title))).click();
 	}
 
 	public boolean isDateDisplayedForFirstPost() {
-		return driver.findElements(postDates).size() > 0;
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(postDates));
+		return true;
 	}
 }

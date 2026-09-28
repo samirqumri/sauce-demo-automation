@@ -4,10 +4,11 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class CatalogPage extends BasePage {
-	private WebDriver driver;
 
 	private By productItems = By.cssSelector(".grid__item, .product-card");
 	private By productTitles = By.cssSelector(".grid-product__title, .product-card__title");
@@ -19,18 +20,25 @@ public class CatalogPage extends BasePage {
 	}
 
 	public int getProductsCount() {
-		return driver.findElements(productItems).size();
+		try {
+			return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(productItems)).size();
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return 0;
+		}
 	}
 
 	public void sortBy(String visibleOption) {
-		new Select(driver.findElement(sortDropdown)).selectByVisibleText(visibleOption);
+		WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(sortDropdown));
+		new Select(dropdown).selectByVisibleText(visibleOption);
 	}
 
 	public List<String> getAllProductTitles() {
-		return driver.findElements(productTitles).stream().map(el -> el.getText()).toList();
+		List<WebElement> elements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(productTitles));
+		return elements.stream().map(el -> el.getText()).toList();
 	}
 
 	public boolean hasSoldOutBadges() {
-		return driver.findElements(soldOutBadge).size() > 0;
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(soldOutBadge));
+		return true;
 	}
 }

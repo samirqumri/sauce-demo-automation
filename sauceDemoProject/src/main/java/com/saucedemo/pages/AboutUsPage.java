@@ -2,9 +2,9 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AboutUsPage extends BasePage {
-	private WebDriver driver;
 
 	private By pageContent = By.cssSelector(".page-content, .rte");
 	private By pageTitle = By.tagName("h1");
@@ -14,10 +14,10 @@ public class AboutUsPage extends BasePage {
 	}
 
 	public String getDescriptionText() {
-		return driver.findElement(pageContent).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(pageContent)).getText();
 	}
 
 	public boolean isPageTitleDisplayed() {
-		return driver.findElement(pageTitle).isDisplayed();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(pageTitle)).isDisplayed();
 	}
 }

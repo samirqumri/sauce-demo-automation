@@ -5,9 +5,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProductPage extends BasePage {
-	private WebDriver driver;
 
 	private By titleText = By.xpath("(//h1)[last()]");
 	private By priceText = By.cssSelector("[class*='price']");
@@ -24,7 +24,8 @@ public class ProductPage extends BasePage {
 
 	public void clickProductLink(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-		List<WebElement> matches = driver.findElements(By.cssSelector("a[href*='" + productSlug + "']"));
+		List<WebElement> matches = wait.until(
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("a[href*='" + productSlug + "']")));
 
 		for (WebElement el : matches) {
 			if (el.isDisplayed()) {
@@ -35,49 +36,56 @@ public class ProductPage extends BasePage {
 	}
 
 	public boolean areProductElementsVisible() {
-		return driver.findElement(titleText).isDisplayed() && driver.findElement(priceText).isDisplayed()
-				&& driver.findElement(addToCartButton).isDisplayed();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(titleText)).isDisplayed()
+				&& wait.until(ExpectedConditions.visibilityOfElementLocated(priceText)).isDisplayed()
+				&& wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton)).isDisplayed();
 	}
 
 	public String getProductName() {
-		return driver.findElement(titleText).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(titleText)).getText();
 	}
 
 	public String getProductPrice() {
-		return driver.findElement(priceText).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(priceText)).getText();
 	}
 
 	public boolean isAddToCartEnabled() {
-		return driver.findElement(addToCartButton).isEnabled();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton)).isEnabled();
 	}
 
 	public void clickAddToCart() {
-		driver.findElement(addToCartButton).click();
+		wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
 	}
 
 	public boolean isProductSoldOut() {
-		return !driver.findElement(addToCartButtonById).isEnabled();
+		return !wait.until(ExpectedConditions.presenceOfElementLocated(addToCartButtonById)).isEnabled();
 	}
 
 	public int getSearchResultsCount() {
-		return driver.findElements(gridItems).size();
+		try {
+			return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(gridItems)).size();
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return 0;
+		}
 	}
 
 	public String getBodyTextContext() {
-		return driver.findElement(pageBody).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(pageBody)).getText();
 	}
 
 	public String getAddToCartButtonText() {
-		return driver.findElement(addToCartButton).getText().toLowerCase();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton)).getText().toLowerCase();
 	}
 
 	public String getRelatedProductsText() {
-		return driver.findElement(relatedProductsSection).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(relatedProductsSection)).getText();
 	}
 
 	public void clickRelatedProduct(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-		driver.findElement(relatedProductsSection).findElement(By.cssSelector("a[href*='" + productSlug + "']"))
-				.click();
+		WebElement section = wait.until(ExpectedConditions.visibilityOfElementLocated(relatedProductsSection));
+		wait.until(ExpectedConditions
+				.elementToBeClickable(section.findElement(By.cssSelector("a[href*='" + productSlug + "']")))).click();
 	}
+
 }

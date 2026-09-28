@@ -27,8 +27,6 @@ public class CartPage extends BasePage {
 		super(driver);
 	}
 
-	
-
 	private WebElement waitForVisible(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
@@ -36,7 +34,6 @@ public class CartPage extends BasePage {
 	private WebElement waitForClickable(By locator) {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
-
 
 	private WebElement waitForFirstDisplayed(By locator) {
 		return wait.until((ExpectedCondition<WebElement>) d -> {
@@ -48,8 +45,6 @@ public class CartPage extends BasePage {
 			return null;
 		});
 	}
-
-	
 
 	public void clickMenuLink(String linkText) {
 		waitForClickable(By.linkText(linkText)).click();
@@ -65,7 +60,6 @@ public class CartPage extends BasePage {
 		waitForClickable(addToCartButton).click();
 	}
 
-	
 	public void addProductToCart(String productName) {
 		int expectedCount = getCartCount() + 1;
 
@@ -82,15 +76,13 @@ public class CartPage extends BasePage {
 		waitForVisible(pageBody);
 	}
 
-
-
 	public String getCartBadgeText() {
 		return waitForVisible(badgeCount).getText().trim();
 	}
 
 	public int getCartCount() {
 		try {
-			String text = driver.findElement(badgeCount).getText();
+			String text = wait.until(ExpectedConditions.visibilityOfElementLocated(badgeCount)).getText();
 			text = text.replace("(", "").replace(")", "").trim();
 
 			if (text.isEmpty()) {
@@ -99,18 +91,15 @@ public class CartPage extends BasePage {
 
 			return Integer.parseInt(text);
 
-		} catch (org.openqa.selenium.NoSuchElementException e) {
+		} catch (org.openqa.selenium.TimeoutException e) {
 			return 0;
 		}
 	}
-
-	
 
 	public void clickCheckout() {
 		waitForClickable(checkoutButton).click();
 	}
 
-	
 	public String getCheckoutSummaryText() {
 		wait.until(ExpectedConditions.urlContains("checkout"));
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(pageBody, "Total"));
@@ -121,7 +110,6 @@ public class CartPage extends BasePage {
 		return driver.findElements(checkoutButton).size();
 	}
 
-	
 	public String getEmptyCartMessage() {
 		return waitForVisible(emptyMessage).getText();
 	}
@@ -129,8 +117,6 @@ public class CartPage extends BasePage {
 	public void clickRemoveItem() {
 		waitForClickable(removeLink).click();
 	}
-
-	
 
 	public void changeQuantity(int quantity) {
 		setQuantityValue(String.valueOf(quantity));
@@ -155,7 +141,6 @@ public class CartPage extends BasePage {
 		waitForClickable(updateButton).click();
 	}
 
-	
 	public void clickUpdateButtonAndWaitForReload() {
 		WebElement button = waitForClickable(updateButton);
 		button.click();

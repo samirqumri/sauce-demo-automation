@@ -2,11 +2,10 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage {
-	private WebDriver driver;
 
-	// Blank placeholder blueprint hooks for the team
 	private By emailField = By.id("customer_email");
 	private By passwordField = By.id("customer_password");
 	private By submitButton = By.cssSelector("input[value*='Sign']");
@@ -19,28 +18,29 @@ public class LoginPage extends BasePage {
 	}
 
 	public void login(String email, String password) {
-		driver.findElement(emailField).sendKeys(email);
-		driver.findElement(passwordField).sendKeys(password);
-		driver.findElement(submitButton).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
+		wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
 	}
 
 	public void clickSubmitOnly() {
-		driver.findElement(submitButton).click();
+		wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
 	}
 
 	public boolean isErrorMessageDisplayed() {
-		return driver.findElement(errorAlert).isDisplayed();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert)).isDisplayed();
 	}
 
 	public String getPasswordInputType() {
-		return driver.findElement(passwordField).getAttribute("type");
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).getAttribute("type");
 	}
 
 	public void clickForgotPassword() {
-		driver.findElement(recoverLink).click();
+		wait.until(ExpectedConditions.elementToBeClickable(recoverLink)).click();
 	}
 
 	public boolean isRecoveryFormVisible() {
-		return driver.findElement(recoverForm).isDisplayed();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(recoverForm)).isDisplayed();
 	}
+
 }
