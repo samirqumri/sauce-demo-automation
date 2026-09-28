@@ -2,9 +2,13 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SignUpPage {
-	private WebDriver driver;
+public class SignUpPage extends BasePage {
+<<<<<<< HEAD
+	
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 
 	private By firstNameField = By.xpath("//label[normalize-space()='First Name']/following::input[1]");
 	private By lastNameField = By.xpath("//label[normalize-space()='Last Name']/following::input[1]");
@@ -14,22 +18,44 @@ public class SignUpPage {
 	private By errorMessage = By.cssSelector(".errors, .error, .form-error");
 
 	public SignUpPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public void signUp(String firstName, String lastName, String email, String password) {
-		driver.findElement(firstNameField).sendKeys(firstName);
-		driver.findElement(lastNameField).sendKeys(lastName);
-		driver.findElement(emailField).sendKeys(email);
-		driver.findElement(passwordField).sendKeys(password);
-		driver.findElement(createButton).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField)).sendKeys(firstName);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameField)).sendKeys(lastName);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
+		wait.until(ExpectedConditions.elementToBeClickable(createButton)).click();
 	}
 
 	public boolean isErrorDisplayed() {
+<<<<<<< HEAD
 		return driver.findElements(errorMessage).size() > 0;
+=======
+		try {
+			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(errorMessage));
+			return true;
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return false;
+		}
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 	}
 
 	public String getErrorText() {
-		return driver.findElement(errorMessage).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
 	}
+
+<<<<<<< HEAD
+
+	public void waitForAccountCreated() {
+		wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("register")));
+	}
+
+
+	public void waitForErrorMessage() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+	}
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 }
