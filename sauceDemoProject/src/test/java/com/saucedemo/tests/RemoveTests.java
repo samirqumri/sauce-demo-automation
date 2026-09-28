@@ -19,7 +19,7 @@ public class RemoveTests extends BaseTest {
 
 		String currentUrl = driver.getCurrentUrl();
 		Assert.assertFalse(currentUrl.contains("checkouts"));
-		Reporter.log("pass",true);
+		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 2)
@@ -30,13 +30,13 @@ public class RemoveTests extends BaseTest {
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
 		productPage.clickAddToCart();
-
+		Thread.sleep(2000);
 		homePage.clickMenuLink("Check Out");
 
 		CheckoutPage checkoutpage = new CheckoutPage(driver);
 		checkoutpage.ToRemoveOrder();
 		Assert.assertEquals(checkoutpage.getOrderItemsCount(), 0);
-		Reporter.log("pass",true);
+		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 3)
@@ -46,22 +46,21 @@ public class RemoveTests extends BaseTest {
 		CheckoutPage checkoutpage = new CheckoutPage(driver);
 
 		homePage.clickMenuLink("Catalog");
-		
-		productPage.clickProductLink("Grey jacket");
-	
-		productPage.clickAddToCart();
-		
 
-		homePage.clickMenuLink("Catalog");
-		
-		productPage.clickProductLink("Noir jacket");
-		
+		productPage.clickProductLink("Grey jacket");
+
 		productPage.clickAddToCart();
-		
+		Thread.sleep(2000);
+		homePage.clickMenuLink("Catalog");
+
+		productPage.clickProductLink("Noir jacket");
+
+		productPage.clickAddToCart();
+		Thread.sleep(2000);
 		homePage.clickMenuLink("Catalog");
 		productPage.clickProductLink("Striped top");
 		productPage.clickAddToCart();
-
+		Thread.sleep(2000);
 		homePage.clickMenuLink("Check Out");
 
 		driver.navigate().refresh();
@@ -74,7 +73,7 @@ public class RemoveTests extends BaseTest {
 
 		checkoutpage.ToRemoveOrder();
 		driver.navigate().refresh();
-		Reporter.log("pass",true);
+		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 4)
@@ -86,15 +85,17 @@ public class RemoveTests extends BaseTest {
 		productPage.clickProductLink("Grey jacket");
 
 		productPage.clickAddToCart();
+		Thread.sleep(2000);
 		productPage.clickAddToCart();
+		Thread.sleep(2000);
 		productPage.clickAddToCart();
-
+		Thread.sleep(2000);
 		homePage.clickMenuLink("Check Out");
 
 		CheckoutPage checkoutpage = new CheckoutPage(driver);
 		checkoutpage.ToRemoveOrder();
 		Assert.assertEquals(checkoutpage.getOrderItemsCount(), 0);
-		Reporter.log("pass",true);
+		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 5)
@@ -105,7 +106,7 @@ public class RemoveTests extends BaseTest {
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
 		productPage.clickAddToCart();
-
+		Thread.sleep(2000);
 		homePage.clickMenuLink("Check Out");
 
 		CheckoutPage checkoutpage = new CheckoutPage(driver);
@@ -115,7 +116,8 @@ public class RemoveTests extends BaseTest {
 		homePage.clickMenuLink("Catalog");
 		productPage.clickProductLink("Grey jacket");
 		productPage.clickAddToCart();
+		Thread.sleep(2000);
 		homePage.clickMenuLink("Check Out");
-		Reporter.log("pass",true);
+		Reporter.log("pass", true);
 	}
 }

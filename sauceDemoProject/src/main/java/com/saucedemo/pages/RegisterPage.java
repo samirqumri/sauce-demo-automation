@@ -2,11 +2,10 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegisterPage extends BasePage {
-	private WebDriver driver;
 
-	// Each box is found by the text you SEE above it on the page
 	private By firstNameField = By.xpath("//label[normalize-space()='First Name']/following::input[1]");
 	private By lastNameField = By.xpath("//label[normalize-space()='Last Name']/following::input[1]");
 	private By emailField = By.xpath("//label[normalize-space()='Email Address']/following::input[1]");
@@ -19,18 +18,20 @@ public class RegisterPage extends BasePage {
 	}
 
 	public void signUp(String firstName, String lastName, String email, String password) {
-		driver.findElement(firstNameField).sendKeys(firstName);
-		driver.findElement(lastNameField).sendKeys(lastName);
-		driver.findElement(emailField).sendKeys(email);
-		driver.findElement(passwordField).sendKeys(password);
-		driver.findElement(createButton).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField)).sendKeys(firstName);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameField)).sendKeys(lastName);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
+		wait.until(ExpectedConditions.elementToBeClickable(createButton)).click();
 	}
 
 	public boolean isErrorDisplayed() {
-		return driver.findElements(errorMessage).size() > 0;
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(errorMessage));
+		return true;
 	}
 
 	public String getErrorText() {
-		return driver.findElement(errorMessage).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
 	}
+
 }

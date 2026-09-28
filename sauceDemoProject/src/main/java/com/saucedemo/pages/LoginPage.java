@@ -43,6 +43,7 @@ public class LoginPage extends BasePage {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(recoverForm)).isDisplayed();
 	}
 
+<<<<<<< HEAD
 	
 
 	public void logout() {
@@ -68,3 +69,6 @@ public class LoginPage extends BasePage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert));
 	}
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation

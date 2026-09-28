@@ -1,16 +1,12 @@
 
 package com.saucedemo.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckoutPage extends BasePage {
-
-	private WebDriver driver;
 
 	private By pageBody = By.tagName("body");
 
@@ -45,89 +41,85 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public String getOrderSummaryText() {
-		return driver.findElement(pageBody).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(pageBody)).getText();
 	}
 
 	public int getOrderItemsCount() {
-		return driver.findElements(orderSummaryItems).size();
+		try {
+			return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(orderSummaryItems)).size();
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return 0;
+		}
 	}
 
 	public void ToRemoveOrder() {
-		driver.findElement(removeOrder).click();
+		wait.until(ExpectedConditions.elementToBeClickable(removeOrder)).click();
 	}
 
 	public void clickPayNow() {
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
 		wait.until(ExpectedConditions.elementToBeClickable(payNowButton)).click();
 	}
 
 	public String getEmailErrorText() {
-		return driver.findElement(emailErrorMessage).getText();
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(emailErrorMessage)).getText();
 	}
 
 	public void enterFirstName(String value) {
-		driver.findElement(firstNameInput).sendKeys(value);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameInput)).sendKeys(value);
 	}
 
 	public void enterLastName(String value) {
-		driver.findElement(lastNameInput).sendKeys(value);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameInput)).sendKeys(value);
 	}
 
 	public boolean isLastNameErrorShown() {
-		return driver.findElement(pageBody).getText().contains("Enter a last name");
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(pageBody)).getText()
+				.contains("Enter a last name");
 	}
 
 	public void enterAddress(String value) {
-		driver.findElement(addressInput).sendKeys(value);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addressInput)).sendKeys(value);
 	}
 
 	public void enterCity(String value) {
-		driver.findElement(cityInput).sendKeys(value);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cityInput)).sendKeys(value);
 	}
 
 	public void enterCardNumber(String value) {
-
-		driver.switchTo().frame(driver.findElement(numberFrame));
-
-		driver.findElement(By.id("number")).sendKeys(value);
-
+		WebElement frameElement = wait.until(ExpectedConditions.presenceOfElementLocated(numberFrame));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("number"))).sendKeys(value);
 		driver.switchTo().defaultContent();
 	}
 
 	public void enterExpiryDate(String value) {
-
-		driver.switchTo().frame(driver.findElement(expiryFrame));
-
-		driver.findElement(By.id("expiry")).sendKeys(value.substring(0, 2));
-
-		driver.findElement(By.id("expiry")).sendKeys(value.substring(2));
-
+		WebElement frameElement = wait.until(ExpectedConditions.presenceOfElementLocated(expiryFrame));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
+		WebElement expiryField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("expiry")));
+		expiryField.sendKeys(value.substring(0, 2));
+		expiryField.sendKeys(value.substring(2));
 		driver.switchTo().defaultContent();
 	}
 
 	public void enterSecurityCode(String value) {
-
-		driver.switchTo().frame(driver.findElement(securityCodeFrame));
-
-		driver.findElement(By.id("verification_value")).sendKeys(value);
-
+		WebElement frameElement = wait.until(ExpectedConditions.presenceOfElementLocated(securityCodeFrame));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("verification_value"))).sendKeys(value);
 		driver.switchTo().defaultContent();
 	}
 
 	public void enterNameOnCard(String value) {
-
-		driver.switchTo().frame(driver.findElement(nameOnCardFrame));
-
-		driver.findElement(By.id("name")).clear();
-
-		driver.findElement(By.id("name")).sendKeys(value);
-
+		WebElement frameElement = wait.until(ExpectedConditions.presenceOfElementLocated(nameOnCardFrame));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
+		WebElement nameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("name")));
+		nameField.clear();
+		nameField.sendKeys(value);
 		driver.switchTo().defaultContent();
 	}
 
 	public boolean isOrderConfirmed() {
-		return driver.findElements(orderConfirmedText).size() > 0;
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(orderConfirmedText));
+		return true;
 	}
+
 }
