@@ -19,6 +19,8 @@ public class CartPage {
 	private By pageBody = By.tagName("body");
 	private By miniCartToggle = By.cssSelector("a.toggle-drawer.cart.desktop");
 	private By miniCartEmptyMessage = By.cssSelector("#drawer p.empty");
+	private By addToCartButton = By.xpath(
+			"//*[self::button or self::input][contains(text(),'Add to Cart') or contains(@value,'Add to Cart')]");
 
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
@@ -101,12 +103,32 @@ public class CartPage {
 	public String getPageText() {
 		return driver.findElement(pageBody).getText();
 	}
-	
+
 	public void clickMiniCartToggle() {
 		driver.findElement(miniCartToggle).click();
 	}
 
 	public String getMiniCartEmptyMessage() {
 		return driver.findElement(miniCartEmptyMessage).getText();
+	}
+
+	public void clickMenuLink(String linkText) {
+		driver.findElement(By.linkText(linkText)).click();
+	}
+
+	public void clickProductLink(String productName) {
+		String productSlug = productName.toLowerCase().replace(" ", "-");
+		List<WebElement> matches = driver.findElements(By.cssSelector("a[href*='" + productSlug + "']"));
+
+		for (WebElement el : matches) {
+			if (el.isDisplayed()) {
+				el.click();
+				return;
+			}
+		}
+	}
+
+	public void clickAddToCart() {
+		driver.findElement(addToCartButton).click();
 	}
 }
