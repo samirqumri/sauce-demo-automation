@@ -46,10 +46,7 @@ public class ProductPage extends BasePage {
 
 	public void clickProductLink(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		By productLink = By.cssSelector("a[href*='" + productSlug + "']");
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productLink));
@@ -70,37 +67,25 @@ public class ProductPage extends BasePage {
 	}
 
 	public String getProductName() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(titleText));
 		return title.getText();
 	}
 
 	public String getProductPrice() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement price = wait.until(ExpectedConditions.visibilityOfElementLocated(priceText));
 		return price.getText();
 	}
 
 	public boolean isAddToCartEnabled() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
 		return addButton.isEnabled();
 	}
 
 	public void clickAddToCart() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		int expectedCount = getCartCount() + 1;
 
 		WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
@@ -111,10 +96,7 @@ public class ProductPage extends BasePage {
 	}
 
 	public boolean isProductSoldOut() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButtonById));
 		return !addButton.isEnabled();
 	}
@@ -124,42 +106,28 @@ public class ProductPage extends BasePage {
 	}
 
 	public String getBodyTextContext() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement body = wait.until(ExpectedConditions.visibilityOfElementLocated(pageBody));
 		return body.getText();
 	}
 
 	public String getAddToCartButtonText() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
 		return addButton.getText().toLowerCase();
 	}
 
 	public String getRelatedProductsText() {
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		WebElement related = wait.until(ExpectedConditions.visibilityOfElementLocated(relatedProductsSection));
 		return related.getText();
 	}
 
 	public void clickRelatedProduct(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-<<<<<<< HEAD
 
 		WebElement link = wait.until(ExpectedConditions
 				.elementToBeClickable(By.cssSelector("#related-products a[href*='" + productSlug + "']")));
-=======
-		WebElement link = wait.until(ExpectedConditions.elementToBeClickable(
-				By.cssSelector("#related-products a[href*='" + productSlug + "']")));
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
 		link.click();
 	}
 }

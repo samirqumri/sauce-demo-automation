@@ -33,9 +33,6 @@ public class CheckoutPage extends BasePage {
 	private By lastNameError = By.xpath("//*[text()='Enter a last name']");
 	private By orderConfirmed = By.xpath("//h2[contains(text(),'Thank you')]");
 
-	private By removeOrder = By.xpath("//a[text()='x']");
-	private By orderSummaryItems = By.cssSelector(".order-summary__item, .product");
-
 	public CheckoutPage(WebDriver driver) {
 		super(driver);
 	}
@@ -110,10 +107,6 @@ public class CheckoutPage extends BasePage {
 		remove.click();
 	}
 
-	public int getOrderItemsCount() {
-		return driver.findElements(orderSummaryItems).size();
-	}
-
 	public String getEmailError() {
 		WebElement error = wait.until(ExpectedConditions.visibilityOfElementLocated(emailError));
 		return error.getText();
@@ -129,7 +122,7 @@ public class CheckoutPage extends BasePage {
 		return message.isDisplayed();
 	}
 
-	public void ToRemoveOrder() {
+	public void ToRemoveOrder1() {
 		WebElement remove = wait.until(ExpectedConditions.elementToBeClickable(removeOrder));
 		remove.click();
 	}
