@@ -11,59 +11,40 @@ public class CartTests extends BaseTest {
 	@Test(priority = 1)
 	public void cartShowsProductAndTotal() {
 		CartPage cartPage = new CartPage(driver);
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Grey jacket");
-		cartPage.clickAddToCart();
-
+		cartPage.addProductToCart("Grey jacket");
 		cartPage.openCart();
-		String cartText = cartPage.getPageText();
 
-		Assert.assertTrue(cartText.contains("Grey jacket"));
-		Assert.assertTrue(cartText.contains("55.00"));
-		Assert.assertEquals(cartPage.getQuantityValue(), "1");
+		Assert.assertTrue(cartPage.getCartText().contains("Grey jacket"));
+		Assert.assertTrue(cartPage.getTotal().contains("55.00"));
+		Assert.assertEquals(cartPage.getQuantity(), "1");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 2)
 	public void updatingQuantityRecalculatesTotal() {
 		CartPage cartPage = new CartPage(driver);
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Grey jacket");
-		cartPage.clickAddToCart();
-
+		cartPage.addProductToCart("Grey jacket");
 		cartPage.openCart();
-		cartPage.changeQuantityByLine(1, 3);
-		driver.navigate().refresh();
 
-		Assert.assertEquals(cartPage.getQuantityValue(), "3");
-		Assert.assertTrue(cartPage.getPageText().contains("165.00"));
+		cartPage.setQuantity("3");
+		cartPage.clickUpdate();
+
+		Assert.assertEquals(cartPage.getQuantity(), "3");
+		Assert.assertTrue(cartPage.getTotal().contains("165.00"));
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 3)
 	public void cartTotalSumsMultipleProducts() {
 		CartPage cartPage = new CartPage(driver);
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Grey jacket");
-		cartPage.clickAddToCart();
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Striped top");
-		cartPage.clickAddToCart();
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Striped top");
-		cartPage.clickAddToCart();
-
+		cartPage.addProductToCart("Grey jacket");
+		cartPage.addProductToCart("Striped top");
+		cartPage.addProductToCart("Striped top");
 		cartPage.openCart();
-		String cartText = cartPage.getPageText();
 
-		Assert.assertTrue(cartText.contains("55.00"));
-		Assert.assertTrue(cartText.contains("100.00"));
-		Assert.assertTrue(cartText.contains("155.00"));
+		Assert.assertTrue(cartPage.getCartText().contains("55.00"));
+		Assert.assertTrue(cartPage.getCartText().contains("100.00"));
+		Assert.assertTrue(cartPage.getTotal().contains("155.00"));
 		Reporter.log("pass", true);
 	}
 
@@ -72,71 +53,57 @@ public class CartTests extends BaseTest {
 		CartPage cartPage = new CartPage(driver);
 		cartPage.openCart();
 
-		String message = cartPage.getEmptyCartMessage();
-
-		Assert.assertTrue(message.contains("It appears that your cart is currently empty"));
-		Assert.assertEquals(cartPage.getCheckoutButtonsCount(), 0);
+		Assert.assertTrue(cartPage.getEmptyCartMessage().contains("It appears that your cart is currently empty"));
+		Assert.assertFalse(cartPage.isCheckoutButtonShown());
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 5)
 	public void checkoutOpensWithCartProducts() {
 		CartPage cartPage = new CartPage(driver);
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Noir jacket");
-		cartPage.clickAddToCart();
-
+		cartPage.addProductToCart("Noir jacket");
 		cartPage.openCart();
 		cartPage.clickCheckout();
 
-		String summaryText = cartPage.getOrderSummaryText();
-
-		Assert.assertTrue(summaryText.contains("Noir jacket"));
-		Assert.assertTrue(summaryText.contains("Total"));
+		String checkoutText = cartPage.getCheckoutPageText();
+		Assert.assertTrue(checkoutText.contains("Noir jacket"));
+		Assert.assertTrue(checkoutText.contains("Total"));
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 6)
 	public void negativeQuantityIsIgnored() {
 		CartPage cartPage = new CartPage(driver);
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Grey jacket");
-		cartPage.clickAddToCart();
-
+		cartPage.addProductToCart("Grey jacket");
 		cartPage.openCart();
-		String quantityBeforeUpdate = cartPage.getQuantityValue();
+		String quantityBefore = cartPage.getQuantity();
 
-		cartPage.setQuantityValue("-1");
-		cartPage.clickUpdateButton();
+		cartPage.setQuantity("-1");
+		cartPage.clickUpdate();
 
-		String quantityAfterUpdate = cartPage.getQuantityValue();
-		Assert.assertEquals(quantityAfterUpdate, quantityBeforeUpdate);
+		Assert.assertEquals(cartPage.getQuantity(), quantityBefore);
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 7)
 	public void veryLargeQuantityShowsCartError() {
 		CartPage cartPage = new CartPage(driver);
-
-		cartPage.clickMenuLink("Catalog");
-		cartPage.clickProductLink("Grey jacket");
-		cartPage.clickAddToCart();
-
+		cartPage.addProductToCart("Grey jacket");
 		cartPage.openCart();
-		cartPage.setQuantityValue("999999999");
-		cartPage.clickUpdateButton();
 
-		Assert.assertTrue(cartPage.isCartErrorPageShown());
+		cartPage.setQuantity("999999999");
+		cartPage.clickUpdate();
+
+		Assert.assertTrue(cartPage.isErrorShown());
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 8)
 	public void miniCartShowsEmptyMessage() {
 		CartPage cartPage = new CartPage(driver);
-		cartPage.clickMiniCartToggle();
+		cartPage.openMiniCart();
 
 		Assert.assertTrue(cartPage.getMiniCartEmptyMessage().contains("Your cart is empty."));
+		Reporter.log("pass", true);
 	}
 }
