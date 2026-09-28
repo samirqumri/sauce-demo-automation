@@ -19,33 +19,33 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
+       
 
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
+    
 
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+        
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+      
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
+       
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(2000);
+       
 
         Assert.assertTrue(
                 checkoutPage.getEmailErrorText()
@@ -66,27 +66,27 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
+       
 
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
+        
 
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+       
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+       
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
+        
 
         driver.findElement(By.id("email"))
                 .sendKeys("not-an-email");
@@ -95,7 +95,7 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(2000);
+        
 
         Assert.assertTrue(
                 checkoutPage.getEmailErrorText()
@@ -116,27 +116,27 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
+       
 
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
+        
 
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+      
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+      
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
+       
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
@@ -149,7 +149,7 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterCity("Test City");
 
-        Thread.sleep(1000);
+      
 
         checkoutPage.enterCardNumber("1");
 
@@ -159,11 +159,11 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterNameOnCard("Talalweh");
 
-        Thread.sleep(1000);
+       
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(5000);
+      
 
         System.out.println(
                 "URL after Pay Now: "
@@ -189,27 +189,27 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
+      
 
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
+      
 
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+       
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+       
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
+        
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
@@ -224,7 +224,7 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterCity("Test City");
 
-        Thread.sleep(1000);
+       
 
         checkoutPage.enterCardNumber("1");
 
@@ -234,11 +234,11 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterNameOnCard("@@@@@@ Talalweh");
 
-        Thread.sleep(1000);
+      
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(5000);
+     
 
         System.out.println(
                 "URL after Pay Now: "
@@ -264,27 +264,27 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
+      
 
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
+       
 
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+       
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+        
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
+       
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
@@ -295,11 +295,11 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterCity("Test City");
 
-        Thread.sleep(1000);
+      
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(2000);
+      
 
         Assert.assertTrue(
                 checkoutPage.isLastNameErrorShown()
@@ -315,27 +315,26 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
 
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
+
 
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+     
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+      
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
+      
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
@@ -348,8 +347,7 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterCity("Test City");
 
-        Thread.sleep(1000);
-
+       
         checkoutPage.enterCardNumber("1");
 
         checkoutPage.enterExpiryDate("1230");
@@ -358,11 +356,11 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterNameOnCard("@@@@@@");
 
-        Thread.sleep(1000);
+        
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(5000);
+    
 
         System.out.println(
                 "URL after Pay Now: "
@@ -388,27 +386,22 @@ public class CheckoutTests extends BaseTest {
 
         homePage.clickMenuLink("Catalog");
 
-        Thread.sleep(1000);
-
         ProductPage productPage = new ProductPage(driver);
 
         productPage.clickProductLink("Grey jacket");
 
-        Thread.sleep(1000);
-
         productPage.clickAddToCart();
 
-        Thread.sleep(2000);
+      
 
         driver.get("https://sauce-demo.myshopify.com/cart");
 
-        Thread.sleep(1500);
+      
 
         CartPage cartPage = new CartPage(driver);
 
         cartPage.clickCheckout();
 
-        Thread.sleep(3000);
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
 
@@ -423,7 +416,7 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterCity("Test City");
 
-        Thread.sleep(1000);
+      
 
         checkoutPage.enterCardNumber("1");
 
@@ -433,11 +426,11 @@ public class CheckoutTests extends BaseTest {
 
         checkoutPage.enterNameOnCard("Test User");
 
-        Thread.sleep(1000);
+     
 
         checkoutPage.clickPayNow();
 
-        Thread.sleep(5000);
+   
 
         Assert.assertTrue(
                 checkoutPage.isOrderConfirmed()

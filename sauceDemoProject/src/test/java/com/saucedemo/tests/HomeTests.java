@@ -11,7 +11,7 @@ public class HomeTests extends BaseTest {
 	@Test(priority = 1)
 	public void homePageShowsContent() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
-		Thread.sleep(1000);
+		
 
 		String pageText = homePage.getPageText();
 
@@ -29,7 +29,7 @@ public class HomeTests extends BaseTest {
 	public void productPageShowsImageDescriptionAndRelatedProducts() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickFeaturedProduct("Grey jacket");
-		Thread.sleep(1000);
+		
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.areProductElementsVisible());
@@ -44,11 +44,11 @@ public class HomeTests extends BaseTest {
 	public void relatedProductLinkOpensItsPage() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickFeaturedProduct("Grey jacket");
-		Thread.sleep(1000);
+	
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickRelatedProduct("Striped top");
-		Thread.sleep(1000);
+		
 
 		Assert.assertEquals(productPage.getProductName(), "Striped top");
 	}
