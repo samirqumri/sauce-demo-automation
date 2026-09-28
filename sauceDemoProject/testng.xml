@@ -4,13 +4,17 @@
     <test name="Automated UI Functional Tests">
         <classes>
             <class name="com.saucedemo.tests.LinksTests"/>
+<<<<<<< HEAD
             <class name="com.saucedemo.tests.CartTests"/>
             <class name="com.saucedemo.tests.CheckoutTests"/>
             <class name="com.saucedemo.tests.LoginTests"/>
+=======
+            <class name="com.saucedemo.tests.CheckoutTests"/>
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation.git
             <class name="com.saucedemo.tests.ProductTests"/>
             <class name="com.saucedemo.tests.RemoveTests"/>
             <class name="com.saucedemo.tests.SearchTests"/>
-            <class name="com.saucedemo.tests.SignUpTests"/>
+            <class name="com.saucedemo.tests.CartTests"/>
             <class name="com.saucedemo.tests.HomeTests"/>
         </classes>
     </test>
