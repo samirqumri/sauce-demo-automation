@@ -22,132 +22,126 @@
     <line>
       <![CDATA[pass]]>
     </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
   </reporter-output>
-  <suite started-at="2026-09-28T21:32:27 EEST" name="Default suite" finished-at="2026-09-28T21:35:17 EEST" duration-ms="170051">
+  <suite started-at="2026-09-28T22:05:55 EEST" name="Default suite" finished-at="2026-09-28T22:08:29 EEST" duration-ms="154049">
     <groups>
     </groups>
-    <test started-at="2026-09-28T21:32:27 EEST" name="Default test" finished-at="2026-09-28T21:35:17 EEST" duration-ms="170051">
+    <test started-at="2026-09-28T22:05:55 EEST" name="Default test" finished-at="2026-09-28T22:08:29 EEST" duration-ms="154049">
       <class name="com.saucedemo.tests.CartTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:32:27 EEST" name="setUp" finished-at="2026-09-28T21:32:35 EEST" duration-ms="7983" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:05:55 EEST" name="setUp" finished-at="2026-09-28T22:06:05 EEST" duration-ms="10436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cartShowsProductAndTotal()[pri:1, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:32:35 EEST" name="cartShowsProductAndTotal" finished-at="2026-09-28T21:32:43 EEST" duration-ms="7363" status="PASS">
+        <test-method signature="cartShowsProductAndTotal()[pri:1, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:05 EEST" name="cartShowsProductAndTotal" finished-at="2026-09-28T22:06:13 EEST" duration-ms="7644" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- cartShowsProductAndTotal -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:32:43 EEST" name="tearDown" finished-at="2026-09-28T21:32:43 EEST" duration-ms="414" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:13 EEST" name="tearDown" finished-at="2026-09-28T22:06:14 EEST" duration-ms="607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:32:43 EEST" name="setUp" finished-at="2026-09-28T21:32:50 EEST" duration-ms="6969" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:14 EEST" name="setUp" finished-at="2026-09-28T22:06:21 EEST" duration-ms="7651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="updatingQuantityRecalculatesTotal()[pri:2, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:32:50 EEST" name="updatingQuantityRecalculatesTotal" finished-at="2026-09-28T21:32:59 EEST" duration-ms="9027" status="PASS">
+        <test-method signature="updatingQuantityRecalculatesTotal()[pri:2, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:21 EEST" name="updatingQuantityRecalculatesTotal" finished-at="2026-09-28T22:06:30 EEST" duration-ms="8385" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- updatingQuantityRecalculatesTotal -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:32:59 EEST" name="tearDown" finished-at="2026-09-28T21:33:00 EEST" duration-ms="292" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:30 EEST" name="tearDown" finished-at="2026-09-28T22:06:31 EEST" duration-ms="843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:00 EEST" name="setUp" finished-at="2026-09-28T21:33:07 EEST" duration-ms="7219" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:31 EEST" name="setUp" finished-at="2026-09-28T22:06:38 EEST" duration-ms="7323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cartTotalSumsMultipleProducts()[pri:3, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:07 EEST" name="cartTotalSumsMultipleProducts" finished-at="2026-09-28T21:33:24 EEST" duration-ms="17184" status="PASS">
+        <test-method signature="cartTotalSumsMultipleProducts()[pri:3, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:38 EEST" name="cartTotalSumsMultipleProducts" finished-at="2026-09-28T22:06:54 EEST" duration-ms="16110" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- cartTotalSumsMultipleProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:24 EEST" name="tearDown" finished-at="2026-09-28T21:33:25 EEST" duration-ms="589" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:54 EEST" name="tearDown" finished-at="2026-09-28T22:06:55 EEST" duration-ms="592" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:25 EEST" name="setUp" finished-at="2026-09-28T21:33:31 EEST" duration-ms="6577" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:06:55 EEST" name="setUp" finished-at="2026-09-28T22:07:05 EEST" duration-ms="10608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="emptyCartShowsMessage()[pri:4, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:31 EEST" name="emptyCartShowsMessage" finished-at="2026-09-28T21:33:38 EEST" duration-ms="6428" status="PASS">
+        <test-method signature="emptyCartShowsMessage()[pri:4, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:05 EEST" name="emptyCartShowsMessage" finished-at="2026-09-28T22:07:12 EEST" duration-ms="6803" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- emptyCartShowsMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:38 EEST" name="tearDown" finished-at="2026-09-28T21:33:38 EEST" duration-ms="256" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:12 EEST" name="tearDown" finished-at="2026-09-28T22:07:13 EEST" duration-ms="1176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:38 EEST" name="setUp" finished-at="2026-09-28T21:33:46 EEST" duration-ms="7912" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:13 EEST" name="setUp" finished-at="2026-09-28T22:07:19 EEST" duration-ms="6175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkoutOpensWithCartProducts()[pri:5, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:33:46 EEST" name="checkoutOpensWithCartProducts" finished-at="2026-09-28T21:34:27 EEST" duration-ms="41239" status="PASS">
+        <test-method signature="checkoutOpensWithCartProducts()[pri:5, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:19 EEST" name="checkoutOpensWithCartProducts" finished-at="2026-09-28T22:07:33 EEST" duration-ms="13540" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- checkoutOpensWithCartProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:34:27 EEST" name="tearDown" finished-at="2026-09-28T21:34:28 EEST" duration-ms="1510" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:33 EEST" name="tearDown" finished-at="2026-09-28T22:07:34 EEST" duration-ms="844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:34:28 EEST" name="setUp" finished-at="2026-09-28T21:34:37 EEST" duration-ms="8432" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:34 EEST" name="setUp" finished-at="2026-09-28T22:07:47 EEST" duration-ms="13660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="negativeQuantityIsIgnored()[pri:6, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:34:37 EEST" name="negativeQuantityIsIgnored" finished-at="2026-09-28T21:34:47 EEST" duration-ms="10085" status="PASS">
+        <test-method signature="negativeQuantityIsIgnored()[pri:6, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:07:47 EEST" name="negativeQuantityIsIgnored" finished-at="2026-09-28T22:08:02 EEST" duration-ms="15029" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- negativeQuantityIsIgnored -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:34:47 EEST" name="tearDown" finished-at="2026-09-28T21:34:48 EEST" duration-ms="720" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:02 EEST" name="tearDown" finished-at="2026-09-28T22:08:03 EEST" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:34:48 EEST" name="setUp" finished-at="2026-09-28T21:34:56 EEST" duration-ms="8373" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:03 EEST" name="setUp" finished-at="2026-09-28T22:08:10 EEST" duration-ms="7046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="veryLargeQuantityShowsCartError()[pri:7, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:34:56 EEST" name="veryLargeQuantityShowsCartError" finished-at="2026-09-28T21:35:06 EEST" duration-ms="9547" status="PASS">
+        <test-method signature="veryLargeQuantityShowsCartError()[pri:7, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:10 EEST" name="veryLargeQuantityShowsCartError" finished-at="2026-09-28T22:08:19 EEST" duration-ms="8911" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
         </test-method> <!-- veryLargeQuantityShowsCartError -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:35:06 EEST" name="tearDown" finished-at="2026-09-28T21:35:08 EEST" duration-ms="1888" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:19 EEST" name="tearDown" finished-at="2026-09-28T22:08:20 EEST" duration-ms="911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:35:08 EEST" name="setUp" finished-at="2026-09-28T21:35:16 EEST" duration-ms="7984" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:20 EEST" name="setUp" finished-at="2026-09-28T22:08:28 EEST" duration-ms="8456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="miniCartShowsEmptyMessage()[pri:8, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:35:16 EEST" name="miniCartShowsEmptyMessage" finished-at="2026-09-28T21:35:16 EEST" duration-ms="853" status="PASS">
+        <test-method signature="miniCartShowsEmptyMessage()[pri:8, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:28 EEST" name="miniCartShowsEmptyMessage" finished-at="2026-09-28T22:08:28 EEST" duration-ms="326" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
           </reporter-output>
         </test-method> <!-- miniCartShowsEmptyMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T21:35:16 EEST" name="tearDown" finished-at="2026-09-28T21:35:17 EEST" duration-ms="1021" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CartTests@7586beff]" started-at="2026-09-28T22:08:28 EEST" name="tearDown" finished-at="2026-09-28T22:08:29 EEST" duration-ms="515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
