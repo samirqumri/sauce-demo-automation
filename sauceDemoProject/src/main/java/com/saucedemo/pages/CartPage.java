@@ -1,14 +1,15 @@
 package com.saucedemo.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartPage extends BasePage {
-	private WebDriver driver;
+
+	private static final String CART_URL = "https://sauce-demo.myshopify.com/cart";
 
 	private By badgeCount = By.id("cart-target-desktop");
 	private By checkoutButton = By.id("checkout");
@@ -26,8 +27,65 @@ public class CartPage extends BasePage {
 		super(driver);
 	}
 
+	
+
+	private WebElement waitForVisible(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+
+	private WebElement waitForClickable(By locator) {
+		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+
+
+	private WebElement waitForFirstDisplayed(By locator) {
+		return wait.until((ExpectedCondition<WebElement>) d -> {
+			for (WebElement el : d.findElements(locator)) {
+				if (el.isDisplayed()) {
+					return el;
+				}
+			}
+			return null;
+		});
+	}
+
+	
+
+	public void clickMenuLink(String linkText) {
+		waitForClickable(By.linkText(linkText)).click();
+	}
+
+	public void clickProductLink(String productName) {
+		String productSlug = productName.toLowerCase().replace(" ", "-");
+		WebElement product = waitForFirstDisplayed(By.cssSelector("a[href*='" + productSlug + "']"));
+		wait.until(ExpectedConditions.elementToBeClickable(product)).click();
+	}
+
+	public void clickAddToCart() {
+		waitForClickable(addToCartButton).click();
+	}
+
+	
+	public void addProductToCart(String productName) {
+		int expectedCount = getCartCount() + 1;
+
+		clickMenuLink("Catalog");
+		clickProductLink(productName);
+		clickAddToCart();
+
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(badgeCount, String.valueOf(expectedCount)));
+	}
+
+	public void openCart() {
+		driver.get(CART_URL);
+		wait.until(ExpectedConditions.urlContains("/cart"));
+		waitForVisible(pageBody);
+	}
+
+
+
 	public String getCartBadgeText() {
-		return driver.findElement(badgeCount).getText().trim();
+		return waitForVisible(badgeCount).getText().trim();
 	}
 
 	public int getCartCount() {
@@ -46,89 +104,82 @@ public class CartPage extends BasePage {
 		}
 	}
 
+	
+
 	public void clickCheckout() {
-		driver.findElement(checkoutButton).click();
+		waitForClickable(checkoutButton).click();
 	}
 
-	public String getEmptyCartMessage() {
-		return driver.findElement(emptyMessage).getText();
+	
+	public String getCheckoutSummaryText() {
+		wait.until(ExpectedConditions.urlContains("checkout"));
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(pageBody, "Total"));
+		return driver.findElement(pageBody).getText();
 	}
 
 	public int getCheckoutButtonsCount() {
 		return driver.findElements(checkoutButton).size();
 	}
 
+	
+	public String getEmptyCartMessage() {
+		return waitForVisible(emptyMessage).getText();
+	}
+
 	public void clickRemoveItem() {
-		driver.findElement(removeLink).click();
+		waitForClickable(removeLink).click();
+	}
+
+	
+
+	public void changeQuantity(int quantity) {
+		setQuantityValue(String.valueOf(quantity));
+		clickUpdateButtonAndWaitForReload();
 	}
 
 	public void changeQuantityToZero() {
-		changeQuantityByLine(1, 0);
-	}
-
-	public void changeQuantityByLine(int lineNumber, int quantity) {
-		String script = "fetch('/cart/change.js', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({line: arguments[0], quantity: arguments[1]})});";
-		((JavascriptExecutor) driver).executeScript(script, lineNumber, quantity);
+		changeQuantity(0);
 	}
 
 	public String getQuantityValue() {
-		List<WebElement> matches = driver.findElements(quantityInput);
-		for (WebElement el : matches) {
-			if (el.isDisplayed()) {
-				return el.getAttribute("value");
-			}
-		}
-		return null;
+		return waitForFirstDisplayed(quantityInput).getAttribute("value");
 	}
 
 	public void setQuantityValue(String value) {
-		List<WebElement> matches = driver.findElements(quantityInput);
-		for (WebElement el : matches) {
-			if (el.isDisplayed()) {
-				el.clear();
-				el.sendKeys(value);
-				return;
-			}
-		}
+		WebElement el = waitForFirstDisplayed(quantityInput);
+		el.clear();
+		el.sendKeys(value);
 	}
 
 	public void clickUpdateButton() {
-		driver.findElement(updateButton).click();
+		waitForClickable(updateButton).click();
+	}
+
+	
+	public void clickUpdateButtonAndWaitForReload() {
+		WebElement button = waitForClickable(updateButton);
+		button.click();
+		wait.until(ExpectedConditions.stalenessOf(button));
+		waitForVisible(pageBody);
 	}
 
 	public boolean isCartErrorPageShown() {
-		return driver.findElement(pageBody).getText().contains("Something went wrong");
-	}
-
-	public String getPageText() {
-		return driver.findElement(pageBody).getText();
-	}
-
-	public void clickMiniCartToggle() {
-		driver.findElement(miniCartToggle).click();
-	}
-
-	public String getMiniCartEmptyMessage() {
-		return driver.findElement(miniCartEmptyMessage).getText();
-	}
-
-	public void clickMenuLink(String linkText) {
-		driver.findElement(By.linkText(linkText)).click();
-	}
-
-	public void clickProductLink(String productName) {
-		String productSlug = productName.toLowerCase().replace(" ", "-");
-		List<WebElement> matches = driver.findElements(By.cssSelector("a[href*='" + productSlug + "']"));
-
-		for (WebElement el : matches) {
-			if (el.isDisplayed()) {
-				el.click();
-				return;
-			}
+		try {
+			return wait.until(ExpectedConditions.textToBePresentInElementLocated(pageBody, "Something went wrong"));
+		} catch (TimeoutException e) {
+			return false;
 		}
 	}
 
-	public void clickAddToCart() {
-		driver.findElement(addToCartButton).click();
+	public String getPageText() {
+		return waitForVisible(pageBody).getText();
+	}
+
+	public void clickMiniCartToggle() {
+		waitForClickable(miniCartToggle).click();
+	}
+
+	public String getMiniCartEmptyMessage() {
+		return waitForVisible(miniCartEmptyMessage).getText();
 	}
 }
