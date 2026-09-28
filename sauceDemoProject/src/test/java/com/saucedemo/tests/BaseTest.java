@@ -27,12 +27,4 @@ public class BaseTest {
 			driver.quit();
 		}
 	}
-
-	protected void pause(long millis) {
-		try {
-			Thread.sleep(millis);
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		}
-	}
 }
