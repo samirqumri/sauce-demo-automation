@@ -3,10 +3,10 @@ package com.saucedemo.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class RegisterPage {
+public class SignUpPage {
     private WebDriver driver;
 
-    // Each box is found by the text you SEE above it on the page
+  
     private By firstNameField = By.xpath("//label[normalize-space()='First Name']/following::input[1]");
     private By lastNameField = By.xpath("//label[normalize-space()='Last Name']/following::input[1]");
     private By emailField = By.xpath("//label[normalize-space()='Email Address']/following::input[1]");
@@ -14,7 +14,7 @@ public class RegisterPage {
     private By createButton = By.xpath("//form[.//label[normalize-space()='First Name']]//*[@type='submit']");
     private By errorMessage = By.cssSelector(".errors, .error, .form-error");
 
-    public RegisterPage(WebDriver driver) {
+    public SignUpPage(WebDriver driver) {
         this.driver = driver;
     }
 

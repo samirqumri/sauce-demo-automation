@@ -22,11 +22,9 @@ public class SearchTests extends BaseTest {
 	public void searchWithNoMatch() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Search");
-		Thread.sleep(1500);
 
 		SearchPage searchPage = new SearchPage(driver);
 		searchPage.searchFor("zzqqxx123");
-		Thread.sleep(2500);
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertEquals(productPage.getSearchResultsCount(), 0);
@@ -37,11 +35,9 @@ public class SearchTests extends BaseTest {
 	public void emptySearch() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Search");
-		Thread.sleep(1500);
 
 		SearchPage searchPage = new SearchPage(driver);
 		searchPage.searchFor("");
-		Thread.sleep(2500);
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.getBodyTextContext().contains("No search performed"));
@@ -52,11 +48,9 @@ public class SearchTests extends BaseTest {
 	public void searchIgnoresCase() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Search");
-		Thread.sleep(1500);
 
 		SearchPage searchPage = new SearchPage(driver);
 		searchPage.searchFor("JACKET");
-		Thread.sleep(2500);
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertNotNull(productPage.getBodyTextContext());
@@ -67,11 +61,9 @@ public class SearchTests extends BaseTest {
 	public void searchFullProductName() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Search");
-		Thread.sleep(1500);
 
 		SearchPage searchPage = new SearchPage(driver);
 		searchPage.searchFor("Striped top");
-		Thread.sleep(2500);
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.getBodyTextContext().contains("Striped top"));
@@ -82,11 +74,9 @@ public class SearchTests extends BaseTest {
 	public void searchWithScriptText() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Search");
-		Thread.sleep(1500);
 
 		SearchPage searchPage = new SearchPage(driver);
 		searchPage.searchFor("<script>alert(1)</script>");
-		Thread.sleep(2500);
 
 		ProductPage productPage = new ProductPage(driver);
 		Assert.assertTrue(productPage.getSearchResultsCount() == 0);

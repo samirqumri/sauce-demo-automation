@@ -15,17 +15,16 @@ public class CartTests extends BaseTest {
 	public void cartShowsProductAndTotal() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
+	
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+	
 
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
-
+		
 		CartPage cartPage = new CartPage(driver);
 		String cartText = cartPage.getPageText();
 
@@ -43,19 +42,18 @@ public class CartTests extends BaseTest {
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
+		
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+	
 
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
+		
 
 		CartPage cartPage = new CartPage(driver);
 		cartPage.changeQuantityByLine(1, 3);
-		Thread.sleep(1500);
+		
 		driver.navigate().refresh();
-		Thread.sleep(1000);
-
+		
 		Assert.assertEquals(cartPage.getQuantityValue(), "3");
 		Assert.assertTrue(cartPage.getPageText().contains("165.00"));
 		Reporter.log("pass",true);
@@ -67,28 +65,28 @@ public class CartTests extends BaseTest {
 		ProductPage productPage = new ProductPage(driver);
 
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
+		
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+		
 
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 		productPage.clickProductLink("Striped top");
-		Thread.sleep(1000);
+	
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+		
 
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 		productPage.clickProductLink("Striped top");
-		Thread.sleep(1000);
+		
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+		
 
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
+	
 
 		CartPage cartPage = new CartPage(driver);
 		String cartText = cartPage.getPageText();
@@ -102,7 +100,7 @@ public class CartTests extends BaseTest {
 	@Test(priority = 4)
 	public void emptyCartShowsMessage() throws InterruptedException {
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
+		
 
 		CartPage cartPage = new CartPage(driver);
 		String message = cartPage.getEmptyCartMessage();
@@ -116,20 +114,19 @@ public class CartTests extends BaseTest {
 	public void checkoutOpensWithCartProducts() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Noir jacket");
-		Thread.sleep(1000);
+		
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
-
+		
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
+		
 
 		CartPage cartPage = new CartPage(driver);
 		cartPage.clickCheckout();
-		Thread.sleep(3000);
+		
 
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
 		String summaryText = checkoutPage.getOrderSummaryText();
@@ -143,23 +140,22 @@ public class CartTests extends BaseTest {
 	public void negativeQuantityIsIgnored() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
+		
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+		
 
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
-
+		
 		CartPage cartPage = new CartPage(driver);
 		String quantityBeforeUpdate = cartPage.getQuantityValue();
 
 		cartPage.setQuantityValue("-1");
 		cartPage.clickUpdateButton();
-		Thread.sleep(2000);
+		
 
 		String quantityAfterUpdate = cartPage.getQuantityValue();
 		Assert.assertEquals(quantityAfterUpdate, quantityBeforeUpdate);
@@ -170,22 +166,21 @@ public class CartTests extends BaseTest {
 	public void veryLargeQuantityShowsCartError() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
+		
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
+		
 		productPage.clickAddToCart();
-		Thread.sleep(2000);
+		
 
 		driver.get("https://sauce-demo.myshopify.com/cart");
-		Thread.sleep(1500);
+		
 
 		CartPage cartPage = new CartPage(driver);
 		cartPage.setQuantityValue("999999999");
 		cartPage.clickUpdateButton();
-		Thread.sleep(2000);
-
+		
 		Assert.assertTrue(cartPage.isCartErrorPageShown());
 		Reporter.log("pass",true);
 	}
@@ -193,7 +188,7 @@ public class CartTests extends BaseTest {
 	public void miniCartShowsEmptyMessage() throws InterruptedException {
 		CartPage cartPage = new CartPage(driver);
 		cartPage.clickMiniCartToggle();
-		Thread.sleep(1000);
+	
 
 		Assert.assertTrue(cartPage.getMiniCartEmptyMessage().contains("Your cart is empty."));
 	}

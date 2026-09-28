@@ -14,11 +14,9 @@ public class ProductTests extends BaseTest {
 	public void productPageShowsNameAndPrice() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
 
 		Assert.assertTrue(productPage.areProductElementsVisible());
 		Assert.assertEquals(productPage.getProductName(), "Grey jacket");
@@ -31,17 +29,14 @@ public class ProductTests extends BaseTest {
 	public void addToCartIncreasesCartCount() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Grey jacket");
-		Thread.sleep(1000);
 
 		CartPage cartPage = new CartPage(driver);
 		int countBefore = cartPage.getCartCount();
 
 		productPage.clickAddToCart();
-		Thread.sleep(4000);
 
 		int countAfter = cartPage.getCartCount();
 		Assert.assertEquals(countAfter, countBefore + 1);
@@ -52,11 +47,9 @@ public class ProductTests extends BaseTest {
 	public void soldOutProductCannotBeAdded() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Catalog");
-		Thread.sleep(1000);
 
 		ProductPage productPage = new ProductPage(driver);
 		productPage.clickProductLink("Brown Shades");
-		Thread.sleep(1000);
 
 		CartPage cartPage = new CartPage(driver);
 		int countBefore = cartPage.getCartCount();
@@ -65,6 +58,5 @@ public class ProductTests extends BaseTest {
 
 		int countAfter = cartPage.getCartCount();
 		Assert.assertEquals(countAfter, countBefore);
-		Reporter.log("pass",true);
 	}
 }
