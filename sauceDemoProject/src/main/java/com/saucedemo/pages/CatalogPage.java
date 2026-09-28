@@ -1,11 +1,12 @@
 package com.saucedemo.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import java.util.List;
 
-public class CatalogPage {
+public class CatalogPage extends BasePage {
 	private WebDriver driver;
 
 	private By productItems = By.cssSelector(".grid__item, .product-card");
@@ -14,7 +15,7 @@ public class CatalogPage {
 	private By sortDropdown = By.cssSelector("select#SortBy, select[name='sort_by']");
 
 	public CatalogPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public int getProductsCount() {
