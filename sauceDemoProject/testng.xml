@@ -4,6 +4,8 @@
     <test name="Automated UI Functional Tests">
         <classes>
             <class name="com.saucedemo.tests.LinksTests"/>
+            <class name="com.saucedemo.tests.CartTests"/>
+            <class name="com.saucedemo.tests.CheckoutTests"/>
             <class name="com.saucedemo.tests.LoginTests"/>
             <class name="com.saucedemo.tests.ProductTests"/>
             <class name="com.saucedemo.tests.RemoveTests"/>

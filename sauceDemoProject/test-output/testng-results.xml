@@ -1,284 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[pass]]>
     </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
-    <line>
-      <![CDATA[pass]]>
-    </line>
   </reporter-output>
-  <suite started-at="2026-09-29T00:35:22 EEST" name="Default suite" finished-at="2026-09-29T00:37:59 EEST" duration-ms="156882">
+  <suite started-at="2026-09-29T02:51:26 IDT" name="Default suite" finished-at="2026-09-29T02:51:29 IDT" duration-ms="3256">
     <groups>
     </groups>
-    <test started-at="2026-09-29T00:35:22 EEST" name="Default test" finished-at="2026-09-29T00:37:59 EEST" duration-ms="156882">
-      <class name="com.saucedemo.tests.CheckoutTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:35:22 EEST" name="setUp" finished-at="2026-09-29T00:35:28 EEST" duration-ms="5511" status="PASS">
+    <test started-at="2026-09-29T02:51:26 IDT" name="Default test" finished-at="2026-09-29T02:51:29 IDT" duration-ms="3256">
+      <class name="com.saucedemo.tests.SearchTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SearchTests@514646ef]" started-at="2026-09-29T02:51:26 IDT" name="setUp" finished-at="2026-09-29T02:51:28 IDT" duration-ms="2065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkoutWithAllFieldsEmptyShowsErrors()[pri:1, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:35:28 EEST" name="checkoutWithAllFieldsEmptyShowsErrors" finished-at="2026-09-29T00:35:37 EEST" duration-ms="9523" status="PASS">
+        <test-method signature="searchIgnoresCase()[pri:4, instance:com.saucedemo.tests.SearchTests@514646ef]" started-at="2026-09-29T02:51:28 IDT" name="searchIgnoresCase" finished-at="2026-09-29T02:51:29 IDT" duration-ms="1057" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[pass]]>
             </line>
           </reporter-output>
-        </test-method> <!-- checkoutWithAllFieldsEmptyShowsErrors -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:35:37 EEST" name="tearDown" finished-at="2026-09-29T00:35:38 EEST" duration-ms="498" status="PASS">
+        </test-method> <!-- searchIgnoresCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SearchTests@514646ef]" started-at="2026-09-29T02:51:29 IDT" name="tearDown" finished-at="2026-09-29T02:51:29 IDT" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:35:38 EEST" name="setUp" finished-at="2026-09-29T00:35:43 EEST" duration-ms="5380" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkoutWithInvalidEmailShowsError()[pri:2, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:35:43 EEST" name="checkoutWithInvalidEmailShowsError" finished-at="2026-09-29T00:35:59 EEST" duration-ms="16016" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- checkoutWithInvalidEmailShowsError -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:35:59 EEST" name="tearDown" finished-at="2026-09-29T00:36:00 EEST" duration-ms="812" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:00 EEST" name="setUp" finished-at="2026-09-29T00:36:04 EEST" duration-ms="4092" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="firstNameEmptyIsAccepted(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:04 EEST" name="firstNameEmptyIsAccepted" data-provider="paymentData" finished-at="2026-09-29T00:36:22 EEST" duration-ms="18114" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test.user@example.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test Street]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Test City]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1230]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- firstNameEmptyIsAccepted -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:22 EEST" name="tearDown" finished-at="2026-09-29T00:36:23 EEST" duration-ms="593" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:23 EEST" name="setUp" finished-at="2026-09-29T00:36:28 EEST" duration-ms="5223" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="firstNameWithSymbolsIsAccepted(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:28 EEST" name="firstNameWithSymbolsIsAccepted" data-provider="paymentData" finished-at="2026-09-29T00:36:47 EEST" duration-ms="19043" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test.user@example.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test Street]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Test City]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1230]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- firstNameWithSymbolsIsAccepted -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:47 EEST" name="tearDown" finished-at="2026-09-29T00:36:47 EEST" duration-ms="576" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:47 EEST" name="setUp" finished-at="2026-09-29T00:36:52 EEST" duration-ms="4161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="lastNameEmptyShowsError(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:36:52 EEST" name="lastNameEmptyShowsError" data-provider="addressData" finished-at="2026-09-29T00:37:06 EEST" duration-ms="14319" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test.user@example.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test Street]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Test City]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- lastNameEmptyShowsError -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:06 EEST" name="tearDown" finished-at="2026-09-29T00:37:07 EEST" duration-ms="618" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:07 EEST" name="setUp" finished-at="2026-09-29T00:37:12 EEST" duration-ms="5525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="lastNameWithSymbolsIsAccepted(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:12 EEST" name="lastNameWithSymbolsIsAccepted" data-provider="paymentData" finished-at="2026-09-29T00:37:30 EEST" duration-ms="18288" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test.user@example.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test Street]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Test City]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1230]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- lastNameWithSymbolsIsAccepted -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:30 EEST" name="tearDown" finished-at="2026-09-29T00:37:31 EEST" duration-ms="450" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:31 EEST" name="setUp" finished-at="2026-09-29T00:37:36 EEST" duration-ms="5413" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkoutHappyPathWithValidTestData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:36 EEST" name="checkoutHappyPathWithValidTestData" data-provider="paymentData" finished-at="2026-09-29T00:37:57 EEST" duration-ms="20468" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test.user@example.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test Street]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Test City]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1230]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- checkoutHappyPathWithValidTestData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.CheckoutTests@233795b6]" started-at="2026-09-29T00:37:57 EEST" name="tearDown" finished-at="2026-09-29T00:37:59 EEST" duration-ms="2117" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.saucedemo.tests.CheckoutTests -->
+      </class> <!-- com.saucedemo.tests.SearchTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

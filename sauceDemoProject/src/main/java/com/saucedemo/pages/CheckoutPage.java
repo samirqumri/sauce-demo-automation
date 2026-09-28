@@ -15,6 +15,8 @@ public class CheckoutPage extends BasePage {
 	private By cartHasOneItem = By.xpath("//span[text()='(1)']");
 	private By checkoutButton = By.id("checkout");
 
+	private By removeOrder = By.xpath("//a[text()='x']");
+	private By orderSummaryItems = By.cssSelector(".order-summary__item, .product");
 	private By emailInput = By.id("email");
 	private By firstNameInput = By.name("firstName");
 	private By lastNameInput = By.name("lastName");
@@ -39,8 +41,8 @@ public class CheckoutPage extends BasePage {
 		WebElement catalog = wait.until(ExpectedConditions.elementToBeClickable(catalogLink));
 		catalog.click();
 
-		WebElement product = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//h3[text()='" + productName + "']")));
+		WebElement product = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='" + productName + "']")));
 		product.click();
 
 		WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
@@ -114,4 +116,18 @@ public class CheckoutPage extends BasePage {
 		WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(orderConfirmed));
 		return message.isDisplayed();
 	}
+
+	public void ToRemoveOrder() {
+		WebElement remove = wait.until(ExpectedConditions.elementToBeClickable(removeOrder));
+		remove.click();
+	}
+
+	public int getOrderItemsCount() {
+		try {
+			return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(orderSummaryItems)).size();
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return 0;
+		}
+	}
+
 }
