@@ -1,57 +1,325 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
   </reporter-output>
-  <suite started-at="2026-09-29T19:41:35 IDT" name="Default suite" finished-at="2026-09-29T19:41:35 IDT" duration-ms="58">
+  <suite started-at="2026-09-29T20:01:10 IDT" name="Default suite" finished-at="2026-09-29T20:02:25 IDT" duration-ms="75689">
     <groups>
     </groups>
-    <test started-at="2026-09-29T19:41:35 IDT" name="Default test" finished-at="2026-09-29T19:41:35 IDT" duration-ms="58">
-      <class name="com.saucedemo.tests.SignUpTests">
-        <test-method signature="createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.saucedemo.tests.SignUpTests@15de0b3c]" started-at="2026-09-29T19:41:35 IDT" name="createAccount" data-provider="signUpData" finished-at="2026-09-29T19:41:35 IDT" duration-ms="15" status="FAIL">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
-            <message>
-              <![CDATA[
-[public void com.saucedemo.tests.SignUpTests.createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: createAccount([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3])
-Arguments: [(java.lang.String) Ali,(java.lang.String) Test,(java.lang.String) createAccount,(java.lang.String) ibrahim.newuser04@gmail.com,(java.lang.String) QaTeam2026]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-[public void com.saucedemo.tests.SignUpTests.createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: createAccount([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3])
-Arguments: [(java.lang.String) Ali,(java.lang.String) Test,(java.lang.String) createAccount,(java.lang.String) ibrahim.newuser04@gmail.com,(java.lang.String) QaTeam2026]
-at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
-at org.testng.internal.Parameters.injectParameters(Parameters.java:915)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+    <test started-at="2026-09-29T20:01:10 IDT" name="Default test" finished-at="2026-09-29T20:02:25 IDT" duration-ms="75689">
+      <class name="com.saucedemo.tests.LoginTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:10 IDT" name="setUp" finished-at="2026-09-29T20:01:14 IDT" duration-ms="4227" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAccount -->
-      </class> <!-- com.saucedemo.tests.SignUpTests -->
+        </test-method> <!-- setUp -->
+        <test-method signature="validLogin(java.lang.String,java.lang.String)[pri:1, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:14 IDT" name="validLogin" data-provider="loginTestData" finished-at="2026-09-29T20:01:18 IDT" duration-ms="4347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ibrahim.newuser001@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:18 IDT" name="tearDown" finished-at="2026-09-29T20:01:19 IDT" duration-ms="338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:19 IDT" name="setUp" finished-at="2026-09-29T20:01:22 IDT" duration-ms="3580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginLinkOpensLoginPage()[pri:2, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:22 IDT" name="loginLinkOpensLoginPage" finished-at="2026-09-29T20:01:23 IDT" duration-ms="1057" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginLinkOpensLoginPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:23 IDT" name="tearDown" finished-at="2026-09-29T20:01:23 IDT" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:23 IDT" name="setUp" finished-at="2026-09-29T20:01:28 IDT" duration-ms="4209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="passwordIsHidden()[pri:3, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:28 IDT" name="passwordIsHidden" finished-at="2026-09-29T20:01:29 IDT" duration-ms="1191" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- passwordIsHidden -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:29 IDT" name="tearDown" finished-at="2026-09-29T20:01:29 IDT" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:29 IDT" name="setUp" finished-at="2026-09-29T20:01:33 IDT" duration-ms="3827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="forgotPassword()[pri:4, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:33 IDT" name="forgotPassword" finished-at="2026-09-29T20:01:34 IDT" duration-ms="1109" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- forgotPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:34 IDT" name="tearDown" finished-at="2026-09-29T20:01:34 IDT" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:34 IDT" name="setUp" finished-at="2026-09-29T20:01:38 IDT" duration-ms="3392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="wrongPassword(java.lang.String,java.lang.String)[pri:6, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:38 IDT" name="wrongPassword" data-provider="loginTestData" finished-at="2026-09-29T20:01:39 IDT" duration-ms="1268" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ibrahim.newuser01@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Wrong123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- wrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:39 IDT" name="tearDown" finished-at="2026-09-29T20:01:39 IDT" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:39 IDT" name="setUp" finished-at="2026-09-29T20:01:43 IDT" duration-ms="3627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bothEmpty(java.lang.String,java.lang.String)[pri:7, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:43 IDT" name="bothEmpty" data-provider="loginTestData" finished-at="2026-09-29T20:01:44 IDT" duration-ms="1149" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bothEmpty -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:44 IDT" name="tearDown" finished-at="2026-09-29T20:01:44 IDT" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:44 IDT" name="setUp" finished-at="2026-09-29T20:01:48 IDT" duration-ms="3673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyPassword(java.lang.String,java.lang.String)[pri:8, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:48 IDT" name="emptyPassword" data-provider="loginTestData" finished-at="2026-09-29T20:01:49 IDT" duration-ms="1204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ibrahim.newuser01@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:49 IDT" name="tearDown" finished-at="2026-09-29T20:01:49 IDT" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:49 IDT" name="setUp" finished-at="2026-09-29T20:01:53 IDT" duration-ms="4100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emailWithoutAt(java.lang.String,java.lang.String)[pri:9, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:53 IDT" name="emailWithoutAt" data-provider="loginTestData" finished-at="2026-09-29T20:01:55 IDT" duration-ms="1313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ibrahimgmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emailWithoutAt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:55 IDT" name="tearDown" finished-at="2026-09-29T20:01:55 IDT" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:55 IDT" name="setUp" finished-at="2026-09-29T20:01:59 IDT" duration-ms="3654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="accountNeedsLogin()[pri:10, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:59 IDT" name="accountNeedsLogin" finished-at="2026-09-29T20:02:00 IDT" duration-ms="1178" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- accountNeedsLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:00 IDT" name="tearDown" finished-at="2026-09-29T20:02:00 IDT" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:00 IDT" name="setUp" finished-at="2026-09-29T20:02:03 IDT" duration-ms="3496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emailInCapitals(java.lang.String,java.lang.String)[pri:11, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:03 IDT" name="emailInCapitals" data-provider="loginTestData" finished-at="2026-09-29T20:02:08 IDT" duration-ms="4641" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IBRAHIM.NEWUSER01@GMAIL.COM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emailInCapitals -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:08 IDT" name="tearDown" finished-at="2026-09-29T20:02:08 IDT" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:08 IDT" name="setUp" finished-at="2026-09-29T20:02:12 IDT" duration-ms="3896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="passwordInCapitals(java.lang.String,java.lang.String)[pri:12, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:12 IDT" name="passwordInCapitals" data-provider="loginTestData" finished-at="2026-09-29T20:02:14 IDT" duration-ms="1393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ibrahim.newuser01@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[QATEAM2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- passwordInCapitals -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:14 IDT" name="tearDown" finished-at="2026-09-29T20:02:14 IDT" duration-ms="228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:14 IDT" name="setUp" finished-at="2026-09-29T20:02:19 IDT" duration-ms="5366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="backButtonAfterLogout(java.lang.String,java.lang.String)[pri:13, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:19 IDT" name="backButtonAfterLogout" data-provider="loginTestData" finished-at="2026-09-29T20:02:25 IDT" duration-ms="5871" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ibrahim.newuser01@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- backButtonAfterLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:02:25 IDT" name="tearDown" finished-at="2026-09-29T20:02:25 IDT" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

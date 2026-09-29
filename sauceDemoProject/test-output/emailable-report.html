@@ -9,38 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">58</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">12</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">75,689</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.saucedemo.tests.SignUpTests</td><td><a href="#m0">createAccount</a></td><td rowspan="1">1790700095619</td><td rowspan="1">15</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="12">com.saucedemo.tests.LoginTests</td><td><a href="#m0">accountNeedsLogin</a></td><td rowspan="1">1790701319028</td><td rowspan="1">1178</td></tr><tr class="passedeven"><td><a href="#m1">backButtonAfterLogout</a></td><td rowspan="1">1790701339651</td><td rowspan="1">5871</td></tr><tr class="passedeven"><td><a href="#m2">bothEmpty</a></td><td rowspan="1">1790701303259</td><td rowspan="1">1149</td></tr><tr class="passedeven"><td><a href="#m3">emailInCapitals</a></td><td rowspan="1">1790701323895</td><td rowspan="1">4641</td></tr><tr class="passedeven"><td><a href="#m4">emailWithoutAt</a></td><td rowspan="1">1790701313842</td><td rowspan="1">1313</td></tr><tr class="passedeven"><td><a href="#m5">emptyPassword</a></td><td rowspan="1">1790701308302</td><td rowspan="1">1204</td></tr><tr class="passedeven"><td><a href="#m6">forgotPassword</a></td><td rowspan="1">1790701293368</td><td rowspan="1">1109</td></tr><tr class="passedeven"><td><a href="#m7">loginLinkOpensLoginPage</a></td><td rowspan="1">1790701282638</td><td rowspan="1">1057</td></tr><tr class="passedeven"><td><a href="#m8">passwordInCapitals</a></td><td rowspan="1">1790701332661</td><td rowspan="1">1393</td></tr><tr class="passedeven"><td><a href="#m9">passwordIsHidden</a></td><td rowspan="1">1790701288120</td><td rowspan="1">1191</td></tr><tr class="passedeven"><td><a href="#m10">validLogin</a></td><td rowspan="1">1790701274360</td><td rowspan="1">4347</td></tr><tr class="passedeven"><td><a href="#m11">wrongPassword</a></td><td rowspan="1">1790701298097</td><td rowspan="1">1268</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.saucedemo.tests.SignUpTests#createAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
-[public void com.saucedemo.tests.SignUpTests.createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: createAccount([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3])
-Arguments: [(java.lang.String) Ali,(java.lang.String) Test,(java.lang.String) createAccount,(java.lang.String) ibrahim.newuser04@gmail.com,(java.lang.String) QaTeam2026]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:915)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.saucedemo.tests.LoginTests#accountNeedsLogin</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.saucedemo.tests.LoginTests#backButtonAfterLogout</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ibrahim.newuser01@gmail.com</td><td>QaTeam2026</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.saucedemo.tests.LoginTests#bothEmpty</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td></td><td></td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.saucedemo.tests.LoginTests#emailInCapitals</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>IBRAHIM.NEWUSER01@GMAIL.COM</td><td>QaTeam2026</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.saucedemo.tests.LoginTests#emailWithoutAt</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ibrahimgmail.com</td><td>QaTeam2026</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.saucedemo.tests.LoginTests#emptyPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ibrahim.newuser01@gmail.com</td><td></td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.saucedemo.tests.LoginTests#forgotPassword</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.saucedemo.tests.LoginTests#loginLinkOpensLoginPage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.saucedemo.tests.LoginTests#passwordInCapitals</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ibrahim.newuser01@gmail.com</td><td>QATEAM2026</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.saucedemo.tests.LoginTests#passwordIsHidden</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.saucedemo.tests.LoginTests#validLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ibrahim.newuser001@gmail.com</td><td>QaTeam2026</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.saucedemo.tests.LoginTests#wrongPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ibrahim.newuser01@gmail.com</td><td>Wrong123</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
