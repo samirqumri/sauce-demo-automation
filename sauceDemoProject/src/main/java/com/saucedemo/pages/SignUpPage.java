@@ -1,6 +1,7 @@
 package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -27,9 +28,9 @@ public class SignUpPage extends BasePage {
 
 	public boolean isErrorDisplayed() {
 		try {
-			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(errorMessage));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
 			return true;
-		} catch (org.openqa.selenium.TimeoutException e) {
+		} catch (TimeoutException e) {
 			return false;
 		}
 	}

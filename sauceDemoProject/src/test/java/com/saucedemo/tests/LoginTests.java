@@ -11,6 +11,7 @@ import com.saucedemo.pages.HomePage;
 import com.saucedemo.pages.LoginPage;
  
 public class LoginTests extends BaseTest {
+<<<<<<< HEAD
  
 	@DataProvider(name = "loginTestData")
 	public Object[][] getLoginData(Method method) {
@@ -30,9 +31,79 @@ public class LoginTests extends BaseTest {
 			return new Object[][] { { "IBRAHIM.NEWUSER01@GMAIL.COM", "QaTeam2026" } };
 		} else if (testName.equals("passwordInCapitals")) {
 			return new Object[][] { { "ibrahim.newuser01@gmail.com", "QATEAM2026" } };
+=======
+
+	@DataProvider(name = "loginData")
+<<<<<<< HEAD
+	public Object[][] loginData(Method method) {
+		Object[][] allData = new Object[][] {
+			// test name               email                          password
+			{ "validLogin",            "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
+			{ "logout",                "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
+			{ "wrongPassword",         "ibrahim.newuser01@gmail.com", "Wrong123"   },   // correct email + wrong password
+			{ "bothEmpty",             "",                            ""           },   // email and password empty
+			{ "emptyPassword",         "ibrahim.newuser01@gmail.com", ""           },   // correct email + empty password
+			{ "emailWithoutAt",        "ibrahimgmail.com",            "QaTeam2026" },   // email without @
+			{ "emailInCapitals",       "IBRAHIM.NEWUSER01@GMAIL.COM", "QaTeam2026" },   // email in capital letters
+			{ "passwordInCapitals",    "ibrahim.newuser01@gmail.com", "QATEAM2026" },   // password in capital letters
+			{ "backButtonAfterLogout", "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
+=======
+
+	public Object[][] loginData(Method method) {
+
+		Object[][] allData = new Object[][] {
+
+				// test name email password
+
+				{ "validLogin", "ibrahim.newuser001@gmail.com", "QaTeam2026" },
+
+				{ "logout", "ibrahim.newuser01@gmail.com", "QaTeam2026" },
+
+				{ "wrongPassword", "ibrahim.newuser01@gmail.com", "Wrong123" },
+
+				{ "bothEmpty", "", "" },
+
+				{ "emptyPassword", "ibrahim.newuser01@gmail.com", "" },
+
+				{ "emailWithoutAt", "ibrahimgmail.com", "QaTeam2026" },
+
+				{ "emailInCapitals", "IBRAHIM.NEWUSER01@GMAIL.COM", "QaTeam2026" },
+
+				{ "passwordInCapitals", "ibrahim.newuser01@gmail.com", "QATEAM2026" },
+
+				{ "backButtonAfterLogout", "ibrahim.newuser01@gmail.com", "QaTeam2026" },
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+		};
+
+<<<<<<< HEAD
+		// return only the row that has the same name as the test method
+		for (Object[] row : allData) {
+			if (row[0].equals(method.getName())) {
+				return new Object[][] { { row[1], row[2] } };
+			}
 		}
+		return new Object[0][0];
+=======
+		for (Object[] row : allData) {
+
+			if (row[0].equals(method.getName())) {
+
+				return new Object[][] { { row[1], row[2] } };
+
+			}
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+		}
+<<<<<<< HEAD
  
 		return new Object[][] { { "ibrahim.newuser01@gmail.com", "QaTeam2026" } };
+=======
+
+		return new Object[0][0];
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 	}
  
 	@Test(priority = 1, dataProvider = "loginTestData")
@@ -42,7 +113,15 @@ public class LoginTests extends BaseTest {
  
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
+<<<<<<< HEAD
  
+=======
+<<<<<<< HEAD
+		loginPage.waitForMyAccount();
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 		Thread.sleep(3000);
 		String currentUrl = driver.getCurrentUrl();
 		String pageContent = driver.getPageSource().toLowerCase();
@@ -149,7 +228,15 @@ public class LoginTests extends BaseTest {
  
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
+<<<<<<< HEAD
  
+=======
+<<<<<<< HEAD
+		loginPage.waitForMyAccount();
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 		Thread.sleep(3000);
 		String currentUrl = driver.getCurrentUrl();
 		String pageContent = driver.getPageSource().toLowerCase();
