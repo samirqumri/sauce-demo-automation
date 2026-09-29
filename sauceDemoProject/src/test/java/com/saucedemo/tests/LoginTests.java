@@ -1,5 +1,7 @@
 package com.saucedemo.tests;
 
+import java.lang.reflect.Method;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
@@ -10,10 +12,9 @@ import com.saucedemo.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
 
-	
-
-	@DataProvider(name = "LogeninData") public Object[][] signUpData() { 
-		return new Object[][] {
+	@DataProvider(name = "loginData")
+	public Object[][] loginData(Method method) {
+		Object[][] allData = new Object[][] {
 			// test name               email                          password
 			{ "validLogin",            "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
 			{ "logout",                "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
@@ -26,9 +27,14 @@ public class LoginTests extends BaseTest {
 			{ "backButtonAfterLogout", "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // correct email + correct password
 		};
 
-	}	
-
-	
+		// return only the row that has the same name as the test method
+		for (Object[] row : allData) {
+			if (row[0].equals(method.getName())) {
+				return new Object[][] { { row[1], row[2] } };
+			}
+		}
+		return new Object[0][0];
+	}
 
 	@Test(priority = 1, dataProvider = "loginData")
 	public void validLogin(String email, String password) {
@@ -37,7 +43,7 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-	
+		loginPage.waitForMyAccount();
 
 		Assert.assertFalse(driver.getCurrentUrl().contains("login"), "My Account page should open");
 		Reporter.log("pass", true);
@@ -47,9 +53,6 @@ public class LoginTests extends BaseTest {
 	public void loginLinkOpensLoginPage() {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Log In");
-
-	
-		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Login page should open");
 		Reporter.log("pass", true);
@@ -84,7 +87,6 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-	
 
 		loginPage.logout();
 
@@ -101,7 +103,6 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
@@ -114,7 +115,6 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
@@ -127,7 +127,7 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-		
+
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Must NOT log in");
 		Reporter.log("pass", true);
 	}
@@ -160,7 +160,7 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-		
+		loginPage.waitForMyAccount();
 
 		Assert.assertFalse(driver.getCurrentUrl().contains("login"), "Email is not case-sensitive - should log in");
 		Reporter.log("pass", true);
@@ -173,7 +173,6 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-		
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Password is case-sensitive - must NOT log in");
 		Reporter.log("pass", true);
@@ -186,7 +185,6 @@ public class LoginTests extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
-		
 
 		loginPage.logout();
 

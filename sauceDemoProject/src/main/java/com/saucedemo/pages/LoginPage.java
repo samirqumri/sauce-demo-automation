@@ -2,6 +2,7 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage {
@@ -12,6 +13,7 @@ public class LoginPage extends BasePage {
 	private By errorAlert = By.xpath("//li[text()='Incorrect email or password.']");
 	private By recoverLink = By.xpath("//a[text()='Forgot your password?']");
 	private By recoverForm = By.id("recover-email");
+	private By logoutLink = By.cssSelector("a[href='/account/logout']");
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -43,9 +45,6 @@ public class LoginPage extends BasePage {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(recoverForm)).isDisplayed();
 	}
 
-<<<<<<< HEAD
-	
-
 	public void logout() {
 		driver.get("https://sauce-demo.myshopify.com/account/logout");
 	}
@@ -54,21 +53,11 @@ public class LoginPage extends BasePage {
 		driver.get("https://sauce-demo.myshopify.com/account");
 	}
 
-	
-	public void waitForLoginPage() {
-		wait.until(ExpectedConditions.urlContains("account/login"));
-	}
-
-	
 	public void waitForMyAccount() {
-		wait.until(ExpectedConditions.urlToBe("https://sauce-demo.myshopify.com/account"));
+		WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(logoutLink));
 	}
 
-	
 	public void waitForErrorMessage() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert));
 	}
 }
-=======
-}
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
