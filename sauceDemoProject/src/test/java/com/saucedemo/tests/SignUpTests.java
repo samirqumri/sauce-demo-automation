@@ -114,8 +114,7 @@ public class SignUpTests extends BaseTest {
 		Assert.assertTrue(isBlockedOrStuck);
 		Reporter.log("pass", true);
 	}
-<<<<<<< HEAD
-=======
+
  
 	@Test(priority = 6, dataProvider = "signUpData")
 	public void emptyFirstName(String firstName, String lastName, String email, String password) {
@@ -161,5 +160,4 @@ public class SignUpTests extends BaseTest {
 		Assert.assertTrue(driver.getCurrentUrl().contains("register") || driver.getCurrentUrl().contains("signup"));
 		Reporter.log("pass", true);
 	}
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 }
