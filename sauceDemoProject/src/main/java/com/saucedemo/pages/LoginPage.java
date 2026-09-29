@@ -63,8 +63,4 @@ public class LoginPage extends BasePage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert));
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
