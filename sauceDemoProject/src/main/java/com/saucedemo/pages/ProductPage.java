@@ -46,6 +46,7 @@ public class ProductPage extends BasePage {
 
 	public void clickProductLink(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
+
 		By productLink = By.cssSelector("a[href*='" + productSlug + "']");
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productLink));
@@ -66,21 +67,25 @@ public class ProductPage extends BasePage {
 	}
 
 	public String getProductName() {
+
 		WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(titleText));
 		return title.getText();
 	}
 
 	public String getProductPrice() {
+
 		WebElement price = wait.until(ExpectedConditions.visibilityOfElementLocated(priceText));
 		return price.getText();
 	}
 
 	public boolean isAddToCartEnabled() {
+
 		WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
 		return addButton.isEnabled();
 	}
 
 	public void clickAddToCart() {
+
 		int expectedCount = getCartCount() + 1;
 
 		WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
@@ -91,6 +96,7 @@ public class ProductPage extends BasePage {
 	}
 
 	public boolean isProductSoldOut() {
+
 		WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButtonById));
 		return !addButton.isEnabled();
 	}
@@ -100,24 +106,28 @@ public class ProductPage extends BasePage {
 	}
 
 	public String getBodyTextContext() {
+
 		WebElement body = wait.until(ExpectedConditions.visibilityOfElementLocated(pageBody));
 		return body.getText();
 	}
 
 	public String getAddToCartButtonText() {
+
 		WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
 		return addButton.getText().toLowerCase();
 	}
 
 	public String getRelatedProductsText() {
+
 		WebElement related = wait.until(ExpectedConditions.visibilityOfElementLocated(relatedProductsSection));
 		return related.getText();
 	}
 
 	public void clickRelatedProduct(String productName) {
 		String productSlug = productName.toLowerCase().replace(" ", "-");
-		WebElement link = wait.until(ExpectedConditions.elementToBeClickable(
-				By.cssSelector("#related-products a[href*='" + productSlug + "']")));
+
+		WebElement link = wait.until(ExpectedConditions
+				.elementToBeClickable(By.cssSelector("#related-products a[href*='" + productSlug + "']")));
 		link.click();
 	}
 }

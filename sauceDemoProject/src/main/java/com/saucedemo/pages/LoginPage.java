@@ -9,8 +9,8 @@ public class LoginPage extends BasePage {
 
 	private By emailField = By.id("customer_email");
 	private By passwordField = By.id("customer_password");
-	private By submitButton = By.cssSelector("input[value*='Sign']");
-	private By errorAlert = By.xpath("//li[text()='Incorrect email or password.']");
+	private By submitButton = By.cssSelector("input[value='Sign In']");
+	private By errorAlert = By.cssSelector(".errors, .errors li, .alert-error");
 	private By recoverLink = By.xpath("//a[text()='Forgot your password?']");
 	private By recoverForm = By.id("recover-email");
 	private By logoutLink = By.cssSelector("a[href='/account/logout']");
@@ -53,6 +53,13 @@ public class LoginPage extends BasePage {
 		driver.get("https://sauce-demo.myshopify.com/account");
 	}
 
+<<<<<<< HEAD
+=======
+	public void waitForLoginPage() {
+		wait.until(ExpectedConditions.urlContains("account/login"));
+	}
+
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 	public void waitForMyAccount() {
 		WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(logoutLink));
 	}
@@ -60,4 +67,13 @@ public class LoginPage extends BasePage {
 	public void waitForErrorMessage() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert));
 	}
+<<<<<<< HEAD
 }
+=======
+
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
