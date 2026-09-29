@@ -6,11 +6,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignUpPage extends BasePage {
 
-	private By firstNameField = By.xpath("//label[normalize-space()='First Name']/following::input[1]");
-	private By lastNameField = By.xpath("//label[normalize-space()='Last Name']/following::input[1]");
-	private By emailField = By.xpath("//label[normalize-space()='Email Address']/following::input[1]");
-	private By passwordField = By.xpath("//label[normalize-space()='Password']/following::input[1]");
-	private By createButton = By.xpath("//form[.//label[normalize-space()='First Name']]//*[@type='submit']");
+	private By firstNameField = By.xpath("//input[@id='first_name']");
+	private By lastNameField  = By.xpath("//input[@id='last_name']");
+	private By emailField     = By.xpath("//input[@id='email']");
+	private By passwordField  = By.xpath("//input[@id='password']");
+	private By createButton = By.cssSelector("#create_customer [type='submit']");
 	private By errorMessage = By.cssSelector(".errors, .error, .form-error");
 
 	public SignUpPage(WebDriver driver) {

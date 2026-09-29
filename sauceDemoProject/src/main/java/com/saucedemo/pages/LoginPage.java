@@ -53,9 +53,12 @@ public class LoginPage extends BasePage {
 		driver.get("https://sauce-demo.myshopify.com/account");
 	}
 
+
+
 	public void waitForLoginPage() {
 		wait.until(ExpectedConditions.urlContains("account/login"));
 	}
+
 
 	public void waitForMyAccount() {
 		@SuppressWarnings("unused")

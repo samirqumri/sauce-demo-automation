@@ -182,6 +182,8 @@ public class LoginTests extends BaseTest {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(email, password);
 
+		loginPage.logout();
+
 		driver.navigate().back();
 		driver.navigate().refresh();
 
@@ -189,4 +191,5 @@ public class LoginTests extends BaseTest {
 				"Browser back button re-established logged out session.");
 		Reporter.log("pass", true);
 	}
+
 }

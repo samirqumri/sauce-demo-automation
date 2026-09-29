@@ -159,4 +159,5 @@ public class SignUpTests extends BaseTest {
 		Assert.assertTrue(driver.getCurrentUrl().contains("register") || driver.getCurrentUrl().contains("signup"));
 		Reporter.log("pass", true);
 	}
+
 }
