@@ -2,28 +2,43 @@ package com.saucedemo.tests;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.saucedemo.pages.CartPage;
 
 public class CartTests extends BaseTest {
 
-	@Test(priority = 1)
-	public void cartShowsProductAndTotal() {
+	@DataProvider
+	public Object[][] productData() {
+		return new Object[][] {
+				{ "Grey jacket" }
+		};
+	}
+
+	@DataProvider
+	public Object[][] multipleProducts() {
+		return new Object[][] {
+				{ "Grey jacket", "Striped top", "55.00", "100.00", "155.00" }
+		};
+	}
+
+	@Test(priority = 1, dataProvider = "productData")
+	public void cartShowsProductAndTotal(String product) {
 		CartPage cartPage = new CartPage(driver);
-		cartPage.addProductToCart("Grey jacket");
+		cartPage.addProductToCart(product);
 		cartPage.openCart();
 
-		Assert.assertTrue(cartPage.getCartText().contains("Grey jacket"));
+		Assert.assertTrue(cartPage.getCartText().contains(product));
 		Assert.assertTrue(cartPage.getTotal().contains("55.00"));
 		Assert.assertEquals(cartPage.getQuantity(), "1");
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 2)
-	public void updatingQuantityRecalculatesTotal() {
+	@Test(priority = 2, dataProvider = "productData")
+	public void updatingQuantityRecalculatesTotal(String product) {
 		CartPage cartPage = new CartPage(driver);
-		cartPage.addProductToCart("Grey jacket");
+		cartPage.addProductToCart(product);
 		cartPage.openCart();
 
 		cartPage.setQuantity("3");
@@ -34,17 +49,18 @@ public class CartTests extends BaseTest {
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 3)
-	public void cartTotalSumsMultipleProducts() {
+	@Test(priority = 3, dataProvider = "multipleProducts")
+	public void cartTotalSumsMultipleProducts(String jacket, String top,
+			String jacketPrice, String twoTopsPrice, String total) {
 		CartPage cartPage = new CartPage(driver);
-		cartPage.addProductToCart("Grey jacket");
-		cartPage.addProductToCart("Striped top");
-		cartPage.addProductToCart("Striped top");
+		cartPage.addProductToCart(jacket);
+		cartPage.addProductToCart(top);
+		cartPage.addProductToCart(top);
 		cartPage.openCart();
 
-		Assert.assertTrue(cartPage.getCartText().contains("55.00"));
-		Assert.assertTrue(cartPage.getCartText().contains("100.00"));
-		Assert.assertTrue(cartPage.getTotal().contains("155.00"));
+		Assert.assertTrue(cartPage.getCartText().contains(jacketPrice));
+		Assert.assertTrue(cartPage.getCartText().contains(twoTopsPrice));
+		Assert.assertTrue(cartPage.getTotal().contains(total));
 		Reporter.log("pass", true);
 	}
 
@@ -71,10 +87,10 @@ public class CartTests extends BaseTest {
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 6)
-	public void negativeQuantityIsIgnored() {
+	@Test(priority = 6, dataProvider = "productData")
+	public void negativeQuantityIsIgnored(String product) {
 		CartPage cartPage = new CartPage(driver);
-		cartPage.addProductToCart("Grey jacket");
+		cartPage.addProductToCart(product);
 		cartPage.openCart();
 		String quantityBefore = cartPage.getQuantity();
 
@@ -85,10 +101,10 @@ public class CartTests extends BaseTest {
 		Reporter.log("pass", true);
 	}
 
-	@Test(priority = 7)
-	public void veryLargeQuantityShowsCartError() {
+	@Test(priority = 7, dataProvider = "productData")
+	public void veryLargeQuantityShowsCartError(String product) {
 		CartPage cartPage = new CartPage(driver);
-		cartPage.addProductToCart("Grey jacket");
+		cartPage.addProductToCart(product);
 		cartPage.openCart();
 
 		cartPage.setQuantity("999999999");
