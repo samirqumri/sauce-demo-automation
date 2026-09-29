@@ -31,7 +31,7 @@ public class ProductPage extends BasePage {
 	public int getCartCount() {
 		try {
 			String text = driver.findElement(badgeCount).getText();
-			text = text.replace("(", "").replace(")", "").trim();
+			text = text.replaceAll("[()]", "").trim();
 
 			if (text.isEmpty()) {
 				return 0;

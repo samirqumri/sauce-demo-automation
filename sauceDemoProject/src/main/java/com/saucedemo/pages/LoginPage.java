@@ -2,6 +2,7 @@ package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage {
@@ -12,6 +13,7 @@ public class LoginPage extends BasePage {
 	private By errorAlert = By.cssSelector(".errors, .errors li, .alert-error");
 	private By recoverLink = By.xpath("//a[text()='Forgot your password?']");
 	private By recoverForm = By.id("recover-email");
+	private By logoutLink = By.cssSelector("a[href='/account/logout']");
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -56,7 +58,8 @@ public class LoginPage extends BasePage {
 	}
 
 	public void waitForMyAccount() {
-		wait.until(ExpectedConditions.urlToBe("https://sauce-demo.myshopify.com/account"));
+		@SuppressWarnings("unused")
+		WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(logoutLink));
 	}
 
 	public void waitForErrorMessage() {

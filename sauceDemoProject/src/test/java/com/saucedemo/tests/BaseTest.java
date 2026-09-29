@@ -10,13 +10,15 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
 	protected WebDriver driver;
 
+	private static final String url = "https://sauce-demo.myshopify.com";
+
 	@BeforeMethod
 	public void setUp() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-		driver.get("https://sauce-demo.myshopify.com");
+		driver.get(url);
 		driver.manage().deleteAllCookies();
 		driver.navigate().refresh();
 	}
