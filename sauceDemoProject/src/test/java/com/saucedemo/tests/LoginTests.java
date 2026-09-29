@@ -295,4 +295,7 @@ public class LoginTests extends BaseTest {
 	}
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation

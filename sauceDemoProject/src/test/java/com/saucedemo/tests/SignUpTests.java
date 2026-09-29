@@ -106,6 +106,10 @@ public class SignUpTests extends BaseTest {
 		Assert.assertTrue(isBlockedOrStuck);
 		Reporter.log("pass", true);
 	}
+<<<<<<< HEAD
 
 	}
 
+=======
+}
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
