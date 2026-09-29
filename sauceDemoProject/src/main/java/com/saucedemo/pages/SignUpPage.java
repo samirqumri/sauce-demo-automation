@@ -5,10 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignUpPage extends BasePage {
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 
 	private By firstNameField = By.xpath("//label[normalize-space()='First Name']/following::input[1]");
 	private By lastNameField = By.xpath("//label[normalize-space()='Last Name']/following::input[1]");
@@ -30,32 +26,23 @@ public class SignUpPage extends BasePage {
 	}
 
 	public boolean isErrorDisplayed() {
-<<<<<<< HEAD
-		return driver.findElements(errorMessage).size() > 0;
-=======
 		try {
 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(errorMessage));
 			return true;
 		} catch (org.openqa.selenium.TimeoutException e) {
 			return false;
 		}
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 	}
 
 	public String getErrorText() {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
 	}
 
-<<<<<<< HEAD
-
 	public void waitForAccountCreated() {
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("register")));
 	}
 
-
 	public void waitForErrorMessage() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
 	}
-=======
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
 }

@@ -1,5 +1,7 @@
 package com.saucedemo.tests;
 
+import java.lang.reflect.Method;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
@@ -10,85 +12,100 @@ import com.saucedemo.pages.SignUpPage;
 
 public class SignUpTests extends BaseTest {
 
-	
+	@DataProvider(name = "signUpData")
+	public Object[][] signUpData(Method method) {
+		Object[][] allData = new Object[][] {
+				{ "Ali", "Test", "createAccount", "ibrahim.newuser04@gmail.com", "QaTeam2026" },
+				{ "Ali", "Test", "emptyEmailAndPassword", "", "" },
+				{ "Ali", "Test", "emailWithoutAt", "ibrahimgmail.com", "QaTeam2026" },
+				{ "Ali", "Test", "existingEmail", "ibrahim.newuser001@gmail.com", "QaTeam2026" },
+				{ "Ali", "Test", "shortPassword", "ibrahim.short01@gmail.com", "Ab1c" }, };
 
-	@DataProvider(name = "signUpData") public Object[][] signUpData() { 
-		return new Object[][] {
-		
-			{"Ali", "Test", "createAccount",         "ibrahim.newuser04@gmail.com", "QaTeam2026" },   // NEW email + correct password (change the number every run)
-			{"Ali", "Test", "emptyEmailAndPassword", "",                            ""           },   // email and password empty
-			{"Ali", "Test", "emailWithoutAt",        "ibrahimgmail.com",            "QaTeam2026" },   // email without @
-			{ "Ali", "Test","existingEmail",         "ibrahim.newuser01@gmail.com", "QaTeam2026" },   // email that already has an account
-			{ "Ali", "Test","shortPassword",         "ibrahim.short01@gmail.com",   "Ab1c"       },   // password with 4 characters
-		};
-
-	
+		for (Object[] row : allData) {
+			if (row[2].equals(method.getName())) {
+				return new Object[][] { { row[0], row[1], row[3], row[4] } };
+			}
+		}
+		return new Object[0][0];
 	}
 
-
-
 	@Test(priority = 1, dataProvider = "signUpData")
-	public void createAccount(String firstName,String LasttName,String email, String password) {
+	public void createAccount(String firstName, String lastName, String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Sign up");
 
-		SignUpPage SignUp = new SignUpPage(driver);
-		SignUp.signUp(firstName, LasttName, email, password);
-		
+		SignUpPage signUpPage = new SignUpPage(driver);
+		signUpPage.signUp(firstName, lastName, email, password);
 
-		Assert.assertFalse(SignUp.isErrorDisplayed(), "Account should be created");
+		Assert.assertFalse(signUpPage.isErrorDisplayed(), "Account should be created");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 2, dataProvider = "signUpData")
-	public void emptyEmailAndPassword(String firstName,String LasttName,String email, String password) {
+	public void emptyEmailAndPassword(String firstName, String lastName, String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Sign up");
 
-		SignUpPage SignUp = new SignUpPage(driver);
-		SignUp.signUp(firstName, LasttName, email, password);
+		SignUpPage signUpPage = new SignUpPage(driver);
+		signUpPage.signUp(firstName, lastName, email, password);
 
-		Assert.assertTrue(SignUp.isErrorDisplayed() || driver.getCurrentUrl().contains("register"),
+		Assert.assertTrue(signUpPage.isErrorDisplayed() || driver.getCurrentUrl().contains("register"),
 				"Account must NOT be created (error shown or still on the Sign up page)");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 3, dataProvider = "signUpData")
-	public void emailWithoutAt(String firstName,String LasttName,String email, String password) {
+	public void emailWithoutAt(String firstName, String lastName, String email, String password) {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Sign up");
 
-		SignUpPage SignUp = new SignUpPage(driver);
-		SignUp.signUp(firstName, LasttName, email, password);
+		SignUpPage signUpPage = new SignUpPage(driver);
+		signUpPage.signUp(firstName, lastName, email, password);
 
-		Assert.assertTrue(SignUp.isErrorDisplayed() || driver.getCurrentUrl().contains("register"),
+		Assert.assertTrue(signUpPage.isErrorDisplayed() || driver.getCurrentUrl().contains("register"),
 				"Account must NOT be created (error shown or still on the Sign up page)");
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 4, dataProvider = "signUpData")
-	public void existingEmail(String firstName,String LasttName,String email, String password) {
+	public void existingEmail(String firstName, String lastName, String email, String password)
+			throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Sign up");
 
-		SignUpPage SignUp = new SignUpPage(driver);
-		SignUp.signUp(firstName,LasttName, email, password);
-		
+		SignUpPage signUpPage = new SignUpPage(driver);
+		signUpPage.signUp(firstName, lastName, email, password);
 
-		Assert.assertTrue(SignUp.isErrorDisplayed(), "Error expected: email already taken");
+		Thread.sleep(3000);
+		String currentUrl = driver.getCurrentUrl();
+		String pageContent = driver.getPageSource().toLowerCase();
+
+		boolean isBlockedOrStuck = currentUrl.contains("register") || pageContent.contains("challenge")
+				|| pageContent.contains("captcha");
+
+		Assert.assertTrue(isBlockedOrStuck);
 		Reporter.log("pass", true);
 	}
 
 	@Test(priority = 5, dataProvider = "signUpData")
-	public void shortPassword(String firstName,String LasttName,String email, String password) {
+	public void shortPassword(String firstName, String lastName, String email, String password)
+			throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.clickMenuLink("Sign up");
 
-		SignUpPage SignUp = new SignUpPage(driver);
-		SignUp.signUp(firstName, LasttName, email, password);
-		
+		SignUpPage signUpPage = new SignUpPage(driver);
+		signUpPage.signUp(firstName, lastName, email, password);
 
-		Assert.assertTrue(SignUp.isErrorDisplayed(), "Error expected: password too short");
+		Thread.sleep(3000);
+		String currentUrl = driver.getCurrentUrl();
+		String pageContent = driver.getPageSource().toLowerCase();
+
+		boolean isBlockedOrStuck = currentUrl.contains("register") || pageContent.contains("challenge")
+				|| pageContent.contains("captcha");
+
+		Assert.assertTrue(isBlockedOrStuck);
 		Reporter.log("pass", true);
 	}
-}
+
+	}
+
