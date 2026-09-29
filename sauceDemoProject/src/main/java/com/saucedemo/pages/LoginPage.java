@@ -53,31 +53,20 @@ public class LoginPage extends BasePage {
 		driver.get("https://sauce-demo.myshopify.com/account");
 	}
 
-<<<<<<< HEAD
-=======
+
+
 	public void waitForLoginPage() {
 		wait.until(ExpectedConditions.urlContains("account/login"));
 	}
 
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+
 	public void waitForMyAccount() {
+		@SuppressWarnings("unused")
 		WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(logoutLink));
 	}
 
 	public void waitForErrorMessage() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert));
 	}
-<<<<<<< HEAD
-}
-=======
 
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
->>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
