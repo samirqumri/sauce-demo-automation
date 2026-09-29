@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+=======
+<<<<<<< HEAD
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+=======
+<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
   <reporter-output>
+<<<<<<< HEAD
     <line>
       <![CDATA[pass]]>
     </line>
@@ -37,15 +46,96 @@
     <line>
       <![CDATA[pass]]>
     </line>
+=======
+<<<<<<< HEAD
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+    <line>
+      <![CDATA[pass]]>
+    </line>
+=======
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-09-29T20:01:10 IDT" name="Default suite" finished-at="2026-09-29T20:02:25 IDT" duration-ms="75689">
+=======
+<<<<<<< HEAD
+  <suite started-at="2026-09-29T19:56:44 EEST" name="Default suite" finished-at="2026-09-29T19:58:03 EEST" duration-ms="78656">
+=======
+  <suite started-at="2026-09-29T19:41:35 IDT" name="Default suite" finished-at="2026-09-29T19:41:35 IDT" duration-ms="58">
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-09-29T20:01:10 IDT" name="Default test" finished-at="2026-09-29T20:02:25 IDT" duration-ms="75689">
       <class name="com.saucedemo.tests.LoginTests">
         <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:10 IDT" name="setUp" finished-at="2026-09-29T20:01:14 IDT" duration-ms="4227" status="PASS">
+=======
+<<<<<<< HEAD
+    <test started-at="2026-09-29T19:56:44 EEST" name="Default test" finished-at="2026-09-29T19:58:03 EEST" duration-ms="78656">
+      <class name="com.saucedemo.tests.SignUpTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:56:44 EEST" name="setUp" finished-at="2026-09-29T19:56:50 EEST" duration-ms="5732" status="PASS">
+=======
+    <test started-at="2026-09-29T19:41:35 IDT" name="Default test" finished-at="2026-09-29T19:41:35 IDT" duration-ms="58">
+      <class name="com.saucedemo.tests.SignUpTests">
+        <test-method signature="createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.saucedemo.tests.SignUpTests@15de0b3c]" started-at="2026-09-29T19:41:35 IDT" name="createAccount" data-provider="signUpData" finished-at="2026-09-29T19:41:35 IDT" duration-ms="15" status="FAIL">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+[public void com.saucedemo.tests.SignUpTests.createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: createAccount([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3])
+Arguments: [(java.lang.String) Ali,(java.lang.String) Test,(java.lang.String) createAccount,(java.lang.String) ibrahim.newuser04@gmail.com,(java.lang.String) QaTeam2026]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void com.saucedemo.tests.SignUpTests.createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: createAccount([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3])
+Arguments: [(java.lang.String) Ali,(java.lang.String) Test,(java.lang.String) createAccount,(java.lang.String) ibrahim.newuser04@gmail.com,(java.lang.String) QaTeam2026]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:915)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- setUp -->
         <test-method signature="validLogin(java.lang.String,java.lang.String)[pri:1, instance:com.saucedemo.tests.LoginTests@198b6731]" started-at="2026-09-29T20:01:14 IDT" name="validLogin" data-provider="loginTestData" finished-at="2026-09-29T20:01:18 IDT" duration-ms="4347" status="PASS">
           <params>
@@ -320,6 +410,195 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.tests.LoginTests -->
+=======
+<<<<<<< HEAD
+        </test-method> <!-- setUp -->
+        <test-method signature="createAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:56:50 EEST" name="createAccount" data-provider="signUpData" finished-at="2026-09-29T19:57:03 EEST" duration-ms="13571" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ibrahim.newuser04@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:03 EEST" name="tearDown" finished-at="2026-09-29T19:57:04 EEST" duration-ms="480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:04 EEST" name="setUp" finished-at="2026-09-29T19:57:08 EEST" duration-ms="3874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emptyEmailAndPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:08 EEST" name="emptyEmailAndPassword" data-provider="signUpData" finished-at="2026-09-29T19:57:21 EEST" duration-ms="13429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyEmailAndPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:21 EEST" name="tearDown" finished-at="2026-09-29T19:57:22 EEST" duration-ms="448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:22 EEST" name="setUp" finished-at="2026-09-29T19:57:25 EEST" duration-ms="3648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="emailWithoutAt(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:25 EEST" name="emailWithoutAt" data-provider="signUpData" finished-at="2026-09-29T19:57:39 EEST" duration-ms="13338" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ibrahimgmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emailWithoutAt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:39 EEST" name="tearDown" finished-at="2026-09-29T19:57:41 EEST" duration-ms="1975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:41 EEST" name="setUp" finished-at="2026-09-29T19:57:44 EEST" duration-ms="3884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="existingEmail(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:44 EEST" name="existingEmail" data-provider="signUpData" finished-at="2026-09-29T19:57:51 EEST" duration-ms="6406" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ibrahim.newuser001@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[QaTeam2026]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- existingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:51 EEST" name="tearDown" finished-at="2026-09-29T19:57:52 EEST" duration-ms="828" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:52 EEST" name="setUp" finished-at="2026-09-29T19:57:56 EEST" duration-ms="3927" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shortPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:57:56 EEST" name="shortPassword" data-provider="signUpData" finished-at="2026-09-29T19:58:02 EEST" duration-ms="6305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ibrahim.short01@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ab1c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- shortPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.SignUpTests@62ddbd7e]" started-at="2026-09-29T19:58:02 EEST" name="tearDown" finished-at="2026-09-29T19:58:03 EEST" duration-ms="694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+=======
+        </test-method> <!-- createAccount -->
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
+      </class> <!-- com.saucedemo.tests.SignUpTests -->
+>>>>>>> branch 'master' of https://github.com/samirqumri/sauce-demo-automation
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
