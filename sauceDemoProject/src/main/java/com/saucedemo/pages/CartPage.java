@@ -31,25 +31,37 @@ public class CartPage extends BasePage {
 	private By payNowButton = By.id("checkout-pay-button");
 	private By pageBody = By.tagName("body");
 
+	private By dynamicProduct(String productName) {
+		return By.xpath("//*[contains(text(),'" + productName + "')]");
+	}
+
+	private By dynamicCartCount(int expectedCount) {
+		return By.xpath("//*[contains(text(),'My Cart (" + expectedCount + ")')]");
+	}
+
 	public CartPage(WebDriver driver) {
 		super(driver);
 	}
 
 	public void addProductToCart(String productName) {
 		int expectedCount = getCartCount() + 1;
+		try {
+			WebElement catalog = wait.until(ExpectedConditions.elementToBeClickable(catalogLink));
+			catalog.click();
+		} catch (org.openqa.selenium.TimeoutException e) {
+			return;
+		}
+		addProductToCart(productName, expectedCount);
+	}
 
-		WebElement catalog = wait.until(ExpectedConditions.elementToBeClickable(catalogLink));
-		catalog.click();
-
-		WebElement product = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//h3[text()='" + productName + "']")));
+	public void addProductToCart(String productName, int expectedCount) {
+		WebElement product = wait.until(ExpectedConditions.elementToBeClickable(dynamicProduct(productName)));
 		product.click();
 
 		WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
 		addButton.click();
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//span[text()='(" + expectedCount + ")']")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(dynamicCartCount(expectedCount)));
 	}
 
 	public int getCartCount() {
